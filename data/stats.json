@@ -1,0 +1,164 @@
+{
+  "updatedAt": "2026-11-20T10:53:50.698Z",
+  "year": 2026,
+  "ytd": {
+    "swim": {
+      "count": 78,
+      "km": 180.1,
+      "hours": 55.4
+    },
+    "bike": {
+      "count": 149,
+      "km": 7610.8,
+      "hours": 257.8
+    },
+    "run": {
+      "count": 159,
+      "km": 2055.6,
+      "hours": 162.5
+    },
+    "total": {
+      "count": 425,
+      "km": 9871.9,
+      "hours": 494.2
+    },
+    "elevationM": 99159
+  },
+  "typicalWeek": {
+    "weeks": 8,
+    "hours": 10.7,
+    "swimKm": 1.4,
+    "bikeKm": 103.5,
+    "runKm": 62.8
+  },
+  "weekly": [
+    {
+      "week": "2026-08-31",
+      "swim": 0.72,
+      "bike": 4.63,
+      "run": 4.7,
+      "other": 0,
+      "hours": 10.04
+    },
+    {
+      "week": "2026-09-07",
+      "swim": 1.38,
+      "bike": 0.35,
+      "run": 1.68,
+      "other": 0,
+      "hours": 3.41
+    },
+    {
+      "week": "2026-09-14",
+      "swim": 1.35,
+      "bike": 7.14,
+      "run": 3.56,
+      "other": 1.08,
+      "hours": 13.14
+    },
+    {
+      "week": "2026-09-21",
+      "swim": 1.59,
+      "bike": 4.59,
+      "run": 5.6,
+      "other": 0.29,
+      "hours": 12.07
+    },
+    {
+      "week": "2026-09-28",
+      "swim": 1.56,
+      "bike": 5.18,
+      "run": 5.14,
+      "other": 1,
+      "hours": 12.88
+    },
+    {
+      "week": "2026-10-05",
+      "swim": 0,
+      "bike": 6.44,
+      "run": 3.84,
+      "other": 0.48,
+      "hours": 10.76
+    },
+    {
+      "week": "2026-10-12",
+      "swim": 0,
+      "bike": 3.53,
+      "run": 5.31,
+      "other": 0,
+      "hours": 8.83
+    },
+    {
+      "week": "2026-10-19",
+      "swim": 0,
+      "bike": 5.64,
+      "run": 5.59,
+      "other": 0.73,
+      "hours": 11.95
+    },
+    {
+      "week": "2026-10-26",
+      "swim": 0,
+      "bike": 4.58,
+      "run": 7.41,
+      "other": 0.22,
+      "hours": 12.21
+    },
+    {
+      "week": "2026-11-02",
+      "swim": 0,
+      "bike": 0.95,
+      "run": 6.86,
+      "other": 7.12,
+      "hours": 14.93
+    },
+    {
+      "week": "2026-11-09",
+      "swim": 0,
+      "bike": 0,
+      "run": 1.06,
+      "other": 0.62,
+      "hours": 1.68
+    },
+    {
+      "week": "2026-11-16",
+      "swim": 0,
+      "bike": 0,
+      "run": 0,
+      "other": 0,
+      "hours": 0
+    }
+  ],
+  "recent": [
+    {
+      "date": "2026-11-12",
+      "sport": "run",
+      "km": 9,
+      "hours": 0.74
+    },
+    {
+      "date": "2026-11-10",
+      "sport": "run",
+      "km": 3.9,
+      "hours": 0.32
+    },
+    {
+      "date": "2026-11-08",
+      "sport": "run",
+      "km": 38.1,
+      "hours": 2.77
+    },
+    {
+      "date": "2026-11-07",
+      "sport": "bike",
+      "km": 1.6,
+      "hours": 0.05
+    },
+    {
+      "date": "2026-11-07",
+      "sport": "bike",
+      "km": 1.9,
+      "hours": 0.08
+    }
+  ]
+}
