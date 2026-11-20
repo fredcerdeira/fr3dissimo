@@ -167,6 +167,7 @@ export function buildStats(activities, now = new Date()) {
   const recent = [...norm]
     .sort((x, y) => (x.date < y.date ? 1 : -1))
     .filter((a) => ["swim", "bike", "run", "multisport"].includes(a.sport))
+    .filter((a) => a.hours >= 10 / 60) // skip warm-ups, transitions and other short bits
     .slice(0, RECENT)
     .map((a) => ({ date: a.date, sport: a.sport, km: round(a.km, a.sport === "swim" ? 2 : 1), hours: round(a.hours, 2) }));
 
