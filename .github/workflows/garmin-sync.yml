@@ -1,0 +1,40 @@
+name: Garmin sync
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # every day at 05:17 UTC
+  workflow_dispatch:        # "Run workflow" button for a manual sync
+
+permissions:
+  contents: write
+
+concurrency:
+  group: garmin-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Pull activities and build stats.json
+        env:
+          GARMIN_API_KEY: ${{ secrets.GARMIN_API_KEY }}
+        run: node scripts/garmin-sync.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "garmin-sync[bot]"
+          git config user.email "garmin-sync[bot]@users.noreply.github.com"
+          git add data/stats.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update training stats"
+            git push
+          fi

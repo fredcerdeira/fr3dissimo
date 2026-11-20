@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stats-loader example</title>
+<style>
+  body { font-family: Inter, system-ui, sans-serif; background: #F3F1EB; color: #141414; margin: 0; padding: 48px 32px; }
+  .band { background: #141414; color: #F3F1EB; padding: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px; }
+  .num { font: 700 48px/1 "Barlow Condensed", sans-serif; display: block; }
+  .lbl { font-size: 13px; text-transform: uppercase; letter-spacing: .1em; color: #C9C5BB; }
+  .chart { color: #B83A0E; margin-top: 32px; }
+</style>
+</head>
+<body>
+  <!-- "By the numbers" band -->
+  <section class="band" aria-label="By the numbers">
+    <div><span class="num">2019</span><span class="lbl">First season</span></div>
+    <div><span class="num" data-stat="ytd.total.count" data-format="int">–</span><span class="lbl">Sessions in <span data-stat="year">–</span></span></div>
+    <div><span class="num" data-stat="ytd.total.km" data-format="km">–</span><span class="lbl">Trained this year</span></div>
+    <div><span class="num" data-stat="ytd.total.hours" data-format="hours">–</span><span class="lbl">Hours this year</span></div>
+  </section>
+
+  <!-- "Typical week" card -->
+  <p>
+    <span data-stat="typicalWeek.hours" data-format="hours">–</span> ·
+    swim <span data-stat="typicalWeek.swimKm" data-format="km">–</span> ·
+    bike <span data-stat="typicalWeek.bikeKm" data-format="km">–</span> ·
+    run <span data-stat="typicalWeek.runKm" data-format="km">–</span>
+  </p>
+
+  <div class="chart" data-stat-weekly></div>
+
+  <h2>Latest sessions</h2>
+  <ul data-stat-recent></ul>
+
+  <p><small>Updated <span data-stat="updatedAt" data-format="date">–</span> · data from Garmin Connect</small></p>
+
+  <script src="stats-loader.js" defer data-src="../data/stats.json"></script>
+</body>
+</html>

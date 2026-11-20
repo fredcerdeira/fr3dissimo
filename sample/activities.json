@@ -1,0 +1,2602 @@
+[
+ {
+  "activityId": 1,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-11-20 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 2,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-11-19 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 3,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-11-18 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 4,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-11-17 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 5,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-11-16 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 6,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-11-15 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 7,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-11-14 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 8,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-11-13 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 9,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-11-12 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 10,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-11-11 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 11,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-11-10 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 12,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-11-09 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 13,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-11-08 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 14,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-11-07 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 15,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-11-06 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 16,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-11-05 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 17,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-11-04 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 18,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-11-03 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 19,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-11-02 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 20,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-11-01 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 21,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-10-31 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 22,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-10-30 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 23,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-10-29 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 24,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-10-28 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 25,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-10-27 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 26,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-10-26 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 27,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-10-25 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 28,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-10-24 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 29,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-10-23 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 30,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-10-22 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 31,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-10-21 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 32,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-10-20 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 33,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-10-19 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 34,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-10-18 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 35,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-10-17 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 36,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-10-16 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 37,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-10-15 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 38,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-10-14 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 39,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-10-13 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 40,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-10-12 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 41,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-10-11 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 42,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-10-10 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 43,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-10-09 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 44,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-10-08 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 45,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-10-07 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 46,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-10-06 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 47,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-10-05 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 48,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-10-04 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 49,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-10-03 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 50,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-10-02 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 51,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-10-01 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 52,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-09-30 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 53,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-09-29 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 54,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-09-28 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 55,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-09-27 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 56,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-09-26 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 57,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-09-25 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 58,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-09-24 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 59,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-09-23 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 60,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-09-22 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 61,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-09-21 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 62,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-09-20 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 63,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-09-19 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 64,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-09-18 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 65,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-09-17 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 66,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-09-16 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 67,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-09-15 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 68,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-09-14 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 69,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-09-13 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 70,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-09-12 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 71,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-09-11 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 72,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-09-10 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 73,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-09-09 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 74,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-09-08 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 75,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-09-07 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 76,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-09-06 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 77,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-09-05 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 78,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-09-04 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 79,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-09-03 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 80,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-09-02 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 81,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-09-01 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 82,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-08-31 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 83,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-08-30 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 84,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-08-29 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 85,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-08-28 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 86,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-08-27 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 87,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-08-26 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 88,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-08-25 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 89,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-08-24 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 90,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-08-23 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 91,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-08-22 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 92,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-08-21 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 93,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-08-20 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 94,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-08-19 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 95,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-08-18 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 96,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-08-17 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 97,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-08-16 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 98,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-08-15 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 99,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-08-14 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 100,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-08-13 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 101,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-08-12 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 102,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-08-11 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 103,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-08-10 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 104,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-08-09 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 105,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-08-08 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 106,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-08-07 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 107,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-08-06 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 108,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-08-05 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 109,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-08-04 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 110,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-08-03 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 111,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-08-02 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 112,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-08-01 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 113,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-07-31 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 114,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-07-30 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 115,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-07-29 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 116,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-07-28 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 117,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-07-27 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 118,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-07-26 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 119,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-07-25 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 120,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-07-24 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 121,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-07-23 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 122,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-07-22 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 123,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-07-21 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 124,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-07-20 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 125,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-07-19 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 126,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-07-18 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 127,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-07-17 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 128,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-07-16 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 129,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-07-15 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 130,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-07-14 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 131,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-07-13 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 132,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-07-12 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 133,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-07-11 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 134,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-07-10 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 135,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-07-09 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 136,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-07-08 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 137,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-07-07 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 138,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-07-06 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 139,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-07-05 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 140,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-07-04 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 141,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-07-03 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 142,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-07-02 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 143,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-07-01 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 144,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-06-30 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 145,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-06-29 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 146,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-06-28 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 147,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-06-27 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 148,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-06-26 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 149,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-06-25 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 150,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-06-24 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 151,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-06-23 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 152,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-06-22 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 153,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-06-21 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 154,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-06-20 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 155,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-06-19 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 156,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-06-18 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 157,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-06-17 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 158,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-06-16 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 159,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-06-15 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 160,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-06-14 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 161,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-06-13 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 162,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-06-12 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 163,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-06-11 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 164,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-06-10 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 165,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-06-09 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 166,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-06-08 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 167,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-06-07 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 168,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-06-06 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 169,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-06-05 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 170,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-06-04 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 171,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-06-03 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 172,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-06-02 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 173,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-06-01 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 174,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-05-31 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 175,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-05-30 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 176,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-05-29 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 177,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-05-28 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 178,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-05-27 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 179,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-05-26 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 180,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-05-25 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 181,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-05-24 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 182,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-05-23 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 183,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-05-22 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 184,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-05-21 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 185,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-05-20 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 186,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-05-19 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 187,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-05-18 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 188,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-05-17 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 189,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-05-16 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 190,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-05-15 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 191,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-05-14 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 192,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-05-13 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 193,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-05-12 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 194,
+  "activityName": "Queluz treadmill_running",
+  "startTimeLocal": "2026-05-11 07:00:00",
+  "activityType": {
+   "typeKey": "treadmill_running"
+  },
+  "distance": 8000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 195,
+  "activityName": "Queluz open_water_swimming",
+  "startTimeLocal": "2026-05-10 07:00:00",
+  "activityType": {
+   "typeKey": "open_water_swimming"
+  },
+  "distance": 1900,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 196,
+  "activityName": "Queluz strength_training",
+  "startTimeLocal": "2026-05-09 07:00:00",
+  "activityType": {
+   "typeKey": "strength_training"
+  },
+  "distance": 0,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 197,
+  "activityName": "Queluz lap_swimming",
+  "startTimeLocal": "2026-05-08 07:00:00",
+  "activityType": {
+   "typeKey": "lap_swimming"
+  },
+  "distance": 2500,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 198,
+  "activityName": "Queluz road_biking",
+  "startTimeLocal": "2026-05-07 07:00:00",
+  "activityType": {
+   "typeKey": "road_biking"
+  },
+  "distance": 70000,
+  "duration": 7200,
+  "elevationGain": 600,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 199,
+  "activityName": "Queluz running",
+  "startTimeLocal": "2026-05-06 07:00:00",
+  "activityType": {
+   "typeKey": "running"
+  },
+  "distance": 12000,
+  "duration": 3600,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ },
+ {
+  "activityId": 200,
+  "activityName": "Queluz indoor_cycling",
+  "startTimeLocal": "2026-05-05 07:00:00",
+  "activityType": {
+   "typeKey": "indoor_cycling"
+  },
+  "distance": 40000,
+  "duration": 7200,
+  "elevationGain": 30,
+  "startLatitude": 38.75,
+  "startLongitude": -9.25
+ }
+]
