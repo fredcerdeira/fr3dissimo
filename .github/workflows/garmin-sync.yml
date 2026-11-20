@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "17 5 * * *"   # every day at 05:17 UTC
   workflow_dispatch:        # "Run workflow" button for a manual sync
+  push:                     # also re-run when the sync code changes
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/garmin-sync.yml"
 
 permissions:
   contents: write
