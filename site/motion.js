@@ -4,7 +4,6 @@
 //  - [data-reveal] fades up when it enters the viewport (stagger with --d)
 //  - [data-parallax="f"] moves at a different speed while scrolling
 //  - [data-scrub] lights up as it crosses the middle of the screen
-//  - km rail: page scroll = a 70.3 (1.9 swim + 90 bike + 21.1 run = 113 km)
 //  - [data-count] numbers count up and weekly bars grow once the stats load
 // Everything is skipped for prefers-reduced-motion.
 
@@ -35,10 +34,6 @@
   const nav = document.querySelector(".nav");
   const parallax = $$("[data-parallax]");
   const scrub = $$("[data-scrub]");
-  const kmEl = document.querySelector("[data-km]");
-  const legEl = document.querySelector("[data-leg]");
-  const fill = document.querySelector(".rail .fill");
-  const TOTAL = 113, SWIM = 1.9, BIKE = 90;
 
   let ticking = false;
   function frame() {
@@ -46,13 +41,6 @@
     const y = scrollY, vh = innerHeight;
     nav && nav.classList.toggle("scrolled", y > 40);
 
-    // km rail
-    const max = document.documentElement.scrollHeight - vh;
-    const p = max > 0 ? clamp(y / max, 0, 1) : 0;
-    const km = p * TOTAL;
-    if (kmEl) kmEl.textContent = km.toFixed(1);
-    if (legEl) legEl.textContent = km < SWIM ? "SWIM" : km < SWIM + BIKE ? "BIKE" : km < TOTAL - 0.05 ? "RUN" : "FINISH";
-    if (fill) fill.style.height = (p * 100).toFixed(2) + "%";
 
     if (reduce) return;
 
