@@ -6,10 +6,8 @@
     "type": "triathlon",
     "distance": "Full · 3.8 / 180 / 42.2 km",
     "time": "9:01:19",
-    "swim": "[0:00]",
-    "bike": "[0:00]",
-    "run": "[0:00]",
-    "place": "4th · M40-44"
+    "place": "4th · M40-44",
+    "details": "3.8/180/42.2 km"
   },
   {
     "date": "2024-06-02",
@@ -18,10 +16,8 @@
     "type": "triathlon",
     "distance": "Full · 3.8 / 180 / 42.2 km",
     "time": "9:08:50",
-    "swim": "[0:00]",
-    "bike": "[0:00]",
-    "run": "[0:00]",
-    "place": "20th · M40-44"
+    "place": "20th · M40-44",
+    "details": "3.8/180/42.2 km"
   },
   {
     "date": "2023-09-10",
@@ -30,10 +26,8 @@
     "type": "triathlon",
     "distance": "Full · 3.8 / 180 / 42.2 km",
     "time": "10:29:43",
-    "swim": "[0:00]",
-    "bike": "[0:00]",
-    "run": "[0:00]",
-    "place": "28th · M40-44"
+    "place": "28th · M40-44",
+    "details": "3.8/180/42.2 km"
   },
   {
     "date": "2023-07-16",
@@ -42,10 +36,8 @@
     "type": "triathlon",
     "distance": "Full · 3.8 / 180 / 42.2 km",
     "time": "9:56:53",
-    "swim": "[0:00]",
-    "bike": "[0:00]",
-    "run": "[0:00]",
-    "place": "43rd · M40-44"
+    "place": "43rd · M40-44",
+    "details": "3.8/180/42.2 km"
   },
   {
     "date": "2022-10-15",
@@ -54,10 +46,8 @@
     "type": "triathlon",
     "distance": "Full · 3.8 / 180 / 42.2 km",
     "time": "10:02:09",
-    "swim": "[0:00]",
-    "bike": "[0:00]",
-    "run": "[0:00]",
-    "place": "22nd · M40-44"
+    "place": "22nd · M40-44",
+    "details": "3.8/180/42.2 km"
   },
   {
     "date": "2021-08-25",

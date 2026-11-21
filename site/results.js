@@ -1,6 +1,7 @@
 // Results table with discipline filters. Data: data/results.json
 // Each entry: date, race, optional location, type (triathlon | trail | road | cycling), distance, time, place,
-// plus per type: swim/bike/run (triathlon), elevation (trail), pace (road), speed (cycling).
+// plus per type: swim/bike/run (triathlon), elevation (trail), pace (road), speed (cycling),
+// or a free-text "details" that replaces them.
 // Newest first: dates sort as text, so write them as YYYY-MM-DD (or YYYY).
 
 (function () {
@@ -15,7 +16,8 @@
   const LABEL = { triathlon: "Triathlon", trail: "Trail run", road: "Road run", cycling: "Cycling" };
   const DETAIL_HEAD = { all: "Details", triathlon: "Swim · Bike · Run", trail: "D+", road: "Pace", cycling: "Avg speed" };
   const detail = (r) =>
-    r.type === "triathlon" ? [r.swim, r.bike, r.run].filter(Boolean).join(" · ")
+    r.details ? r.details
+    : r.type === "triathlon" ? [r.swim, r.bike, r.run].filter(Boolean).join(" · ")
     : r.type === "trail" ? r.elevation || ""
     : r.type === "road" ? r.pace || ""
     : r.type === "cycling" ? r.speed || "" : "";
