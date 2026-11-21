@@ -88,6 +88,17 @@
   td { padding:18px 16px; border-bottom:1px solid var(--line-dark); font-variant-numeric:tabular-nums; }
   th:first-child, td:first-child { padding-left:0; } th:last-child, td:last-child { padding-right:0; }
 
+  .results { margin-top:56px; display:flex; flex-direction:column; gap:24px; }
+  .filters { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+  .chip { font:500 14px var(--sans); min-height:40px; padding:0 16px; border-radius:999px; border:1px solid var(--line-dark); background:transparent; color:var(--ink-dark); cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:background .2s, color .2s, border-color .2s; }
+  .chip:hover { border-color:var(--ink-dark); }
+  .chip[aria-pressed="true"] { background:var(--ink-dark); color:var(--paper); border-color:var(--ink-dark); }
+  .chip span { font:500 11px var(--mono); opacity:.7; }
+  .chip:focus-visible { outline:2px solid var(--accent-on-paper); outline-offset:2px; }
+  .results tbody tr { animation:rowin .45s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes rowin { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+  @media (prefers-reduced-motion: reduce) { .results tbody tr { animation:none; } }
+
   /* season */
   .race-card { margin-top:56px; display:grid; grid-template-columns:1.2fr 1fr; border:1px solid var(--line); background:var(--bg2); }
   .race-card .info { padding:clamp(28px, 4vw, 56px); display:flex; flex-direction:column; gap:16px; }
@@ -239,15 +250,21 @@
   <div class="wrap">
     <p class="mono eyebrow" data-reveal>02 · Results</p>
     <h2 class="display big" data-reveal>Results</h2>
-    <div style="overflow-x:auto; margin-top:56px" data-reveal>
-      <table>
-        <thead><tr><th scope="col">Date</th><th scope="col">Race</th><th scope="col">Distance</th><th scope="col">Swim</th><th scope="col">Bike</th><th scope="col">Run</th><th scope="col">Total</th><th scope="col">Age group</th></tr></thead>
-        <tbody>
-          <tr><td>[DATE]</td><td><b>[Race name]</b></td><td>[Sprint / Olympic / 70.3]</td><td>[0:00]</td><td>[0:00]</td><td>[0:00]</td><td><b>[0:00:00]</b></td><td>[—/—]</td></tr>
-          <tr><td>[DATE]</td><td><b>[Race name]</b></td><td>[Sprint / Olympic / 70.3]</td><td>[0:00]</td><td>[0:00]</td><td>[0:00]</td><td><b>[0:00:00]</b></td><td>[—/—]</td></tr>
-          <tr><td>[DATE]</td><td><b>[Race name]</b></td><td>[Sprint / Olympic / 70.3]</td><td>[0:00]</td><td>[0:00]</td><td>[0:00]</td><td><b>[0:00:00]</b></td><td>[—/—]</td></tr>
-        </tbody>
-      </table>
+    <div class="results" data-results data-src="data/results.json">
+      <div class="filters" role="group" aria-label="Filter results by discipline" data-reveal>
+        <button type="button" class="chip" data-filter="all" aria-pressed="true">All <span data-n></span></button>
+        <button type="button" class="chip" data-filter="triathlon" aria-pressed="false">Triathlon <span data-n></span></button>
+        <button type="button" class="chip" data-filter="trail" aria-pressed="false">Trail run <span data-n></span></button>
+        <button type="button" class="chip" data-filter="road" aria-pressed="false">Road run <span data-n></span></button>
+        <button type="button" class="chip" data-filter="cycling" aria-pressed="false">Cycling <span data-n></span></button>
+        <span class="mono muted" data-results-status aria-live="polite" style="margin-left:auto"></span>
+      </div>
+      <div style="overflow-x:auto" data-reveal>
+        <table>
+          <thead><tr><th scope="col">Date</th><th scope="col">Race</th><th scope="col">Discipline</th><th scope="col">Distance</th><th scope="col">Time</th><th scope="col" data-detail-head>Details</th><th scope="col">Place</th></tr></thead>
+          <tbody><tr><td colspan="7" class="muted">Loading results…</td></tr></tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
@@ -345,5 +362,6 @@
 
 <script src="site/stats-loader.js" defer data-src="data/stats.json"></script>
 <script src="site/motion.js" defer></script>
+<script src="site/results.js" defer></script>
 </body>
 </html>

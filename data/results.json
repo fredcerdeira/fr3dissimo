@@ -1,0 +1,60 @@
+[
+  {
+    "date": "2024",
+    "race": "IRONMAN Calella-Barcelona",
+    "type": "triathlon",
+    "distance": "Full · 3.8 / 180 / 42.2 km",
+    "time": "[0:00:00]",
+    "swim": "[0:00]",
+    "bike": "[0:00]",
+    "run": "[0:00]",
+    "place": "[—/—]"
+  },
+  {
+    "date": "[YYYY-MM-DD]",
+    "race": "[Triathlon race]",
+    "type": "triathlon",
+    "distance": "[Sprint / Olympic / 70.3]",
+    "time": "[0:00:00]",
+    "swim": "[0:00]",
+    "bike": "[0:00]",
+    "run": "[0:00]",
+    "place": "[—/—]"
+  },
+  {
+    "date": "[YYYY]",
+    "race": "TDS · UTMB Mont-Blanc",
+    "type": "trail",
+    "distance": "[0] km",
+    "time": "[0:00:00]",
+    "elevation": "[0] m",
+    "place": "[—/—]"
+  },
+  {
+    "date": "[YYYY-MM-DD]",
+    "race": "[Trail race]",
+    "type": "trail",
+    "distance": "[0] km",
+    "time": "[0:00:00]",
+    "elevation": "[0] m",
+    "place": "[—/—]"
+  },
+  {
+    "date": "[YYYY-MM-DD]",
+    "race": "[Road race]",
+    "type": "road",
+    "distance": "[10 km / Half / Marathon]",
+    "time": "[0:00:00]",
+    "pace": "[0:00] /km",
+    "place": "[—/—]"
+  },
+  {
+    "date": "[YYYY]",
+    "race": "Campeonato Nacional de Gravel · Coruche",
+    "type": "cycling",
+    "distance": "[0] km",
+    "time": "[0:00:00]",
+    "speed": "[0.0] km/h",
+    "place": "[—/—]"
+  }
+]
