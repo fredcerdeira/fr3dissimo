@@ -86,9 +86,28 @@ async function fetchActivities(token, startDate, endDate, extra = {}) {
 const HISTORY_FROM = Number(process.env.TRAIL_HISTORY_FROM || 2010);
 async function fetchTrailHistory(token, toYear) {
   const all = [];
+  let useTypeFilter = true;
   for (let y = HISTORY_FROM; y <= toYear; y++) {
-    const items = await fetchActivities(token, `${y}-01-01`, `${y}-12-31`, { activityType: "trail_running" });
-    all.push(...items.filter((a) => (a.activityType?.typeKey || "").toLowerCase().includes("trail")));
+    let items = null;
+    if (useTypeFilter) {
+      try {
+        items = await fetchActivities(token, `${y}-01-01`, `${y}-12-31`, { activityType: "trail_running" });
+      } catch (e) {
+        console.warn(`Type filter refused (${e.message.slice(0, 120)}); continuing without it.`);
+        useTypeFilter = false;
+      }
+    }
+    if (items === null) {
+      try {
+        items = await fetchActivities(token, `${y}-01-01`, `${y}-12-31`);
+      } catch (e) {
+        console.warn(`Skipping ${y}: ${e.message.slice(0, 160)}`);
+        continue;
+      }
+    }
+    const trail = items.filter((a) => (a.activityType?.typeKey || "").toLowerCase().includes("trail"));
+    console.log(`${y}: ${trail.length} trail runs`);
+    all.push(...trail);
   }
   return all;
 }
@@ -249,7 +268,12 @@ async function main() {
     const token = await getToken(apiKey);
     activities = await fetchActivities(token, startDate, today);
     console.log(`Fetched ${activities.length} activities since ${startDate}.`);
-    trailHistory = await fetchTrailHistory(token, Number(today.slice(0, 4)));
+    try {
+      trailHistory = await fetchTrailHistory(token, Number(today.slice(0, 4)));
+    } catch (e) {
+      console.warn(`Trail history failed: ${e.message}`);
+      trailHistory = activities;
+    }
     console.log(`Fetched ${trailHistory.length} trail runs since ${HISTORY_FROM}.`);
   }
 
