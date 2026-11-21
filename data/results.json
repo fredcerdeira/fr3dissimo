@@ -157,5 +157,15 @@
     "time": "12:17:30",
     "elevation": "5,000 m D+",
     "place": "5th overall"
+  },
+  {
+    "date": "2020-02-02",
+    "race": "Peninha Sky Race",
+    "location": "Sintra, Portugal",
+    "type": "trail",
+    "distance": "28.1 km",
+    "time": "2:46:05",
+    "elevation": "1,860 m D+",
+    "place": "7th overall"
   }
 ]
