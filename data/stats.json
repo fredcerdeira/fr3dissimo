@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T00:47:00.117Z",
+  "updatedAt": "2026-11-21T02:07:03.890Z",
   "year": 2026,
   "ytd": {
     "swim": {
@@ -167,5 +167,13 @@
       "km": 10,
       "hours": 0.91
     }
-  ]
+  ],
+  "trailAllTime": {
+    "count": 661,
+    "km": 12155.5,
+    "hours": 1411.4,
+    "elevationM": 529359,
+    "longestKm": 177.7,
+    "since": 2015
+  }
 }
