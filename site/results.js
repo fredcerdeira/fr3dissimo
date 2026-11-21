@@ -41,11 +41,11 @@
     return wrap;
   };
 
-  // "4th · M40-44" → "4th" + smaller age group
+  // "4th · M40-44" / "29th overall" → place + smaller qualifier line
   const placeField = (place) => {
     const f = field("f-place", "Place", "");
     const dd = f.querySelector("dd");
-    const m = /^(.*?)\s*·\s*(.+)$/.exec(place);
+    const m = /^(.*?)\s*·\s*(.+)$/.exec(place) || /^(\S+)\s+(overall)$/i.exec(place);
     if (m) dd.append(m[1], " ", el("span", "ag", m[2]));
     else dd.textContent = place;
     return f;
