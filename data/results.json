@@ -94,7 +94,7 @@
     "type": "road",
     "distance": "Marathon",
     "time": "2:38:54",
-    "pace": "3'45/km pace",
+    "pace": "3'45 pace",
     "place": "496th overall"
   },
   {
@@ -114,7 +114,7 @@
     "type": "road",
     "distance": "Half-Marathon",
     "time": "1:14:37",
-    "pace": "3'32/km pace",
+    "pace": "3'32 pace",
     "place": "50th overall"
   },
   {
@@ -230,6 +230,6 @@
     "distance": "10 km",
     "time": "0:33:59",
     "place": "5th · M40-44",
-    "pace": "3'24/km pace"
+    "pace": "3'24 pace"
   }
 ]
