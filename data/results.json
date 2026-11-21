@@ -1,25 +1,63 @@
 [
   {
-    "date": "2024",
+    "date": "2024-10-06",
     "race": "IRONMAN Calella-Barcelona",
+    "location": "Spain",
     "type": "triathlon",
     "distance": "Full · 3.8 / 180 / 42.2 km",
-    "time": "[0:00:00]",
+    "time": "9:01:19",
     "swim": "[0:00]",
     "bike": "[0:00]",
     "run": "[0:00]",
-    "place": "[—/—]"
+    "place": "[—] · M40-44"
   },
   {
-    "date": "[YYYY-MM-DD]",
-    "race": "[Triathlon race]",
+    "date": "2024-06-02",
+    "race": "IRONMAN Hamburg",
+    "location": "Germany",
     "type": "triathlon",
-    "distance": "[Sprint / Olympic / 70.3]",
-    "time": "[0:00:00]",
+    "distance": "Full · 3.8 / 180 / 42.2 km",
+    "time": "9:08:50",
     "swim": "[0:00]",
     "bike": "[0:00]",
     "run": "[0:00]",
-    "place": "[—/—]"
+    "place": "[—] · M40-44"
+  },
+  {
+    "date": "2023-09-10",
+    "race": "IRONMAN World Championship - Men",
+    "location": "Nice, France",
+    "type": "triathlon",
+    "distance": "Full · 3.8 / 180 / 42.2 km",
+    "time": "10:29:43",
+    "swim": "[0:00]",
+    "bike": "[0:00]",
+    "run": "[0:00]",
+    "place": "[—] · M40-44"
+  },
+  {
+    "date": "2023-07-16",
+    "race": "IRONMAN Vitoria-Gasteiz",
+    "location": "Spain",
+    "type": "triathlon",
+    "distance": "Full · 3.8 / 180 / 42.2 km",
+    "time": "9:56:53",
+    "swim": "[0:00]",
+    "bike": "[0:00]",
+    "run": "[0:00]",
+    "place": "[—] · M40-44"
+  },
+  {
+    "date": "2022-10-15",
+    "race": "IRONMAN Portugal-Cascais",
+    "location": "Portugal",
+    "type": "triathlon",
+    "distance": "Full · 3.8 / 180 / 42.2 km",
+    "time": "10:02:09",
+    "swim": "[0:00]",
+    "bike": "[0:00]",
+    "run": "[0:00]",
+    "place": "[—] · M40-44"
   },
   {
     "date": "2021-08-25",

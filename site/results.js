@@ -20,9 +20,11 @@
     : r.type === "road" ? r.pace || ""
     : r.type === "cycling" ? r.speed || "" : "";
 
-  const fmtDate = (d) => /^\d{4}-\d{2}-\d{2}$/.test(d)
-    ? new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })
-    : d || "";
+  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const fmtDate = (d) => {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d || "");
+    return m ? `${Number(m[3])} ${MON[Number(m[2]) - 1]} ${m[1]}` : d || "";
+  };
   const raceCell = (r) => {
     const td = document.createElement("td");
     const b = document.createElement("b"); b.textContent = r.race || ""; td.appendChild(b);
