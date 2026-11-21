@@ -73,6 +73,9 @@
 
   fetch(SRC, { cache: "no-cache" })
     .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
-    .then(fill)
+    .then((stats) => {
+      fill(stats);
+      document.dispatchEvent(new CustomEvent("stats:filled", { detail: stats }));
+    })
     .catch((e) => console.warn("stats-loader: could not load", SRC, e));
 })();

@@ -4,134 +4,239 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>[YOUR NAME] — Triathlete</title>
-<meta name="description" content="Age-group triathlete since 2019. Story, results, 2027 season and live training numbers.">
+<meta name="description" content="Age-group triathlete since 2019. Story, results, 2027 season and live training numbers from Garmin.">
+<meta name="theme-color" content="#0b0b0c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-  :root { --bg:#F3F1EB; --bg2:#E8E5DD; --ink:#141414; --muted:#3F3F3A; --muted2:#4A4A45; --line:#C9C5BB; --accent:#B83A0E; --accent-dark:#F0956C; }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 Inter, system-ui, sans-serif; }
-  a { color:var(--accent); } a:hover { color:#8A2A08; }
-  .wrap { max-width:1240px; margin:0 auto; padding-left:32px; padding-right:32px; }
-  .display { font-family:"Barlow Condensed", "Arial Narrow", sans-serif; font-weight:800; text-transform:uppercase; }
-  .kicker { margin:0; font-size:14px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
-  .num-label { font-size:14px; color:#C9C5BB; text-transform:uppercase; letter-spacing:.1em; }
-  .section { padding-top:96px; padding-bottom:96px; }
-  .alt { background:var(--bg2); }
-  .sec-head { display:flex; flex-direction:column; gap:8px; }
-  .sec-head span { font:700 18px "Barlow Condensed", sans-serif; color:var(--accent); }
-  .sec-head h2 { margin:0; font-size:56px; line-height:.95; }
-  .split { display:grid; grid-template-columns:1fr 2fr; gap:48px; }
-  .placeholder { background:#DEDAD0; border:2px dashed #A9A49A; display:flex; align-items:center; justify-content:center; color:#55554F; font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; text-align:center; padding:16px; }
-  .btn { display:inline-flex; align-items:center; min-height:48px; padding:0 24px; font-weight:600; font-size:15px; text-decoration:none; }
-  .btn-solid { background:var(--ink); color:var(--bg); } .btn-solid:hover { color:var(--bg); background:#333; }
-  .btn-line { border:2px solid var(--ink); color:var(--ink); } .btn-line:hover { color:var(--ink); background:#fff; }
+  :root {
+    --bg:#0b0b0c; --bg2:#131315; --bg3:#1b1b1e; --line:rgba(242,241,236,.14);
+    --ink:#f2f1ec; --muted:#a3a29c;
+    --paper:#f2f1ec; --ink-dark:#111112; --muted-dark:#5d5c57; --line-dark:rgba(17,17,18,.15);
+    --accent:#ff6b2c; --accent-ink:#111112; --accent-on-paper:#b8400c;
+    --display:"Anton", Impact, "Arial Narrow", sans-serif;
+    --sans:Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+    --gutter:clamp(20px, 4vw, 56px);
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:72px; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:400 17px/1.6 var(--sans); -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; display:block; }
+  a { color:inherit; }
+  .wrap { max-width:1240px; margin:0 auto; padding-left:var(--gutter); padding-right:var(--gutter); }
+  .display { font-family:var(--display); font-weight:400; text-transform:uppercase; line-height:.9; letter-spacing:.005em; margin:0; }
+  .mono { font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; }
+  .eyebrow { display:flex; align-items:center; gap:12px; color:var(--accent); margin:0 0 24px; }
+  .eyebrow::before { content:""; width:28px; height:1px; background:currentColor; }
+  .paper .eyebrow { color:var(--accent-on-paper); }
+  .section { padding-top:clamp(80px, 12vw, 160px); padding-bottom:clamp(80px, 12vw, 160px); }
+  .pill { display:inline-flex; align-items:center; gap:8px; min-height:46px; padding:0 22px; border-radius:999px; font-weight:600; font-size:15px; text-decoration:none; transition:transform .2s, background .2s, color .2s; }
+  .pill:hover { transform:translateY(-2px); }
+  .pill-solid { background:var(--accent); color:var(--accent-ink); }
+  .pill-line { border:1px solid var(--line); color:var(--ink); background:rgba(11,11,12,.35); backdrop-filter:blur(6px); }
+  .pill-line:hover { border-color:var(--ink); }
 
-  header nav a { color:var(--ink); text-decoration:none; padding:10px 0; }
-  header nav a:hover { color:var(--accent); }
+  /* nav */
+  .nav { position:fixed; inset:0 0 auto 0; z-index:50; transition:background .3s, border-color .3s; border-bottom:1px solid transparent; }
+  .nav.scrolled { background:rgba(11,11,12,.78); backdrop-filter:blur(12px); border-color:var(--line); }
+  .nav .wrap { height:64px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+  .nav .brand { font-family:var(--display); font-size:22px; text-transform:uppercase; text-decoration:none; letter-spacing:.02em; }
+  .nav nav { display:flex; gap:24px; font-size:14px; }
+  .nav nav a { text-decoration:none; color:var(--muted); padding:10px 0; transition:color .2s; }
+  .nav nav a:hover { color:var(--ink); }
 
-  .timeline { margin:0; padding:0; list-style:none; border-top:1px solid var(--line); }
-  .timeline li { display:grid; grid-template-columns:96px 1fr; gap:24px; padding:20px 0; border-bottom:1px solid var(--line); }
-  .timeline b { font:700 24px "Barlow Condensed", sans-serif; }
+  /* hero */
+  .hero { position:relative; min-height:100svh; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; isolation:isolate; }
+  .hero-bg { position:absolute; inset:-8% 0 0 0; z-index:-2; }
+  .hero-bg img { width:100%; height:100%; object-fit:cover; object-position:68% 40%; filter:grayscale(1) contrast(1.1) brightness(.85); will-change:transform; }
+  .hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg, rgba(11,11,12,.92) 0%, rgba(11,11,12,.55) 45%, rgba(11,11,12,.1) 75%), linear-gradient(0deg, rgba(11,11,12,1) 0%, rgba(11,11,12,.6) 30%, rgba(11,11,12,0) 60%); }
+  .hero-content { width:100%; padding-top:112px; padding-bottom:48px; display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:28px 56px; align-items:end; }
+  .hero-content .eyebrow { grid-column:1 / -1; margin:0; }
+  .hero-side { display:flex; flex-direction:column; gap:24px; padding-bottom:12px; }
+  .hero h1 { font-size:clamp(52px, 7.6vw, 124px); }
+  .hero h1 .line { display:block; overflow:hidden; padding-bottom:.02em; white-space:nowrap; }
+  .hero h1 .line > span { display:block; }
+  .hero h1 .accent { color:var(--accent); }
+  .hero p.lede { margin:0; max-width:32rem; color:#e4e3dd; font-size:18px; text-shadow:0 1px 12px rgba(0,0,0,.6); }
+  .hero .ctas { display:flex; flex-wrap:wrap; gap:12px; }
+  .stats { border-top:1px solid var(--line); background:rgba(11,11,12,.5); backdrop-filter:blur(6px); }
+  .stats .wrap { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); }
+  .stat { padding:20px 20px 22px; border-left:1px solid var(--line); display:flex; flex-direction:column; gap:6px; }
+  .stat:first-child { border-left:0; padding-left:0; }
+  .stat .mono { color:var(--muted); font-size:11px; }
+  .stat b { font:600 28px/1 var(--sans); font-variant-numeric:tabular-nums; }
+  .stat small { font:400 11px var(--mono); color:var(--muted); letter-spacing:.08em; text-transform:uppercase; margin-left:6px; }
 
+  /* story */
+  .story-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:clamp(32px, 6vw, 96px); align-items:end; }
+  .big { font-size:clamp(56px, 8vw, 128px); }
+  .story-photo { overflow:hidden; aspect-ratio:4/5; }
+  .story-photo img { width:100%; height:118%; object-fit:cover; object-position:50% 30%; filter:grayscale(1) contrast(1.05); will-change:transform; }
+  .timeline { margin:72px 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); border-top:1px solid var(--line); }
+  .timeline li { padding:28px 28px 0 0; transition:opacity .3s; }
+  .timeline li + li { padding-left:28px; border-left:1px solid var(--line); }
+  .timeline h3 { font:600 26px/1.15 var(--sans); margin:12px 0 10px; letter-spacing:-.01em; }
+  .timeline p { margin:0; color:var(--muted); font-size:15px; }
+
+  /* results (paper) */
+  .paper { background:var(--paper); color:var(--ink-dark); }
+  .paper .muted { color:var(--muted-dark); }
   table { width:100%; min-width:760px; border-collapse:collapse; font-size:16px; }
-  th { text-align:left; font-size:13px; text-transform:uppercase; letter-spacing:.1em; color:var(--muted2); padding:12px 16px; border-bottom:2px solid var(--ink); }
-  td { padding:16px; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums; }
+  th { text-align:left; font:500 11px var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--muted-dark); padding:12px 16px; border-bottom:1px solid var(--ink-dark); }
+  td { padding:18px 16px; border-bottom:1px solid var(--line-dark); font-variant-numeric:tabular-nums; }
   th:first-child, td:first-child { padding-left:0; } th:last-child, td:last-child { padding-right:0; }
 
-  .card { background:var(--bg); padding:32px; display:flex; flex-direction:column; gap:12px; }
-  .card h3 { margin:0; font:700 28px "Barlow Condensed", sans-serif; text-transform:uppercase; }
-  .card p { margin:0; color:var(--muted); }
-  .recent { margin:0; padding:0; list-style:none; }
-  .recent li { padding:8px 0; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums; }
-  .weekly { color:var(--accent); }
+  /* season */
+  .race-card { margin-top:56px; display:grid; grid-template-columns:1.2fr 1fr; border:1px solid var(--line); background:var(--bg2); }
+  .race-card .info { padding:clamp(28px, 4vw, 56px); display:flex; flex-direction:column; gap:16px; }
+  .race-card h3 { font-size:clamp(44px, 5.5vw, 80px); }
+  .race-card .splits { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); border-left:1px solid var(--line); }
+  .race-card .splits div { padding:clamp(20px, 3vw, 40px); border-left:1px solid var(--line); display:flex; flex-direction:column; justify-content:flex-end; gap:8px; }
+  .race-card .splits div:first-child { border-left:0; }
+  .race-card .splits b { font:400 44px/1 var(--display); }
+  .buildup { margin:24px 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px; }
+  .buildup li { border:1px solid var(--line); padding:24px; display:flex; flex-direction:column; gap:6px; }
+  .buildup b { font:400 28px/1 var(--display); text-transform:uppercase; }
 
-  .gallery { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); grid-auto-rows:220px; grid-auto-flow:dense; gap:16px; }
-  .gallery figure { margin:0; position:relative; overflow:hidden; background:#DEDAD0; }
-  .gallery img { width:100%; height:100%; object-fit:cover; display:block; }
-  .gallery figcaption { position:absolute; left:0; bottom:0; padding:6px 10px; background:rgba(20,20,20,.75); color:#F3F1EB; font-size:12px; }
+  /* training */
+  .train-grid { margin-top:56px; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); }
+  .tile { background:var(--bg); padding:clamp(24px, 3vw, 40px); display:flex; flex-direction:column; gap:12px; min-height:220px; }
+  .tile .num { font:400 clamp(56px, 6vw, 88px)/1 var(--display); }
+  .tile .mono { color:var(--muted); }
+  .tile p { margin:0; color:var(--muted); }
+  .tile.wide { grid-column:span 2; }
+  .weekly { color:var(--accent); flex:1; min-height:120px; }
+  .recent { margin:0; padding:0; list-style:none; font:400 14px/1.5 var(--mono); }
+  .recent li { padding:10px 0; border-bottom:1px solid var(--line); }
+
+  /* gallery */
+  .gallery { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); grid-auto-rows:240px; grid-auto-flow:dense; gap:8px; }
+  .gallery figure { margin:0; position:relative; overflow:hidden; background:var(--bg3); }
+  .gallery img { width:100%; height:100%; object-fit:cover; filter:grayscale(1) contrast(1.05); transform:scale(1.04); transition:filter .5s, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .gallery figure:hover img { filter:none; transform:scale(1); }
+  .gallery figcaption { position:absolute; left:0; bottom:0; padding:8px 12px; font:400 11px var(--mono); letter-spacing:.08em; text-transform:uppercase; background:rgba(11,11,12,.7); }
   .g-wide { grid-column:span 2; grid-row:span 2; }
   .g-tall { grid-row:span 2; }
 
-  @media (max-width: 860px) {
+  /* footer */
+  footer h2 { font-size:clamp(64px, 12vw, 200px); }
+  .links { display:flex; flex-wrap:wrap; gap:12px; margin-top:40px; }
+
+  /* km rail */
+  .rail { position:fixed; right:18px; top:50%; transform:translateY(-50%); z-index:40; display:flex; flex-direction:column; align-items:flex-end; gap:10px; pointer-events:none; }
+  .rail .track { width:2px; height:38vh; background:var(--line); position:relative; margin-right:6px; }
+  .rail .fill { position:absolute; inset:0 0 auto 0; height:0; background:var(--accent); }
+  .rail .tick { position:absolute; right:-5px; width:12px; height:1px; background:var(--muted); }
+  .rail .label { font:500 11px var(--mono); letter-spacing:.08em; padding:4px 8px; background:var(--bg); border:1px solid var(--line); white-space:nowrap; font-variant-numeric:tabular-nums; }
+  .rail .label em { font-style:normal; color:var(--accent); margin-left:6px; }
+
+  /* reveal */
+  .js [data-reveal] { opacity:0; transform:translateY(28px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); transition-delay:var(--d, 0s); }
+  .js [data-reveal].in { opacity:1; transform:none; }
+  .js .hero h1 .line > span { transform:translateY(105%); transition:transform 1.1s cubic-bezier(.2,.8,.2,1); transition-delay:calc(var(--i) * 90ms + 150ms); }
+  .js .hero.ready h1 .line > span { transform:none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior:auto; }
+    .js [data-reveal], .js .hero h1 .line > span { opacity:1 !important; transform:none !important; transition:none !important; }
+    .hero-bg img, .story-photo img { transform:none !important; }
+  }
+  @media (max-width: 960px) {
+    .nav nav { display:none; }
+    .hero-content { grid-template-columns:1fr; }
+    .stats .wrap { grid-template-columns:repeat(2, minmax(0,1fr)); }
+    .stat, .stat:first-child { border-left:0; padding-left:0; border-top:1px solid var(--line); }
+    .stat:nth-child(even) { padding-left:20px; border-left:1px solid var(--line); }
+    .story-grid, .race-card { grid-template-columns:1fr; }
+    .race-card .splits { border-left:0; border-top:1px solid var(--line); }
+    .timeline, .buildup, .train-grid { grid-template-columns:1fr; }
+    .timeline li + li { padding-left:0; border-left:0; border-top:1px solid var(--line); padding-top:24px; margin-top:24px; }
+    .tile.wide { grid-column:auto; }
     .gallery { grid-template-columns:repeat(2, minmax(0, 1fr)); grid-auto-rows:180px; }
-    .split { grid-template-columns:1fr; }
-    .wrap { padding-left:20px; padding-right:20px; }
-    .section { padding-top:64px; padding-bottom:64px; }
-    .sec-head h2 { font-size:44px; }
+    .rail { display:none; }
   }
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add('js')</script>
 
-<header class="wrap" style="padding-top:24px; padding-bottom:24px; display:flex; flex-wrap:wrap; gap:16px 32px; align-items:center; justify-content:space-between">
-  <a href="#top" class="display" style="font-size:26px; letter-spacing:.02em; color:var(--ink); text-decoration:none">[YOUR NAME]</a>
-  <nav aria-label="Sections" style="display:flex; flex-wrap:wrap; gap:4px 24px; font-size:15px; font-weight:500">
-    <a href="#story">Story</a>
-    <a href="#results">Results</a>
-    <a href="#season">2027 Season</a>
-    <a href="#training">Training</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">[YOUR NAME]</a>
+    <nav aria-label="Sections">
+      <a href="#story">Story</a>
+      <a href="#results">Results</a>
+      <a href="#season">2027 season</a>
+      <a href="#training">Training</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="pill pill-solid" style="min-height:38px; padding:0 18px; font-size:14px">Contact</a>
+  </div>
 </header>
 
+<aside class="rail" aria-hidden="true">
+  <div class="track"><div class="fill"></div><span class="tick" style="top:1.7%"></span><span class="tick" style="top:81.3%"></span></div>
+  <div class="label">KM <span data-km>0.0</span><em data-leg>SWIM</em></div>
+</aside>
+
 <main>
-<section id="top" class="wrap" style="padding-top:32px; padding-bottom:64px; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap:48px; align-items:end">
-  <div style="display:flex; flex-direction:column; gap:24px; container-type:inline-size">
-    <p class="kicker">Triathlete · Lisbon, Portugal · since 2019</p>
-    <h1 class="display" style="margin:0; font-size:clamp(44px, 17cqi, 124px); line-height:.88; letter-spacing:-.01em">Swim.<br>Bike.<br>[Trail]Run.<br>Rest.<br>Repeat.</h1>
-    <p style="margin:0; max-width:34rem; font-size:19px; color:var(--muted)">Age-group triathlete for seven seasons, product designer by trade. This is the journey so far, the results, and what comes next.</p>
-    <div style="display:flex; flex-wrap:wrap; gap:12px">
-      <a href="#results" class="btn btn-solid">See results</a>
-      <a href="#season" class="btn btn-line">Next race</a>
+<section id="top" class="hero">
+  <div class="hero-bg"><img src="img/bike-descent.jpg" alt="" data-parallax="0.25"></div>
+  <div class="wrap hero-content">
+    <p class="mono eyebrow">Triathlete · Lisbon · since 2019</p>
+    <h1 class="display">
+      <span class="line"><span style="--i:0">Swim.</span></span>
+      <span class="line"><span style="--i:1">Bike.</span></span>
+      <span class="line"><span style="--i:2"><span class="accent">[Trail]</span>Run.</span></span>
+      <span class="line"><span style="--i:3">Rest.</span></span>
+      <span class="line"><span style="--i:4">Repeat.</span></span>
+    </h1>
+    <div class="hero-side">
+    <p class="lede" data-reveal style="--d:.7s">Age-group triathlete for seven seasons, product designer by trade. Every race, every session — the numbers below come straight from my Garmin.</p>
+    <div class="ctas" data-reveal style="--d:.85s">
+      <a href="#results" class="pill pill-solid">See results <span aria-hidden="true">→</span></a>
+      <a href="#season" class="pill pill-line">2027 season</a>
+    </div>
     </div>
   </div>
-  <img src="img/hero-run.jpg" alt="Running in a road race in Lisbon" width="1200" height="1600" style="width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:50% 30%; display:block">
-</section>
-
-<section aria-label="By the numbers" style="background:var(--ink); color:var(--bg)">
-  <div class="wrap" style="padding-top:48px; padding-bottom:48px; display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:32px">
-    <div style="display:flex; flex-direction:column; gap:4px">
-      <span class="display" style="font-weight:700; font-size:64px; line-height:1">2019</span>
-      <span class="num-label">First season</span>
-    </div>
-    <div style="display:flex; flex-direction:column; gap:4px">
-      <span class="display" style="font-weight:700; font-size:64px; line-height:1">[N]</span>
-      <span class="num-label">Races finished</span>
-    </div>
-    <div style="display:flex; flex-direction:column; gap:4px">
-      <span class="display" style="font-weight:700; font-size:64px; line-height:1" data-stat="ytd.total.km" data-format="km">–</span>
-      <span class="num-label">Trained in <span data-stat="year">this year</span></span>
-    </div>
-    <div style="display:flex; flex-direction:column; gap:4px">
-      <span class="display" style="font-weight:700; font-size:64px; line-height:1" data-stat="ytd.total.hours" data-format="hours">–</span>
-      <span class="num-label">Hours this year</span>
+  <div class="stats">
+    <div class="wrap">
+      <div class="stat"><span class="mono">First season</span><b>2019</b></div>
+      <div class="stat"><span class="mono"><span data-stat="year">2026</span> · distance</span><b><span data-stat="ytd.total.km" data-format="int" data-count>–</span><small>km</small></b></div>
+      <div class="stat"><span class="mono"><span data-stat="year">2026</span> · hours</span><b><span data-stat="ytd.total.hours" data-format="int" data-count>–</span><small>h</small></b></div>
+      <div class="stat"><span class="mono"><span data-stat="year">2026</span> · sessions</span><b><span data-stat="ytd.total.count" data-format="int" data-count>–</span></b></div>
+      <div class="stat"><span class="mono">Next A race</span><b style="color:var(--accent)">70.3<small>Vilamoura 27</small></b></div>
     </div>
   </div>
 </section>
 
-<section id="story" class="wrap section split">
-  <div class="sec-head"><span>01</span><h2 class="display">Story</h2></div>
-  <div style="display:flex; flex-direction:column; gap:32px; max-width:46rem">
-    <p style="margin:0; font-size:21px; line-height:1.5">[How and why you started triathlon in 2019 — two or three sentences, first person.]</p>
+<section id="story" class="section">
+  <div class="wrap">
+    <div class="story-grid">
+      <div>
+        <p class="mono eyebrow" data-reveal>01 · Story</p>
+        <h2 class="display big" data-reveal>Since<br>2019.</h2>
+        <p class="muted" data-reveal style="--d:.1s; color:var(--muted); font-size:20px; max-width:34rem; margin:32px 0 0">[How and why you started triathlon in 2019 — two or three sentences, first person.]</p>
+      </div>
+      <div class="story-photo" data-reveal style="--d:.15s"><img src="img/hero-run.jpg" alt="Running in a road race in Lisbon" data-parallax="-0.12" loading="lazy"></div>
+    </div>
     <ol class="timeline">
-      <li><b>2019</b><span>First triathlon season. [First race]</span></li>
-      <li><b>[YEAR]</b><span>[First half-distance / key milestone]</span></li>
-      <li><b>2027</b><span>IRONMAN 70.3 Vilamoura-Algarve.</span></li>
+      <li data-scrub><span class="mono" style="color:var(--muted)">2019 · Year 1</span><h3>First triathlon season.</h3><p>[First race and how it went.]</p></li>
+      <li data-scrub><span class="mono" style="color:var(--muted)">[Year]</span><h3>[Key milestone.]</h3><p>[First half-distance, first full, a PB…]</p></li>
+      <li data-scrub><span class="mono" style="color:var(--muted)">2027 · Next</span><h3>IRONMAN 70.3 Vilamoura-Algarve.</h3><p>The A race of the season.</p></li>
     </ol>
   </div>
 </section>
 
-<section id="results" class="alt">
-  <div class="wrap section" style="display:flex; flex-direction:column; gap:40px">
-    <div class="sec-head"><span>02</span><h2 class="display">Results</h2></div>
-    <div style="overflow-x:auto">
+<section id="results" class="section paper">
+  <div class="wrap">
+    <p class="mono eyebrow" data-reveal>02 · Results</p>
+    <h2 class="display big" data-reveal>Results</h2>
+    <div style="overflow-x:auto; margin-top:56px" data-reveal>
       <table>
-        <thead>
-          <tr><th scope="col">Date</th><th scope="col">Race</th><th scope="col">Distance</th><th scope="col">Swim</th><th scope="col">Bike</th><th scope="col">Run</th><th scope="col">Total</th><th scope="col">Age group</th></tr>
-        </thead>
+        <thead><tr><th scope="col">Date</th><th scope="col">Race</th><th scope="col">Distance</th><th scope="col">Swim</th><th scope="col">Bike</th><th scope="col">Run</th><th scope="col">Total</th><th scope="col">Age group</th></tr></thead>
         <tbody>
           <tr><td>[DATE]</td><td><b>[Race name]</b></td><td>[Sprint / Olympic / 70.3]</td><td>[0:00]</td><td>[0:00]</td><td>[0:00]</td><td><b>[0:00:00]</b></td><td>[—/—]</td></tr>
           <tr><td>[DATE]</td><td><b>[Race name]</b></td><td>[Sprint / Olympic / 70.3]</td><td>[0:00]</td><td>[0:00]</td><td>[0:00]</td><td><b>[0:00:00]</b></td><td>[—/—]</td></tr>
@@ -142,76 +247,72 @@
   </div>
 </section>
 
-<section id="season" class="wrap section" style="display:flex; flex-direction:column; gap:40px">
-  <div class="sec-head"><span>03</span><h2 class="display">2027 Season</h2></div>
-  <article style="background:var(--ink); color:var(--bg); padding:clamp(24px, 4vw, 48px); display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap:40px">
-    <div style="display:flex; flex-direction:column; gap:12px">
-      <span style="font-size:13px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-dark)">A race</span>
-      <h3 class="display" style="margin:0; font-size:48px; line-height:.95">IRONMAN 70.3 Vilamoura-Algarve</h3>
-      <p style="margin:0; color:#C9C5BB">[DATE] · 1.9 km swim · 90 km bike · 21.1 km run</p>
-    </div>
-    <div style="display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:24px; align-content:end">
-      <div style="border-top:2px solid var(--bg); padding-top:12px"><span class="num-label" style="display:block">Swim</span><span class="display" style="font-weight:700; font-size:36px">[0:00]</span></div>
-      <div style="border-top:2px solid var(--bg); padding-top:12px"><span class="num-label" style="display:block">Bike</span><span class="display" style="font-weight:700; font-size:36px">[0:00]</span></div>
-      <div style="border-top:2px solid var(--bg); padding-top:12px"><span class="num-label" style="display:block">Run</span><span class="display" style="font-weight:700; font-size:36px">[0:00]</span></div>
-      <p style="grid-column:1 / -1; margin:0; font-size:15px; color:#C9C5BB">Target splits — [set your goal times].</p>
-    </div>
-  </article>
-  <ul style="margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap:24px">
-    <li style="padding:24px; border:1px solid var(--line); display:flex; flex-direction:column; gap:4px"><span style="font-size:13px; color:var(--muted2); text-transform:uppercase; letter-spacing:.1em">[DATE]</span><span class="display" style="font-weight:700; font-size:28px">[Build-up race]</span><span style="color:var(--muted2)">[Location] · [Distance]</span></li>
-    <li style="padding:24px; border:1px solid var(--line); display:flex; flex-direction:column; gap:4px"><span style="font-size:13px; color:var(--muted2); text-transform:uppercase; letter-spacing:.1em">[DATE]</span><span class="display" style="font-weight:700; font-size:28px">[Build-up race]</span><span style="color:var(--muted2)">[Location] · [Distance]</span></li>
-    <li style="padding:24px; border:1px solid var(--line); display:flex; flex-direction:column; gap:4px"><span style="font-size:13px; color:var(--muted2); text-transform:uppercase; letter-spacing:.1em">[DATE]</span><span class="display" style="font-weight:700; font-size:28px">[B / C race]</span><span style="color:var(--muted2)">[Location] · [Distance]</span></li>
-  </ul>
+<section id="season" class="section">
+  <div class="wrap">
+    <p class="mono eyebrow" data-reveal>03 · 2027 season</p>
+    <h2 class="display big" data-reveal>2027</h2>
+    <article class="race-card" data-reveal>
+      <div class="info">
+        <span class="mono" style="color:var(--accent)">A race · [Date]</span>
+        <h3 class="display">IRONMAN 70.3<br>Vilamoura-Algarve</h3>
+        <p style="margin:0; color:var(--muted)">1.9 km swim · 90 km bike · 21.1 km run<br>Target splits on the right.</p>
+      </div>
+      <div class="splits">
+        <div><span class="mono" style="color:var(--muted)">Swim</span><b>[0:00]</b></div>
+        <div><span class="mono" style="color:var(--muted)">Bike</span><b>[0:00]</b></div>
+        <div><span class="mono" style="color:var(--muted)">Run</span><b>[0:00]</b></div>
+      </div>
+    </article>
+    <ul class="buildup">
+      <li data-reveal><span class="mono" style="color:var(--muted)">[Date]</span><b>[Build-up race]</b><span style="color:var(--muted)">[Location] · [Distance]</span></li>
+      <li data-reveal style="--d:.08s"><span class="mono" style="color:var(--muted)">[Date]</span><b>[Build-up race]</b><span style="color:var(--muted)">[Location] · [Distance]</span></li>
+      <li data-reveal style="--d:.16s"><span class="mono" style="color:var(--muted)">[Date]</span><b>[B / C race]</b><span style="color:var(--muted)">[Location] · [Distance]</span></li>
+    </ul>
+  </div>
 </section>
 
-<section id="training" class="alt">
-  <div class="wrap section split">
-    <div class="sec-head"><span>04</span><h2 class="display">Training</h2></div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap:24px">
-      <div class="card">
-        <h3>Method</h3>
-        <p>Always coached by professionals. Right now I follow an 80/20 approach: most of the volume at low intensity, a small, well-dosed slice at high intensity.</p>
-      </div>
-      <div class="card">
-        <h3>Typical week</h3>
-        <p><span data-stat="typicalWeek.hours" data-format="hours">–</span> · swim <span data-stat="typicalWeek.swimKm" data-format="km">–</span> · bike <span data-stat="typicalWeek.bikeKm" data-format="km">–</span> · run <span data-stat="typicalWeek.runKm" data-format="km">–</span></p>
-        <p style="font-size:14px">Average of the last 8 weeks.</p>
-      </div>
-      <div class="card">
-        <h3>Last 12 weeks</h3>
-        <div class="weekly" data-stat-weekly></div>
-        <p style="font-size:14px">Hours per week.</p>
-      </div>
-      <div class="card" style="grid-column:1 / -1">
-        <h3>Latest sessions</h3>
-        <ul class="recent" data-stat-recent><li>Loading…</li></ul>
-        <p style="font-size:13px; color:var(--muted2)">Updated <span data-stat="updatedAt" data-format="date">–</span> · data from Garmin Connect</p>
-      </div>
+<section id="training" class="section" style="background:var(--bg2)">
+  <div class="wrap">
+    <p class="mono eyebrow" data-reveal>04 · Training</p>
+    <h2 class="display big" data-reveal>Every<br>session.</h2>
+    <p data-reveal style="color:var(--muted); max-width:36rem; margin:32px 0 0">Always coached by professionals. Right now I follow an 80/20 approach: most of the volume easy, a small, well-dosed slice hard. Numbers update daily from Garmin Connect.</p>
+    <div class="train-grid">
+      <div class="tile" data-reveal><span class="mono">Swim · <span data-stat="year">2026</span></span><span class="num"><span data-stat="ytd.swim.km" data-format="int" data-count>–</span></span><p>km in <span data-stat="ytd.swim.count" data-format="int">–</span> sessions</p></div>
+      <div class="tile" data-reveal style="--d:.08s"><span class="mono">Bike · <span data-stat="year">2026</span></span><span class="num"><span data-stat="ytd.bike.km" data-format="int" data-count>–</span></span><p>km in <span data-stat="ytd.bike.count" data-format="int">–</span> sessions</p></div>
+      <div class="tile" data-reveal style="--d:.16s"><span class="mono">Run · <span data-stat="year">2026</span></span><span class="num"><span data-stat="ytd.run.km" data-format="int" data-count>–</span></span><p>km in <span data-stat="ytd.run.count" data-format="int">–</span> sessions</p></div>
+      <div class="tile wide" data-reveal><span class="mono">Hours per week · last 12 weeks</span><div class="weekly" data-stat-weekly></div><p>Typical week: <span data-stat="typicalWeek.hours" data-format="hours">–</span> · swim <span data-stat="typicalWeek.swimKm" data-format="km">–</span> · bike <span data-stat="typicalWeek.bikeKm" data-format="km">–</span> · run <span data-stat="typicalWeek.runKm" data-format="km">–</span></p></div>
+      <div class="tile" data-reveal style="--d:.08s"><span class="mono">Latest sessions</span><ul class="recent" data-stat-recent><li>Loading…</li></ul><p class="mono" style="font-size:10px">Updated <span data-stat="updatedAt" data-format="date">–</span></p></div>
     </div>
   </div>
 </section>
 
-<section aria-label="Gallery" class="wrap gallery" style="padding-top:96px">
-  <figure class="g-wide"><img src="img/bike-descent.jpg" alt="Descending on the time-trial bike during a race" loading="lazy" style="object-position:70% 50%"></figure>
-  <figure class="g-tall"><img src="img/bike-aero.jpg" alt="Head-on, in the aero position on the time-trial bike" loading="lazy" style="object-position:50% 30%"></figure>
-  <figure class="g-tall"><img src="img/finish.jpg" alt="Running down the finish carpet" loading="lazy" style="object-position:50% 35%"></figure>
-  <figure class="g-tall"><img src="img/gravel-mud.jpg" alt="Gravel bike wheels throwing up mud" loading="lazy"></figure>
-  <figure class="g-wide"><img src="img/gravel-coruche.jpg" alt="Riding gravel under stone pines in Coruche" loading="lazy" style="object-position:50% 70%"><figcaption>Gravel, Coruche · photo Marco Barbosa</figcaption></figure>
-  <figure><img src="img/hydration.jpg" alt="Drinking from a bottle mid-run" loading="lazy"></figure>
-  <figure><img src="img/medal-barcelona.jpg" alt="IRONMAN Calella-Barcelona finisher medal, 2024" loading="lazy" style="object-position:70% 70%"><figcaption>IRONMAN Calella-Barcelona, 2024</figcaption></figure>
+<section aria-label="Gallery" class="section" style="padding-bottom:0">
+  <div class="wrap gallery">
+    <figure class="g-wide" data-reveal><img src="img/bike-descent.jpg" alt="Descending on the time-trial bike during a race" loading="lazy" style="object-position:70% 50%"></figure>
+    <figure class="g-tall" data-reveal style="--d:.06s"><img src="img/bike-aero.jpg" alt="Head-on, in the aero position on the time-trial bike" loading="lazy" style="object-position:50% 30%"></figure>
+    <figure class="g-tall" data-reveal style="--d:.12s"><img src="img/finish.jpg" alt="Running down the finish carpet" loading="lazy" style="object-position:50% 35%"></figure>
+    <figure class="g-tall" data-reveal><img src="img/gravel-mud.jpg" alt="Gravel bike wheels throwing up mud" loading="lazy"></figure>
+    <figure class="g-wide" data-reveal style="--d:.06s"><img src="img/gravel-coruche.jpg" alt="Riding gravel under stone pines in Coruche" loading="lazy" style="object-position:50% 92%"><figcaption>Gravel · Coruche · photo Marco Barbosa</figcaption></figure>
+    <figure data-reveal style="--d:.12s"><img src="img/hydration.jpg" alt="Drinking from a bottle mid-run" loading="lazy"></figure>
+    <figure data-reveal style="--d:.18s"><img src="img/medal-barcelona.jpg" alt="IRONMAN Calella-Barcelona finisher medal, 2024" loading="lazy" style="object-position:70% 70%"><figcaption>IRONMAN Calella-Barcelona · 2024</figcaption></figure>
+  </div>
 </section>
 </main>
 
-<footer id="contact" class="wrap" style="padding-top:96px; padding-bottom:64px; display:flex; flex-direction:column; gap:32px">
-  <div class="sec-head"><span>05</span><h2 class="display" style="font-size:clamp(48px, 7vw, 96px); line-height:.9">See you on<br>the start line.</h2></div>
-  <div style="display:flex; flex-wrap:wrap; gap:12px 32px; font-size:17px; font-weight:600">
-    <a href="mailto:[email]" style="padding:10px 0">[email]</a>
-    <a href="[instagram-url]" style="padding:10px 0">Instagram</a>
-    <a href="[strava-url]" style="padding:10px 0">Strava</a>
+<footer id="contact" class="section">
+  <div class="wrap">
+    <p class="mono eyebrow" data-reveal>05 · Contact</p>
+    <h2 class="display" data-reveal>See you on<br>the start line.</h2>
+    <div class="links" data-reveal>
+      <a class="pill pill-solid" href="mailto:[email]">[email]</a>
+      <a class="pill pill-line" href="[instagram-url]">Instagram</a>
+      <a class="pill pill-line" href="[strava-url]">Strava</a>
+    </div>
+    <p class="mono" style="margin:96px 0 0; padding-top:24px; border-top:1px solid var(--line); color:var(--muted)">© 2026 [YOUR NAME] · Training data from Garmin Connect</p>
   </div>
-  <p style="margin:0; padding-top:24px; border-top:1px solid var(--line); font-size:14px; color:var(--muted2)">© 2026 [YOUR NAME]</p>
 </footer>
 
 <script src="site/stats-loader.js" defer data-src="data/stats.json"></script>
+<script src="site/motion.js" defer></script>
 </body>
 </html>
