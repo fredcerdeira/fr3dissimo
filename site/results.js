@@ -1,20 +1,27 @@
-// Results table with discipline filters. Data: data/results.json
-// Each entry: date, race, optional location, type (triathlon | trail | road | cycling), distance, time, place,
-// plus per type: swim/bike/run (triathlon), elevation (trail), pace (road), speed (cycling),
-// or a free-text "details" that replaces them.
-// Newest first: dates sort as text, so write them as YYYY-MM-DD (or YYYY).
+// Results list with discipline filters. Data: data/results.json
+// Each entry: date, race, optional location, type (triathlon | trail | road | cycling),
+// distance, time, place, plus per type: swim/bike/run (triathlon), elevation (trail),
+// pace (road), speed (cycling), or a free-text "details" that replaces them.
+// Newest first: write dates as YYYY-MM-DD (or YYYY).
+//
+// Markup per race: <li> → <h3> race name (+ location) and a <dl> of label/value pairs.
 
 (function () {
   const root = document.querySelector("[data-results]");
   if (!root) return;
   const SRC = root.dataset.src || "data/results.json";
-  const tbody = root.querySelector("tbody");
+  const list = root.querySelector("[data-res-list]");
   const detailHead = root.querySelector("[data-detail-head]");
   const buttons = [...root.querySelectorAll("[data-filter]")];
   const status = root.querySelector("[data-results-status]");
 
   const LABEL = { triathlon: "Triathlon", trail: "Trail run", road: "Road run", cycling: "Cycling" };
   const DETAIL_HEAD = { all: "Details", triathlon: "Swim · Bike · Run", trail: "D+", road: "Pace", cycling: "Avg speed" };
+  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const fmtDate = (d) => {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d || "");
+    return m ? `${Number(m[3])} ${MON[Number(m[2]) - 1]} ${m[1]}` : d || "";
+  };
   const detail = (r) =>
     r.details ? r.details
     : r.type === "triathlon" ? [r.swim, r.bike, r.run].filter(Boolean).join(" · ")
@@ -22,39 +29,42 @@
     : r.type === "road" ? r.pace || ""
     : r.type === "cycling" ? r.speed || "" : "";
 
-  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  const fmtDate = (d) => {
-    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d || "");
-    return m ? `${Number(m[3])} ${MON[Number(m[2]) - 1]} ${m[1]}` : d || "";
+  const el = (tag, cls, text) => {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
   };
-  const raceCell = (r) => {
-    const td = document.createElement("td");
-    const b = document.createElement("b"); b.textContent = r.race || ""; td.appendChild(b);
-    if (r.location) { const s = document.createElement("span"); s.className = "loc"; s.textContent = r.location; td.appendChild(s); }
-    return td;
-  };
-  const cell = (text, tag = "td", bold = false) => {
-    const el = document.createElement(tag);
-    if (bold) { const b = document.createElement("b"); b.textContent = text; el.appendChild(b); }
-    else el.textContent = text;
-    return el;
+  const field = (cls, label, value) => {
+    const wrap = el("div", cls);
+    wrap.append(el("dt", null, label), el("dd", null, value));
+    return wrap;
   };
 
   let rows = [];
   function render(filter) {
-    const list = rows.filter((r) => filter === "all" || r.type === filter);
-    detailHead.textContent = DETAIL_HEAD[filter];
-    const heads = [...root.querySelectorAll("thead th")].map((th) => th.textContent.trim());
-    tbody.replaceChildren(...list.map((r, i) => {
-      const tr = document.createElement("tr");
-      tr.style.animationDelay = i * 40 + "ms";
-      tr.append(cell(fmtDate(r.date)), raceCell(r), cell(LABEL[r.type] || r.type),
-        cell(r.distance || ""), cell(r.time || "", "td", true), cell(detail(r)), cell(r.place || ""));
-      [...tr.children].forEach((td, j) => (td.dataset.label = heads[j] || ""));
-      return tr;
+    const shown = rows.filter((r) => filter === "all" || r.type === filter);
+    const detailLabel = DETAIL_HEAD[filter];
+    detailHead.textContent = detailLabel;
+    list.replaceChildren(...shown.map((r, i) => {
+      const li = el("li", "res-row");
+      li.style.animationDelay = i * 40 + "ms";
+      const h = el("h3", null, r.race || "");
+      if (r.location) h.append(el("span", "loc", r.location));
+      const dl = el("dl");
+      dl.append(
+        field("f-date", "Date", fmtDate(r.date)),
+        field("f-disc", "Discipline", LABEL[r.type] || r.type || ""),
+        field("f-dist", "Distance", r.distance || ""),
+        field("f-time", "Time", r.time || ""),
+        field("f-det", detailLabel, detail(r)),
+        field("f-place", "Place", r.place || "")
+      );
+      li.append(h, dl);
+      return li;
     }));
     buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === filter)));
-    if (status) status.textContent = `${list.length} result${list.length === 1 ? "" : "s"}`;
+    if (status) status.textContent = `${shown.length} result${shown.length === 1 ? "" : "s"}`;
   }
 
   buttons.forEach((b) => b.addEventListener("click", () => render(b.dataset.filter)));

@@ -101,36 +101,32 @@
   .chip[aria-pressed="true"] { background:var(--ink-dark); color:var(--paper); border-color:var(--ink-dark); }
   .chip span { font:400 11px var(--mono); opacity:.7; }
   .chip:focus-visible { outline:2px solid var(--accent-on-paper); outline-offset:2px; }
-  .results .loc { display:block; font-size:13px; color:var(--muted-dark); margin-top:2px; }
-  .results td:nth-child(1), .results td:nth-child(5), .results td:nth-child(6), .results td:nth-child(7) { white-space:nowrap; }
-  /* results: fixed column widths on wide screens so short columns stay compact */
-  @media (min-width: 1280px) {
-    .results table { table-layout:fixed; }
-    .results th:nth-child(1) { width:12%; }
-    .results th:nth-child(2) { width:auto; }
-    .results th:nth-child(3) { width:10%; }
-    .results th:nth-child(4) { width:11%; }
-    .results th:nth-child(5) { width:10%; }
-    .results th:nth-child(6) { width:15%; }
-    .results th:nth-child(7) { width:12%; }
-    .results td:nth-child(4) { white-space:normal; }
-  }
-  /* results: stacked cards on small screens */
+  /* results: ordered list of races, each a heading + description list, laid out as a grid */
+  .res { --res-cols:12% minmax(0,1fr) 10% 11% 10% 15% 12%; }
+  .res-head, .res-row { display:grid; grid-template-columns:var(--res-cols); column-gap:16px; align-items:center; }
+  .res-head { padding:12px 0; border-bottom:1px solid var(--ink-dark); font:400 11px var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--muted-dark); }
+  .res-list { list-style:none; margin:0; padding:0; }
+  .res-row { padding:18px 0; border-bottom:1px solid var(--line-dark); font-variant-numeric:tabular-nums; animation:rowin .45s cubic-bezier(.2,.7,.2,1) both; }
+  .res-row h3 { grid-area:1 / 2; margin:0; font:600 16px/1.35 var(--sans); }
+  .res-row .loc { display:block; font-size:13px; font-weight:400; color:var(--muted-dark); margin-top:2px; }
+  .res-row dl { display:contents; }
+  .res-row dl > div { display:contents; }
+  .res-row dd { margin:0; }
+  .res-row dt { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  .res-row .f-date > dd { grid-area:1 / 1; } .res-row .f-disc > dd { grid-area:1 / 3; } .res-row .f-dist > dd { grid-area:1 / 4; }
+  .res-row .f-time > dd { grid-area:1 / 5; font-weight:700; } .res-row .f-det > dd { grid-area:1 / 6; } .res-row .f-place > dd { grid-area:1 / 7; }
+  .res-empty { display:block; color:var(--muted-dark); }
+  /* small screens: stacked cards */
   @media (max-width: 1023px) {
-    .results table { min-width:0; }
-    .results thead { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
-    .results table, .results tbody { display:block; }
-    .results tbody tr { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px 20px; padding:22px 0; border-bottom:1px solid var(--line-dark); }
-    .results td { display:flex; flex-direction:column; gap:3px; padding:0 !important; border:0; white-space:normal !important; font-size:15px; }
-    .results td::before { content:attr(data-label); font:400 10px var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--muted-dark); }
-    .results td:nth-child(2) { grid-column:1 / -1; order:-1; font-size:19px; line-height:1.25; }
-    .results td:nth-child(2)::before { content:none; }
-    .results td[colspan] { grid-column:1 / -1; }
-    .results td[colspan]::before { content:none; }
+    .res-head { display:none; }
+    .res-row { grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px 20px; padding:22px 0; align-items:start; }
+    .res-row h3 { grid-area:auto; grid-column:1 / -1; font-size:19px; line-height:1.25; }
+    .res-row dl > div { display:flex; flex-direction:column; gap:3px; font-size:15px; }
+    .res-row dt { position:static; width:auto; height:auto; overflow:visible; clip:auto; font:400 10px var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--muted-dark); }
+    .res-row dl > div > dd { grid-area:auto; }
   }
-  .results tbody tr { animation:rowin .45s cubic-bezier(.2,.7,.2,1) both; }
   @keyframes rowin { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
-  @media (prefers-reduced-motion: reduce) { .results tbody tr { animation:none; } }
+  @media (prefers-reduced-motion: reduce) { .res-row { animation:none; } }
 
   /* season */
   .race-card { margin-top:56px; display:grid; grid-template-columns:1.2fr 1fr; border:1px solid var(--line); background:var(--bg2); }
@@ -298,11 +294,13 @@
         <button type="button" class="chip" data-filter="cycling" aria-pressed="false">Cycling <span data-n></span></button>
         <span class="mono muted" data-results-status aria-live="polite" style="margin-left:auto"></span>
       </div>
-      <div style="overflow-x:auto" data-reveal>
-        <table>
-          <thead><tr><th scope="col">Date</th><th scope="col">Race</th><th scope="col">Discipline</th><th scope="col">Distance</th><th scope="col">Time</th><th scope="col" data-detail-head>Details</th><th scope="col">Place</th></tr></thead>
-          <tbody><tr><td colspan="7" class="muted">Loading results…</td></tr></tbody>
-        </table>
+      <div class="res" data-reveal>
+        <div class="res-head" aria-hidden="true">
+          <span>Date</span><span>Race</span><span>Discipline</span><span>Distance</span><span>Time</span><span data-detail-head>Details</span><span>Place</span>
+        </div>
+        <ol class="res-list" data-res-list aria-label="Race results">
+          <li class="res-row res-empty">Loading results…</li>
+        </ol>
       </div>
     </div>
   </div>
