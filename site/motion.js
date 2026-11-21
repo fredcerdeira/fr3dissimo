@@ -67,7 +67,13 @@
       if (box.bottom < -200 || box.top > vh + 200) return;
       const f = parseFloat(img.dataset.parallax) || 0;
       const d = box.top + box.height / 2 - vh / 2;
-      img.style.transform = `translate3d(0, ${(-d * f).toFixed(1)}px, 0)`;
+      // never move further than the image's extra height, so no empty strip shows
+      let y = -d * f;
+      if (img.closest(".story-photo")) {
+        const spare = Math.max(0, img.offsetHeight - box.height);
+        y = clamp(y, -spare, 0);
+      }
+      img.style.transform = `translate3d(0, ${y.toFixed(1)}px, 0)`;
     });
 
     // scrub: dim → bright as items cross 65% of the viewport
