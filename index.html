@@ -15,7 +15,7 @@
   body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 Inter, system-ui, sans-serif; }
   a { color:var(--accent); } a:hover { color:#8A2A08; }
   .wrap { max-width:1240px; margin:0 auto; padding-left:32px; padding-right:32px; }
-  .display { font-family:"Barlow Condensed", sans-serif; font-weight:800; text-transform:uppercase; }
+  .display { font-family:"Barlow Condensed", "Arial Narrow", sans-serif; font-weight:800; text-transform:uppercase; }
   .kicker { margin:0; font-size:14px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
   .num-label { font-size:14px; color:#C9C5BB; text-transform:uppercase; letter-spacing:.1em; }
   .section { padding-top:96px; padding-bottom:96px; }
@@ -48,7 +48,15 @@
   .recent li { padding:8px 0; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums; }
   .weekly { color:var(--accent); }
 
+  .gallery { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); grid-auto-rows:220px; grid-auto-flow:dense; gap:16px; }
+  .gallery figure { margin:0; position:relative; overflow:hidden; background:#DEDAD0; }
+  .gallery img { width:100%; height:100%; object-fit:cover; display:block; }
+  .gallery figcaption { position:absolute; left:0; bottom:0; padding:6px 10px; background:rgba(20,20,20,.75); color:#F3F1EB; font-size:12px; }
+  .g-wide { grid-column:span 2; grid-row:span 2; }
+  .g-tall { grid-row:span 2; }
+
   @media (max-width: 860px) {
+    .gallery { grid-template-columns:repeat(2, minmax(0, 1fr)); grid-auto-rows:180px; }
     .split { grid-template-columns:1fr; }
     .wrap { padding-left:20px; padding-right:20px; }
     .section { padding-top:64px; padding-bottom:64px; }
@@ -71,17 +79,16 @@
 
 <main>
 <section id="top" class="wrap" style="padding-top:32px; padding-bottom:64px; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap:48px; align-items:end">
-  <div style="display:flex; flex-direction:column; gap:24px">
+  <div style="display:flex; flex-direction:column; gap:24px; container-type:inline-size">
     <p class="kicker">Triathlete · Lisbon, Portugal · since 2019</p>
-    <h1 class="display" style="margin:0; font-size:clamp(64px, 9vw, 132px); line-height:.88; letter-spacing:-.01em">Swim.<br>Bike.<br>[Trail]Run.<br>Rest.<br>Repeat.</h1>
+    <h1 class="display" style="margin:0; font-size:clamp(44px, 17cqi, 124px); line-height:.88; letter-spacing:-.01em">Swim.<br>Bike.<br>[Trail]Run.<br>Rest.<br>Repeat.</h1>
     <p style="margin:0; max-width:34rem; font-size:19px; color:var(--muted)">Age-group triathlete for seven seasons, product designer by trade. This is the journey so far, the results, and what comes next.</p>
     <div style="display:flex; flex-wrap:wrap; gap:12px">
       <a href="#results" class="btn btn-solid">See results</a>
       <a href="#season" class="btn btn-line">Next race</a>
     </div>
   </div>
-  <!-- Replace with: <img src="img/hero.jpg" alt="…" style="width:100%; aspect-ratio:4/5; object-fit:cover"> -->
-  <div class="placeholder" role="img" aria-label="Main photo placeholder" style="aspect-ratio:4/5">[Race photo — portrait]</div>
+  <img src="img/hero-run.jpg" alt="Running in a road race in Lisbon" width="1200" height="1600" style="width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:50% 30%; display:block">
 </section>
 
 <section aria-label="By the numbers" style="background:var(--ink); color:var(--bg)">
@@ -184,10 +191,14 @@
   </div>
 </section>
 
-<section aria-label="Gallery" class="wrap" style="padding-top:96px; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap:16px">
-  <div class="placeholder" role="img" aria-label="Swim photo placeholder" style="aspect-ratio:3/4">[Photo — swim]</div>
-  <div class="placeholder" role="img" aria-label="Bike photo placeholder" style="aspect-ratio:3/4">[Photo — bike]</div>
-  <div class="placeholder" role="img" aria-label="Run photo placeholder" style="aspect-ratio:3/4">[Photo — run]</div>
+<section aria-label="Gallery" class="wrap gallery" style="padding-top:96px">
+  <figure class="g-wide"><img src="img/bike-descent.jpg" alt="Descending on the time-trial bike during a race" loading="lazy" style="object-position:70% 50%"></figure>
+  <figure class="g-tall"><img src="img/bike-aero.jpg" alt="Head-on, in the aero position on the time-trial bike" loading="lazy" style="object-position:50% 30%"></figure>
+  <figure class="g-tall"><img src="img/finish.jpg" alt="Running down the finish carpet" loading="lazy" style="object-position:50% 35%"></figure>
+  <figure class="g-tall"><img src="img/gravel-mud.jpg" alt="Gravel bike wheels throwing up mud" loading="lazy"></figure>
+  <figure class="g-wide"><img src="img/gravel-coruche.jpg" alt="Riding gravel under stone pines in Coruche" loading="lazy" style="object-position:50% 70%"><figcaption>Gravel, Coruche · photo Marco Barbosa</figcaption></figure>
+  <figure><img src="img/hydration.jpg" alt="Drinking from a bottle mid-run" loading="lazy"></figure>
+  <figure><img src="img/medal-barcelona.jpg" alt="IRONMAN Calella-Barcelona finisher medal, 2024" loading="lazy" style="object-position:70% 70%"><figcaption>IRONMAN Calella-Barcelona, 2024</figcaption></figure>
 </section>
 </main>
 
