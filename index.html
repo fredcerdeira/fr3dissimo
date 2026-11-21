@@ -67,10 +67,10 @@
   .hero h1 .accent { color:var(--accent); }
   .hero p.lede { margin:0; max-width:32rem; color:#e4e3dd; font-size:18px; text-shadow:0 1px 12px rgba(0,0,0,.6); }
   .hero .ctas { display:flex; flex-wrap:wrap; gap:12px; }
-  .stats { border-top:1px solid var(--line); background:rgba(11,11,12,.5); backdrop-filter:blur(6px); }
+  .stats { background:rgba(11,11,12,.5); backdrop-filter:blur(6px); }
   .stats .wrap { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); }
-  .stat { padding:20px 20px 22px; border-left:1px solid var(--line); display:flex; flex-direction:column; gap:6px; }
-  .stat:first-child { border-left:0; padding-left:0; }
+  .stat { padding:20px 20px 22px; display:flex; flex-direction:column; gap:6px; }
+  .stat:first-child { padding-left:0; }
   .stat .mono { color:var(--muted); font-size:11px; }
   .stat b { font:600 28px/1 var(--sans); font-variant-numeric:tabular-nums; }
   .stat small { font:400 11px var(--mono); color:var(--muted); letter-spacing:.08em; text-transform:uppercase; margin-left:6px; }
@@ -180,8 +180,8 @@
     .nav.open nav { display:flex; }
     .hero-content { grid-template-columns:1fr; }
     .stats .wrap { grid-template-columns:repeat(2, minmax(0,1fr)); }
-    .stat, .stat:first-child { border-left:0; padding-left:0; border-top:1px solid var(--line); }
-    .stat:nth-child(even) { padding-left:20px; border-left:1px solid var(--line); }
+    .stat, .stat:first-child { padding-left:0; }
+    .stat:nth-child(even) { padding-left:20px; }
     .story-grid, .race-card { grid-template-columns:1fr; }
     .race-card .splits { border-left:0; border-top:1px solid var(--line); }
     .timeline, .buildup, .train-grid, .trail-grid { grid-template-columns:1fr; }
