@@ -56,7 +56,7 @@
     "type": "trail",
     "distance": "147.2 km",
     "time": "23:47:44",
-    "elevation": "9,035 m",
+    "elevation": "9,035 m D+",
     "place": "29th overall"
   },
   {
@@ -79,11 +79,11 @@
   },
   {
     "date": "[YYYY]",
-    "race": "Campeonato Nacional de Gravel · Coruche",
+    "race": "Gravel Coruche",
     "type": "cycling",
     "distance": "[0] km",
     "time": "[0:00:00]",
-    "speed": "[0.0] km/h",
-    "place": "[—/—]"
+    "place": "--",
+    "details": "Gravel Race"
   }
 ]
