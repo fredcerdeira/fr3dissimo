@@ -8,14 +8,14 @@
 <meta name="theme-color" content="#0b0b0c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62,900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
   :root {
     --bg:#0b0b0c; --bg2:#131315; --bg3:#1b1b1e; --line:rgba(242,241,236,.14);
     --ink:#f2f1ec; --muted:#a3a29c;
     --paper:#f2f1ec; --ink-dark:#111112; --muted-dark:#5d5c57; --line-dark:rgba(17,17,18,.15);
     --accent:#ff6b2c; --accent-ink:#111112; --accent-on-paper:#b8400c;
-    --display:"Anton", Impact, "Arial Narrow", sans-serif;
+    --display:"Archivo", "Arial Narrow", sans-serif;
     --sans:Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
     --gutter:clamp(20px, 4vw, 56px);
@@ -26,7 +26,7 @@
   img { max-width:100%; display:block; }
   a { color:inherit; }
   .wrap { max-width:1240px; margin:0 auto; padding-left:var(--gutter); padding-right:var(--gutter); }
-  .display { font-family:var(--display); font-weight:400; text-transform:uppercase; line-height:.9; letter-spacing:.005em; margin:0; }
+  .display { font-family:var(--display); font-weight:900; font-stretch:extra-condensed; text-transform:uppercase; line-height:.9; letter-spacing:0; margin:0; }
   .mono { font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; }
   .eyebrow { display:flex; align-items:center; gap:12px; color:var(--accent); margin:0 0 24px; }
   .eyebrow::before { content:""; width:28px; height:1px; background:currentColor; }
@@ -42,7 +42,7 @@
   .nav { position:fixed; inset:0 0 auto 0; z-index:50; transition:background .3s, border-color .3s; border-bottom:1px solid transparent; }
   .nav.scrolled { background:rgba(11,11,12,.78); backdrop-filter:blur(12px); border-color:var(--line); }
   .nav .wrap { height:64px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-  .nav .brand { font-family:var(--display); font-size:22px; text-transform:uppercase; text-decoration:none; letter-spacing:.02em; }
+  .nav .brand { font-family:var(--display); font-weight:900; font-stretch:extra-condensed; font-size:24px; text-transform:uppercase; text-decoration:none; letter-spacing:.02em; }
   .nav nav { display:flex; gap:24px; font-size:14px; }
   .nav nav a { text-decoration:none; color:var(--muted); padding:10px 0; transition:color .2s; }
   .nav nav a:hover { color:var(--ink); }
@@ -107,15 +107,15 @@
   .race-card .splits { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); border-left:1px solid var(--line); }
   .race-card .splits div { padding:clamp(20px, 3vw, 40px); border-left:1px solid var(--line); display:flex; flex-direction:column; justify-content:flex-end; gap:8px; }
   .race-card .splits div:first-child { border-left:0; }
-  .race-card .splits b { font:400 44px/1 var(--display); }
+  .race-card .splits b { font:extra-condensed 900 44px/1 var(--display); }
   .buildup { margin:24px 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px; }
   .buildup li { border:1px solid var(--line); padding:24px; display:flex; flex-direction:column; gap:6px; }
-  .buildup b { font:400 28px/1 var(--display); text-transform:uppercase; }
+  .buildup b { font:extra-condensed 900 28px/1 var(--display); text-transform:uppercase; }
 
   /* training */
   .train-grid { margin-top:56px; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); }
   .tile { background:var(--bg); padding:clamp(24px, 3vw, 40px); display:flex; flex-direction:column; gap:12px; min-height:220px; }
-  .tile .num { font:400 clamp(56px, 6vw, 88px)/1 var(--display); }
+  .tile .num { font:extra-condensed 900 clamp(56px, 6vw, 88px)/1 var(--display); }
   .tile .mono { color:var(--muted); }
   .tile p { margin:0; color:var(--muted); }
   .tile.wide { grid-column:span 2; }
