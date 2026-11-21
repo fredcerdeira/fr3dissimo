@@ -111,6 +111,9 @@ th:first-child, td:first-child { padding-left:0; } th:last-child, td:last-child 
 .res-row .ag { display:block; margin-top:2px; font-size:12px; color:var(--muted-dark); letter-spacing:.02em; }
 /* small screens: stacked cards */
 
+/* never let the page scroll sideways */
+body { overflow-x:clip; }
+
 /* utilities that replace former inline styles */
 .muted { color:var(--muted); }
 .text-accent { color:var(--accent); }
@@ -165,7 +168,7 @@ th:first-child, td:first-child { padding-left:0; } th:last-child, td:last-child 
 .train-grid { margin-top:56px; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:32px; }
 .tile { background:none; padding:clamp(24px, 3vw, 40px); display:flex; flex-direction:column; gap:12px; min-height:220px; }
 .tile { container-type:inline-size; }
-.tile .num { font:extra-condensed 900 32cqi/1 var(--display); }
+.tile .num { font:extra-condensed 900 32cqi/1 var(--display); white-space:nowrap; } /* shrunk by motion.js if a value is too long */
 .tile .mono { color:var(--muted); }
 .tile p { margin:0; color:var(--muted); }
 .tile.wide { grid-column:span 2; }

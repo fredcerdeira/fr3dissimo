@@ -88,8 +88,27 @@
   addEventListener("resize", onScroll);
   frame();
 
+  // ---- keep tile numbers inside their tile, whatever font is showing ----
+  // Measures each number's final text; if it is wider than the tile, scales the font down.
+  const fitNums = () => $$(".tile .num").forEach((n) => {
+    n.style.fontSize = "";
+    const text = n.dataset.final || n.textContent;
+    const m = document.createElement("span");
+    m.textContent = text;
+    m.style.cssText = "position:absolute;visibility:hidden;white-space:nowrap";
+    n.append(m);
+    const need = m.getBoundingClientRect().width, room = n.clientWidth;
+    m.remove();
+    if (room && need > room) n.style.fontSize = (parseFloat(getComputedStyle(n).fontSize) * room / need) * 0.98 + "px";
+  });
+  let fitTimer;
+  addEventListener("resize", () => { clearTimeout(fitTimer); fitTimer = setTimeout(fitNums, 120); });
+  if (document.fonts) document.fonts.ready.then(fitNums);
+
   // ---- count-up + bars, after stats-loader fills the page ----
   document.addEventListener("stats:filled", () => {
+    $$(".tile .num").forEach((n) => (n.dataset.final = n.textContent.trim()));
+    fitNums();
     const nf = new Intl.NumberFormat("en-GB", { maximumFractionDigits: 0 });
     const counters = $$("[data-count]").map((el) => ({ el, to: parseFloat(el.textContent.replace(/[^\d.]/g, "")) })).filter((c) => !isNaN(c.to));
     const bars = $$("[data-stat-weekly] > div");
