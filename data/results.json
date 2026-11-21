@@ -97,13 +97,14 @@
     "place": "496th overall"
   },
   {
-    "date": "[YYYY-MM-DD]",
-    "race": "[Race name 2]",
-    "type": "[Discipline]",
-    "distance": "[0] km",
-    "time": "[0:00:00]",
-    "details": "[Details]",
-    "place": "[—]"
+    "date": "2026-07-05",
+    "race": "DATEV Challenge Roth",
+    "location": "Roth, Germany",
+    "type": "triathlon",
+    "distance": "Full",
+    "time": "9:31:32",
+    "details": "3.8/180/42.2 km",
+    "place": "18th · M45-49"
   },
   {
     "date": "[YYYY-MM-DD]",
