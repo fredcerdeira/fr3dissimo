@@ -108,13 +108,14 @@
     "place": "18th · M45-49"
   },
   {
-    "date": "[YYYY-MM-DD]",
-    "race": "[Race name 3]",
-    "type": "[Discipline]",
-    "distance": "[0] km",
-    "time": "[0:00:00]",
-    "details": "[Details]",
-    "place": "[—]"
+    "date": "2026-03-08",
+    "race": "Lisbon Half Marathon",
+    "location": "Lisbon, Portugal",
+    "type": "road",
+    "distance": "Half Marathon · 21.1 km",
+    "time": "1:14:37",
+    "pace": "3'32/km pace",
+    "place": "50th overall"
   },
   {
     "date": "[YYYY-MM-DD]",
