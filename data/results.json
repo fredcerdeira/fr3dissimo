@@ -61,12 +61,12 @@
   },
   {
     "date": "[YYYY-MM-DD]",
-    "race": "[Trail race]",
-    "type": "trail",
-    "distance": "[0] km",
-    "time": "[0:00:00]",
-    "elevation": "[0] m",
-    "place": "[—/—]"
+    "race": "UCI Alentejo Gravel",
+    "type": "cycling",
+    "distance": "118 km",
+    "time": "4:26:32",
+    "details": "Gravel Race - 2,084 m D+",
+    "place": "--"
   },
   {
     "date": "[YYYY-MM-DD]",
