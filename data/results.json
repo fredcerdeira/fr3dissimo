@@ -4,7 +4,7 @@
     "race": "IRONMAN Calella-Barcelona",
     "location": "Spain",
     "type": "triathlon",
-    "distance": "Full · 3.8 / 180 / 42.2 km",
+    "distance": "Full",
     "time": "9:01:19",
     "place": "4th · M40-44",
     "details": "3.8/180/42.2 km"
@@ -14,7 +14,7 @@
     "race": "IRONMAN Hamburg",
     "location": "Germany",
     "type": "triathlon",
-    "distance": "Full · 3.8 / 180 / 42.2 km",
+    "distance": "Full",
     "time": "9:08:50",
     "place": "20th · M40-44",
     "details": "3.8/180/42.2 km"
@@ -24,7 +24,7 @@
     "race": "IRONMAN World Championship - Men",
     "location": "Nice, France",
     "type": "triathlon",
-    "distance": "Full · 3.8 / 180 / 42.2 km",
+    "distance": "Full",
     "time": "10:29:43",
     "place": "28th · M40-44",
     "details": "3.8/180/42.2 km"
@@ -34,7 +34,7 @@
     "race": "IRONMAN Vitoria-Gasteiz",
     "location": "Spain",
     "type": "triathlon",
-    "distance": "Full · 3.8 / 180 / 42.2 km",
+    "distance": "Full",
     "time": "9:56:53",
     "place": "43rd · M40-44",
     "details": "3.8/180/42.2 km"
@@ -44,7 +44,7 @@
     "race": "IRONMAN Portugal-Cascais",
     "location": "Portugal",
     "type": "triathlon",
-    "distance": "Full · 3.8 / 180 / 42.2 km",
+    "distance": "Full",
     "time": "10:02:09",
     "place": "22nd · M40-44",
     "details": "3.8/180/42.2 km"
