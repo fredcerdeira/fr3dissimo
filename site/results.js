@@ -15,7 +15,7 @@
   const buttons = [...root.querySelectorAll("[data-filter]")];
   const status = root.querySelector("[data-results-status]");
 
-  const LABEL = { triathlon: "Triathlon", trail: "Trail run", road: "Road Run", cycling: "Cycling" };
+  const LABEL = { triathlon: "Triathlon", trail: "Trail Run", road: "Road Run", cycling: "Cycling" };
   const DETAIL_HEAD = { all: "Details", triathlon: "Swim · Bike · Run", trail: "D+", road: "Pace", cycling: "Avg speed" };
   const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const fmtDate = (d) => {
