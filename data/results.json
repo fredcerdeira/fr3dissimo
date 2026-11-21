@@ -118,13 +118,14 @@
     "place": "50th overall"
   },
   {
-    "date": "[YYYY-MM-DD]",
-    "race": "[Race name 4]",
-    "type": "[Discipline]",
-    "distance": "[0] km",
-    "time": "[0:00:00]",
-    "details": "[Details]",
-    "place": "[—]"
+    "date": "2018-12-08",
+    "race": "Maxi Race Madeira 2018",
+    "location": "Madeira, Portugal",
+    "type": "trail",
+    "distance": "103.2 km",
+    "time": "14:03:03",
+    "elevation": "7,970 m D+",
+    "place": "3rd overall"
   },
   {
     "date": "[YYYY-MM-DD]",
