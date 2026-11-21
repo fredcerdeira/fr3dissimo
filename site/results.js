@@ -41,6 +41,16 @@
     return wrap;
   };
 
+  // "4th · M40-44" → "4th" + smaller age group
+  const placeField = (place) => {
+    const f = field("f-place", "Place", "");
+    const dd = f.querySelector("dd");
+    const m = /^(.*?)\s*·\s*(.+)$/.exec(place);
+    if (m) dd.append(m[1], " ", el("span", "ag", m[2]));
+    else dd.textContent = place;
+    return f;
+  };
+
   let rows = [];
   function render(filter) {
     const shown = rows.filter((r) => filter === "all" || r.type === filter);
@@ -58,7 +68,7 @@
         field("f-dist", "Distance", r.distance || ""),
         field("f-time", "Time", r.time || ""),
         field("f-det", detailLabel, detail(r)),
-        field("f-place", "Place", r.place || "")
+        placeField(r.place || "")
       );
       li.append(h, dl);
       return li;
