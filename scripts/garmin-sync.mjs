@@ -114,6 +114,7 @@ export function buildStats(activities, now = new Date()) {
     .map((a) => ({
       date: localDate(a),
       sport: sportOf(a.activityType?.typeKey),
+      trail: (a.activityType?.typeKey || "").toLowerCase().includes("trail"),
       name: a.activityName || "",
       km: (Number(a.distance) || 0) / 1000,
       hours: (Number(a.movingDuration) || Number(a.duration) || 0) / 3600,
@@ -124,6 +125,7 @@ export function buildStats(activities, now = new Date()) {
   // Year to date
   const ytd = { swim: emptyTotals(), bike: emptyTotals(), run: emptyTotals(), total: emptyTotals() };
   let elevationYtd = 0;
+  const trail = { count: 0, km: 0, hours: 0, elevation: 0, longestKm: 0 };
   for (const a of norm) {
     if (!a.date.startsWith(year)) continue;
     for (const key of [a.sport, "total"]) {
@@ -133,6 +135,10 @@ export function buildStats(activities, now = new Date()) {
       ytd[key].hours += a.hours;
     }
     elevationYtd += a.elevation;
+    if (a.trail) {
+      trail.count += 1; trail.km += a.km; trail.hours += a.hours; trail.elevation += a.elevation;
+      trail.longestKm = Math.max(trail.longestKm, a.km);
+    }
   }
 
   // Weekly series: last WEEKS weeks, current (partial) week last
@@ -175,7 +181,8 @@ export function buildStats(activities, now = new Date()) {
   return {
     updatedAt: now.toISOString(),
     year: Number(year),
-    ytd: { swim: fix(ytd.swim), bike: fix(ytd.bike), run: fix(ytd.run), total: fix(ytd.total), elevationM: Math.round(elevationYtd) },
+    ytd: { swim: fix(ytd.swim), bike: fix(ytd.bike), run: fix(ytd.run), total: fix(ytd.total), elevationM: Math.round(elevationYtd),
+      trail: { ...fix(trail), elevationM: Math.round(trail.elevation), longestKm: round(trail.longestKm) } },
     typicalWeek: {
       weeks: complete.length,
       hours: round(typical.hours / n),
