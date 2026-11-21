@@ -22,13 +22,14 @@
     "place": "[—/—]"
   },
   {
-    "date": "[YYYY]",
-    "race": "TDS · UTMB Mont-Blanc",
+    "date": "2021-08-25",
+    "race": "UTMB® 2021 - TDS®",
+    "location": "Mont Blanc",
     "type": "trail",
-    "distance": "[0] km",
-    "time": "[0:00:00]",
+    "distance": "147.2 km",
+    "time": "23:47:44",
     "elevation": "[0] m",
-    "place": "[—/—]"
+    "place": "29th overall"
   },
   {
     "date": "[YYYY-MM-DD]",

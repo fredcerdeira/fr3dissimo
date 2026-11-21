@@ -1,5 +1,5 @@
 // Results table with discipline filters. Data: data/results.json
-// Each entry: date, race, type (triathlon | trail | road | cycling), distance, time, place,
+// Each entry: date, race, optional location, type (triathlon | trail | road | cycling), distance, time, place,
 // plus per type: swim/bike/run (triathlon), elevation (trail), pace (road), speed (cycling).
 // Newest first: dates sort as text, so write them as YYYY-MM-DD (or YYYY).
 
@@ -20,6 +20,15 @@
     : r.type === "road" ? r.pace || ""
     : r.type === "cycling" ? r.speed || "" : "";
 
+  const fmtDate = (d) => /^\d{4}-\d{2}-\d{2}$/.test(d)
+    ? new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })
+    : d || "";
+  const raceCell = (r) => {
+    const td = document.createElement("td");
+    const b = document.createElement("b"); b.textContent = r.race || ""; td.appendChild(b);
+    if (r.location) { const s = document.createElement("span"); s.className = "loc"; s.textContent = r.location; td.appendChild(s); }
+    return td;
+  };
   const cell = (text, tag = "td", bold = false) => {
     const el = document.createElement(tag);
     if (bold) { const b = document.createElement("b"); b.textContent = text; el.appendChild(b); }
@@ -34,7 +43,7 @@
     tbody.replaceChildren(...list.map((r, i) => {
       const tr = document.createElement("tr");
       tr.style.animationDelay = i * 40 + "ms";
-      tr.append(cell(r.date || ""), cell(r.race || "", "td", true), cell(LABEL[r.type] || r.type),
+      tr.append(cell(fmtDate(r.date)), raceCell(r), cell(LABEL[r.type] || r.type),
         cell(r.distance || ""), cell(r.time || "", "td", true), cell(detail(r)), cell(r.place || ""));
       return tr;
     }));
