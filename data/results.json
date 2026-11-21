@@ -128,12 +128,13 @@
     "place": "3rd overall"
   },
   {
-    "date": "[YYYY-MM-DD]",
-    "race": "[Race name 5]",
-    "type": "[Discipline]",
-    "distance": "[0] km",
-    "time": "[0:00:00]",
-    "details": "[Details]",
-    "place": "[—]"
+    "date": "2017-07-07",
+    "race": "Ehunmilak Ultra-Trail®",
+    "location": "Basque Country, Spain",
+    "type": "trail",
+    "distance": "170.7 km",
+    "time": "30:11:42",
+    "elevation": "10,160 m D+",
+    "place": "30th overall"
   }
 ]
