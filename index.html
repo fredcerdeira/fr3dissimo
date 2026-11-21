@@ -112,7 +112,7 @@
   .recent li { padding:10px 0; border-bottom:1px solid var(--line); }
 
   /* trail */
-  .trail-photo { aspect-ratio:4/5; border:1px dashed var(--line); background:var(--bg2); display:flex; align-items:center; justify-content:center; color:var(--muted); }
+  .trail-fig figcaption { position:absolute; left:0; bottom:0; padding:8px 12px; font:400 11px var(--mono); letter-spacing:.08em; text-transform:uppercase; background:rgba(11,11,12,.7); }
   .trail-grid { grid-template-columns:repeat(4, minmax(0,1fr)); }
 
   /* gallery */
@@ -299,7 +299,7 @@
         <h2 class="display big" data-reveal>Off<br>road.</h2>
         <p data-reveal style="--d:.1s; color:var(--muted); font-size:20px; max-width:34rem; margin:32px 0 0">[Why trail: what you get out of it, favourite places to run, how it fits around triathlon.]</p>
       </div>
-      <div class="trail-photo" data-reveal style="--d:.15s"><span class="mono">[Trail photo]</span></div>
+      <figure class="story-photo trail-fig" data-reveal style="--d:.15s; margin:0; position:relative"><img src="img/trail-tds.jpg" alt="Crossing a mountain stream with poles during the TDS trail race" data-parallax="-0.12" loading="lazy" style="object-position:50% 20%"><figcaption>TDS</figcaption></figure>
     </div>
     <div class="train-grid trail-grid">
       <div class="tile" data-reveal><span class="mono">Trail · <span data-stat="year">2026</span></span><span class="num"><span data-stat="ytd.trail.km" data-format="int" data-count>–</span></span><p>km off-road</p></div>
