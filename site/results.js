@@ -41,6 +41,15 @@
     return wrap;
   };
 
+  // "Gravel Race 2,084 m D+" → label, then the numbers on their own line
+  const detField = (label, text) => {
+    const f = field("f-det", label, "");
+    const dd = f.querySelector("dd");
+    const m = /^([^\d]+?)\s+(\d.*)$/.exec(text);
+    if (m) dd.append(m[1], " ", el("span", "nl", m[2]));
+    else dd.textContent = text;
+    return f;
+  };
   // "4th · M40-44" / "29th overall" → place + smaller qualifier line
   const placeField = (place) => {
     const f = field("f-place", "Place", "");
@@ -67,7 +76,7 @@
         field("f-disc", "Discipline", LABEL[r.type] || r.type || ""),
         field("f-dist", "Distance", r.distance || ""),
         field("f-time", "Time", r.time || ""),
-        field("f-det", detailLabel, detail(r)),
+        detField(detailLabel, detail(r)),
         placeField(r.place || "")
       );
       li.append(h, dl);
