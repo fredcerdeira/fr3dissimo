@@ -42,10 +42,16 @@
   .nav { position:fixed; inset:0 0 auto 0; z-index:50; transition:background .3s, border-color .3s; border-bottom:1px solid transparent; }
   .nav.scrolled { background:rgba(11,11,12,.78); backdrop-filter:blur(12px); border-color:var(--line); }
   .nav .wrap { height:64px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-  .nav .brand { font-family:var(--display); font-weight:900; font-stretch:extra-condensed; font-size:24px; text-transform:uppercase; text-decoration:none; letter-spacing:.02em; }
+  .nav .brand { white-space:nowrap; font-family:var(--display); font-weight:900; font-stretch:extra-condensed; font-size:24px; text-transform:uppercase; text-decoration:none; letter-spacing:.02em; }
   .nav nav { display:flex; gap:24px; font-size:14px; }
   .nav nav a { text-decoration:none; color:var(--nav-link); padding:10px 0; transition:color .2s; }
   .nav nav a:hover { color:var(--ink); }
+  .menu-btn { display:none; width:44px; height:44px; border:1px solid var(--line); border-radius:999px; background:transparent; cursor:pointer; position:relative; flex:none; }
+  .menu-btn span { position:absolute; left:13px; right:13px; height:2px; background:var(--ink); transition:transform .25s, top .25s; }
+  .menu-btn span:first-child { top:17px; } .menu-btn span:last-child { top:25px; }
+  .nav.open .menu-btn span:first-child { top:21px; transform:rotate(45deg); }
+  .nav.open .menu-btn span:last-child { top:21px; transform:rotate(-45deg); }
+  .menu-btn:focus-visible, .nav nav a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
 
   /* hero */
   .hero { position:relative; min-height:100svh; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; isolation:isolate; }
@@ -163,7 +169,14 @@
     body::after { animation:none; }
   }
   @media (max-width: 960px) {
-    .nav nav { display:none; }
+    .menu-btn { display:inline-block; }
+    .nav .nav-cta { margin-left:auto; }
+    .nav .wrap { gap:12px; }
+    .nav nav { display:none; position:absolute; top:64px; left:0; right:0; flex-direction:column; gap:0; padding:8px var(--gutter) 24px; background:rgba(11,11,12,.97); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); font-size:22px; }
+    .nav nav a { padding:14px 0; border-bottom:1px solid var(--line); color:var(--ink); font-family:var(--display); font-weight:900; font-stretch:extra-condensed; text-transform:uppercase; letter-spacing:.01em; }
+    .nav nav a:last-child { border-bottom:0; }
+    .nav.open { background:rgba(11,11,12,.97); border-color:var(--line); }
+    .nav.open nav { display:flex; }
     .hero-content { grid-template-columns:1fr; }
     .stats .wrap { grid-template-columns:repeat(2, minmax(0,1fr)); }
     .stat, .stat:first-child { border-left:0; padding-left:0; border-top:1px solid var(--line); }
@@ -183,14 +196,15 @@
 <header class="nav">
   <div class="wrap">
     <a href="#top" class="brand">Fred Cerdeira</a>
-    <nav aria-label="Sections">
+    <nav id="site-nav" aria-label="Sections">
       <a href="#about">About</a>
       <a href="#results">Results</a>
       <a href="#trail">Trail Run</a>
       <a href="#training">Training</a>
       <a href="#season">2027 Season</a>
     </nav>
-    <a href="#contact" class="pill pill-solid" style="min-height:38px; padding:0 18px; font-size:14px">Contact</a>
+    <a href="#contact" class="pill pill-solid nav-cta" style="min-height:38px; padding:0 18px; font-size:14px">Contact</a>
+    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span></button>
   </div>
 </header>
 

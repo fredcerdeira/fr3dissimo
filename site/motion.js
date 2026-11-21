@@ -10,6 +10,23 @@
 (function () {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+  // ---- mobile menu ----
+  const navEl = document.querySelector(".nav");
+  const menuBtn = document.querySelector(".menu-btn");
+  if (navEl && menuBtn) {
+    const setOpen = (open) => {
+      navEl.classList.toggle("open", open);
+      menuBtn.setAttribute("aria-expanded", String(open));
+      menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    };
+    menuBtn.addEventListener("click", () => setOpen(!navEl.classList.contains("open")));
+    $$("#site-nav a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && navEl.classList.contains("open")) { setOpen(false); menuBtn.focus(); }
+    });
+    matchMedia("(min-width: 961px)").addEventListener("change", (e) => e.matches && setOpen(false));
+  }
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
   // ---- hero title ----
