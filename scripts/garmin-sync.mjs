@@ -70,15 +70,48 @@ async function apiGet(token, path, params, attempt = 0) {
   return res.json();
 }
 
-async function fetchActivities(token, startDate, endDate) {
+async function fetchActivities(token, startDate, endDate, extra = {}) {
   const all = [];
   for (let start = 0; ; start += PAGE) {
-    const page = await apiGet(token, SEARCH_PATH, { start, limit: PAGE, startDate, endDate });
+    const page = await apiGet(token, SEARCH_PATH, { start, limit: PAGE, startDate, endDate, ...extra });
     const items = Array.isArray(page) ? page : page.activities || page.activityList || [];
     all.push(...items);
     if (items.length < PAGE) break;
   }
   return all;
+}
+
+// Every trail run ever, one year at a time (keeps each request small).
+// activityType narrows the search; results are filtered again locally in case it is ignored.
+const HISTORY_FROM = Number(process.env.TRAIL_HISTORY_FROM || 2010);
+async function fetchTrailHistory(token, toYear) {
+  const all = [];
+  for (let y = HISTORY_FROM; y <= toYear; y++) {
+    const items = await fetchActivities(token, `${y}-01-01`, `${y}-12-31`, { activityType: "trail_running" });
+    all.push(...items.filter((a) => (a.activityType?.typeKey || "").toLowerCase().includes("trail")));
+  }
+  return all;
+}
+
+export function buildTrailAllTime(activities) {
+  const t = { count: 0, km: 0, hours: 0, elevationM: 0, longestKm: 0, since: null };
+  const seen = new Set();
+  for (const a of activities) {
+    if (!(a.activityType?.typeKey || "").toLowerCase().includes("trail")) continue;
+    const id = a.activityId ?? `${a.startTimeLocal}-${a.distance}`;
+    if (seen.has(id)) continue;
+    seen.add(id);
+    const km = (Number(a.distance) || 0) / 1000;
+    t.count += 1;
+    t.km += km;
+    t.hours += (Number(a.movingDuration) || Number(a.duration) || 0) / 3600;
+    t.elevationM += Number(a.elevationGain) || 0;
+    t.longestKm = Math.max(t.longestKm, km);
+    const year = Number((a.startTimeLocal || a.startTimeGMT || "").slice(0, 4));
+    if (year && (!t.since || year < t.since)) t.since = year;
+  }
+  return { count: t.count, km: Math.round(t.km * 10) / 10, hours: Math.round(t.hours * 10) / 10,
+           elevationM: Math.round(t.elevationM), longestKm: Math.round(t.longestKm * 10) / 10, since: t.since };
 }
 
 // ---------- dates ----------
@@ -201,9 +234,11 @@ async function main() {
   const fileIdx = args.indexOf("--from-file");
   const now = new Date();
   let activities;
+  let trailHistory;
 
   if (fileIdx !== -1) {
     activities = JSON.parse(await readFile(args[fileIdx + 1], "utf8"));
+    trailHistory = activities;
   } else {
     const apiKey = process.env.GARMIN_API_KEY;
     if (!apiKey) throw new Error("Set GARMIN_API_KEY (your Garmin Personal API key).");
@@ -214,9 +249,12 @@ async function main() {
     const token = await getToken(apiKey);
     activities = await fetchActivities(token, startDate, today);
     console.log(`Fetched ${activities.length} activities since ${startDate}.`);
+    trailHistory = await fetchTrailHistory(token, Number(today.slice(0, 4)));
+    console.log(`Fetched ${trailHistory.length} trail runs since ${HISTORY_FROM}.`);
   }
 
   const stats = buildStats(activities, now);
+  stats.trailAllTime = buildTrailAllTime(trailHistory);
   await mkdir(dirname(OUT), { recursive: true });
   await writeFile(OUT, JSON.stringify(stats, null, 2) + "\n");
   console.log(`Wrote ${OUT}: ${stats.ytd.total.count} sessions, ${stats.ytd.total.hours} h this year.`);
