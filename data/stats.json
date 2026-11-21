@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T10:56:32.805Z",
+  "updatedAt": "2026-11-21T00:47:00.117Z",
   "year": 2026,
   "ytd": {
     "swim": {
@@ -22,7 +22,14 @@
       "km": 9871.9,
       "hours": 494.2
     },
-    "elevationM": 99159
+    "elevationM": 99159,
+    "trail": {
+      "count": 10,
+      "km": 121.6,
+      "hours": 10.8,
+      "elevationM": 1649,
+      "longestKm": 21.5
+    }
   },
   "typicalWeek": {
     "weeks": 8,
