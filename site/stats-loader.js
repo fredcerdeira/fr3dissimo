@@ -59,11 +59,10 @@
         "Training hours per week, last " + stats.weekly.length + " weeks: " +
           stats.weekly.map((w) => nf(1).format(w.hours)).join(", ")
       );
-      box.style.cssText += ";display:flex;align-items:flex-end;gap:6px;height:120px";
       box.replaceChildren(
         ...stats.weekly.map((w) => {
           const bar = document.createElement("div");
-          bar.style.cssText = `flex:1;height:${(w.hours / max) * 100}%;min-height:2px;background:currentColor`;
+          bar.style.height = `${(w.hours / max) * 100}%`;
           bar.title = `Week of ${fmt.date(w.week)}: ${nf(1).format(w.hours)} h`;
           return bar;
         })
