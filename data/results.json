@@ -62,6 +62,7 @@
   {
     "date": "2026-10-25",
     "race": "UCI Alentejo Gravel",
+    "location": "Alentejo, Portugal",
     "type": "cycling",
     "distance": "118 km",
     "time": "4:26:32",
@@ -81,6 +82,7 @@
   {
     "date": "2026-09-20",
     "race": "Gravel Coruche",
+    "location": "Coruche, Portugal",
     "type": "cycling",
     "distance": "97 km",
     "time": "3:33:56",

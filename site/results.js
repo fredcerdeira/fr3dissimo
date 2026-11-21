@@ -3,6 +3,8 @@
 // distance, time, place, plus per type: swim/bike/run (triathlon), elevation (trail),
 // pace (road), speed (cycling), or a free-text "details" that replaces them.
 // Newest first: write dates as YYYY-MM-DD (or YYYY).
+// A flag is drawn before the location, from its last part (e.g. "Seville, Spain");
+// set "country" (pt, es, de, fr, ad) to override.
 //
 // Markup per race: <li> → <h3> race name (+ location) and a <dl> of label/value pairs.
 
@@ -17,6 +19,24 @@
 
   const LABEL = { triathlon: "Triathlon", trail: "Trail Run", road: "Road Run", cycling: "Cycling" };
   const DETAIL_HEAD = { all: "Details", triathlon: "Swim · Bike · Run", trail: "D+", road: "Pace", cycling: "Avg speed" };
+  // Small inline flags (30×20 viewBox), keyed by ISO code
+  const FLAGS = {
+    "pt": "<rect width=\"30\" height=\"20\" fill=\"#d80027\"/><rect width=\"12\" height=\"20\" fill=\"#006600\"/><circle cx=\"12\" cy=\"10\" r=\"4.4\" fill=\"#ffcc00\"/><path d=\"M10.3 7.4h3.4v3.6a1.7 1.7 0 0 1-3.4 0z\" fill=\"#d80027\"/><path d=\"M11.2 8.4h1.6v2.4a.8.8 0 0 1-1.6 0z\" fill=\"#fff\"/>",
+    "es": "<rect width=\"30\" height=\"20\" fill=\"#aa151b\"/><rect y=\"5\" width=\"30\" height=\"10\" fill=\"#f1bf00\"/>",
+    "de": "<rect width=\"30\" height=\"20\" fill=\"#ffce00\"/><rect width=\"30\" height=\"13.34\" fill=\"#dd0000\"/><rect width=\"30\" height=\"6.67\" fill=\"#000\"/>",
+    "fr": "<rect width=\"30\" height=\"20\" fill=\"#ed2939\"/><rect width=\"20\" height=\"20\" fill=\"#fff\"/><rect width=\"10\" height=\"20\" fill=\"#002395\"/>",
+    "ad": "<rect width=\"30\" height=\"20\" fill=\"#d50032\"/><rect width=\"20\" height=\"20\" fill=\"#fedd00\"/><rect width=\"10\" height=\"20\" fill=\"#10069f\"/><rect x=\"12.6\" y=\"6.6\" width=\"4.8\" height=\"6.4\" rx=\".8\" fill=\"#c7a34a\" stroke=\"#7a5a12\" stroke-width=\".6\"/>"
+  };
+  const COUNTRY = { portugal: "pt", spain: "es", germany: "de", france: "fr", andorra: "ad", "mont blanc": "fr" };
+  const flagFor = (r) => {
+    const code = r.country || COUNTRY[String(r.location || "").split(",").pop().trim().toLowerCase()];
+    if (!FLAGS[code]) return null;
+    const s = document.createElement("span");
+    s.className = "flag";
+    s.setAttribute("aria-hidden", "true");
+    s.innerHTML = '<svg viewBox="0 0 30 20" width="18" height="12">' + FLAGS[code] + "</svg>";
+    return s;
+  };
   const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const fmtDate = (d) => {
     const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d || "");
@@ -69,7 +89,13 @@
       const li = el("li", "res-row");
       li.style.animationDelay = i * 40 + "ms";
       const h = el("h3", null, r.race || "");
-      if (r.location) h.append(el("span", "loc", r.location));
+      if (r.location) {
+        const loc = el("span", "loc");
+        const f = flagFor(r);
+        if (f) loc.append(f);
+        loc.append(r.location);
+        h.append(loc);
+      }
       const dl = el("dl");
       dl.append(
         field("f-date", "Date", fmtDate(r.date)),
