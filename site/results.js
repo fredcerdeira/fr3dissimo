@@ -44,11 +44,13 @@
   function render(filter) {
     const list = rows.filter((r) => filter === "all" || r.type === filter);
     detailHead.textContent = DETAIL_HEAD[filter];
+    const heads = [...root.querySelectorAll("thead th")].map((th) => th.textContent.trim());
     tbody.replaceChildren(...list.map((r, i) => {
       const tr = document.createElement("tr");
       tr.style.animationDelay = i * 40 + "ms";
       tr.append(cell(fmtDate(r.date)), raceCell(r), cell(LABEL[r.type] || r.type),
         cell(r.distance || ""), cell(r.time || "", "td", true), cell(detail(r)), cell(r.place || ""));
+      [...tr.children].forEach((td, j) => (td.dataset.label = heads[j] || ""));
       return tr;
     }));
     buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === filter)));
