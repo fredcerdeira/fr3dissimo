@@ -165,7 +165,7 @@ body { overflow-x:clip; }
 .buildup b { font:extra-condensed 900 28px/1 var(--display); text-transform:uppercase; }
 
 /* training */
-.train-grid { margin-top:56px; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:100px; }
+.train-grid { margin-top:16px; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:100px; }
 .tile { background:none; padding:clamp(24px, 3vw, 40px); display:flex; flex-direction:column; gap:12px; min-height:220px; }
 .tile { container-type:inline-size; }
 .tile .num { font:extra-condensed 900 32cqi/1 var(--display); white-space:nowrap; } /* shrunk by motion.js if a value is too long */
