@@ -87,13 +87,14 @@
     "details": "Gravel Race 1,065 m D+"
   },
   {
-    "date": "[YYYY-MM-DD]",
-    "race": "[Race name 1]",
-    "type": "[Discipline]",
-    "distance": "[0] km",
-    "time": "[0:00:00]",
-    "details": "[Details]",
-    "place": "[—]"
+    "date": "2024-02-18",
+    "race": "Seville Marathon",
+    "location": "Seville, Spain",
+    "type": "road",
+    "distance": "Marathon · 42.2 km",
+    "time": "2:38:54",
+    "pace": "3:45 /km",
+    "place": "496th overall"
   },
   {
     "date": "[YYYY-MM-DD]",
