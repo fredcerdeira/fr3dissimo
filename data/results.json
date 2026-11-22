@@ -1,5 +1,75 @@
 [
   {
+    "date": "2026-10-25",
+    "race": "UCI Alentejo Gravel",
+    "location": "Alentejo, Portugal",
+    "type": "cycling",
+    "distance": "118 km",
+    "time": "4:26:32",
+    "details": "Gravel Race 2,084 m D+",
+    "place": "70th · M45-49"
+  },
+  {
+    "date": "2026-09-20",
+    "race": "Gravel Coruche",
+    "location": "Coruche, Portugal",
+    "type": "cycling",
+    "distance": "97 km",
+    "time": "3:33:56",
+    "place": "--",
+    "details": "Gravel Race 1,065 m D+"
+  },
+  {
+    "date": "2026-07-05",
+    "race": "Challenge Roth",
+    "location": "Roth, Germany",
+    "type": "triathlon",
+    "distance": "Full",
+    "time": "9:31:32",
+    "details": "3.8/180/42.2 km",
+    "place": "18th · M45-49"
+  },
+  {
+    "date": "2026-04-26",
+    "race": "Middle Distance National Championship",
+    "location": "Moura, Portugal",
+    "type": "triathlon",
+    "distance": "Half",
+    "time": "4:45:38",
+    "details": "1.9/90/21 km",
+    "place": "2nd · M45-49"
+  },
+  {
+    "date": "2026-03-08",
+    "race": "Lisbon Half Marathon",
+    "location": "Lisbon, Portugal",
+    "type": "road",
+    "distance": "Half-Marathon",
+    "time": "1:14:37",
+    "pace": "3'32 pace",
+    "place": "50th overall"
+  },
+  {
+    "date": "2025-12-20",
+    "race": "São Silvestre Baía do Seixal",
+    "location": "Seixal, Portugal",
+    "type": "road",
+    "distance": "10 km",
+    "time": "0:33:59",
+    "place": "5th · M40-44",
+    "pace": "3'24 pace"
+  },
+  {
+    "date": "2025-07-06",
+    "race": "Challenge Roth",
+    "location": "Roth, Germany",
+    "type": "triathlon",
+    "distance": "Full",
+    "time": "9:36:12",
+    "details": "3.8/180/42.2 km",
+    "place": "51st · M40-44"
+  },
+  {
     "date": "2024-10-06",
     "race": "IRONMAN Calella-Barcelona",
     "location": "Spain",
@@ -18,6 +88,16 @@
     "time": "9:08:50",
     "place": "20th · M40-44",
     "details": "3.8/180/42.2 km"
+  },
+  {
+    "date": "2024-02-18",
+    "race": "Seville Marathon",
+    "location": "Seville, Spain",
+    "type": "road",
+    "distance": "Marathon",
+    "time": "2:38:54",
+    "pace": "3'45 pace",
+    "place": "496th overall"
   },
   {
     "date": "2023-09-10",
@@ -60,105 +140,15 @@
     "place": "29th overall"
   },
   {
-    "date": "2026-10-25",
-    "race": "UCI Alentejo Gravel",
-    "location": "Alentejo, Portugal",
-    "type": "cycling",
-    "distance": "118 km",
-    "time": "4:26:32",
-    "details": "Gravel Race 2,084 m D+",
-    "place": "70th · M45-49"
-  },
-  {
-    "date": "2018-08-29",
-    "race": "UTMB® 2018",
-    "location": "Mont Blanc",
+    "date": "2021-05-02",
+    "race": "Zela Ultra Marathon",
+    "location": "Portugal",
     "type": "trail",
-    "distance": "171 km",
-    "time": "28:12:07",
-    "elevation": "9,990 m D+",
-    "place": "74th overall"
-  },
-  {
-    "date": "2026-09-20",
-    "race": "Gravel Coruche",
-    "location": "Coruche, Portugal",
-    "type": "cycling",
-    "distance": "97 km",
-    "time": "3:33:56",
-    "place": "--",
-    "details": "Gravel Race 1,065 m D+"
-  },
-  {
-    "date": "2024-02-18",
-    "race": "Seville Marathon",
-    "location": "Seville, Spain",
-    "type": "road",
-    "distance": "Marathon",
-    "time": "2:38:54",
-    "pace": "3'45 pace",
-    "place": "496th overall"
-  },
-  {
-    "date": "2026-07-05",
-    "race": "Challenge Roth",
-    "location": "Roth, Germany",
-    "type": "triathlon",
-    "distance": "Full",
-    "time": "9:31:32",
-    "details": "3.8/180/42.2 km",
-    "place": "18th · M45-49"
-  },
-  {
-    "date": "2026-03-08",
-    "race": "Lisbon Half Marathon",
-    "location": "Lisbon, Portugal",
-    "type": "road",
-    "distance": "Half-Marathon",
-    "time": "1:14:37",
-    "pace": "3'32 pace",
-    "place": "50th overall"
-  },
-  {
-    "date": "2018-12-08",
-    "race": "Maxi Race Madeira",
-    "location": "Madeira, Portugal",
-    "type": "trail",
-    "distance": "103.2 km",
-    "time": "14:03:03",
-    "elevation": "7,970 m D+",
-    "place": "3rd overall"
-  },
-  {
-    "date": "2017-07-07",
-    "race": "Ehunmilak Ultra-Trail®",
-    "location": "Basque Country, Spain",
-    "type": "trail",
-    "distance": "170.7 km",
-    "time": "30:11:42",
-    "elevation": "10,160 m D+",
-    "place": "30th overall"
-  },
-  {
-    "date": "2018-06-30",
-    "race": "Ultra-Trail® Serra da Freita",
-    "location": "Arouca, Portugal",
-    "type": "trail",
-    "distance": "106.6 km",
-    "time": "15:25:45",
-    "elevation": "7,020 m D+",
-    "place": "15th overall",
-    "details": "National Championship 7,020 m D+"
-  },
-  {
-    "date": "2019-07-20",
-    "race": "Andorra Ultra Trail – Celestrail",
-    "location": "Andorra",
-    "type": "trail",
-    "distance": "83 km",
-    "time": "12:17:30",
-    "elevation": "5,000 m D+",
-    "place": "5th overall"
+    "distance": "41.7 km",
+    "time": "5:09:38",
+    "elevation": "2,490 m D+",
+    "place": "6th overall",
+    "details": "Skyrunning 2,490 m D+"
   },
   {
     "date": "2020-02-02",
@@ -170,6 +160,16 @@
     "elevation": "1,860 m D+",
     "place": "7th overall",
     "details": "Skyrunning 1,860 m D+"
+  },
+  {
+    "date": "2019-07-20",
+    "race": "Andorra Ultra Trail – Celestrail",
+    "location": "Andorra",
+    "type": "trail",
+    "distance": "83 km",
+    "time": "12:17:30",
+    "elevation": "5,000 m D+",
+    "place": "5th overall"
   },
   {
     "date": "2019-07-07",
@@ -194,17 +194,6 @@
     "details": "Skyrunning 2,710 m D+"
   },
   {
-    "date": "2021-05-02",
-    "race": "Zela Ultra Marathon",
-    "location": "Portugal",
-    "type": "trail",
-    "distance": "41.7 km",
-    "time": "5:09:38",
-    "elevation": "2,490 m D+",
-    "place": "6th overall",
-    "details": "Skyrunning 2,490 m D+"
-  },
-  {
     "date": "2019-02-23",
     "race": "Ultra-Trail de Conímbriga Terras de Sicó",
     "location": "Condeixa-a-Nova, Portugal",
@@ -213,6 +202,37 @@
     "time": "12:14:40",
     "elevation": "3,630 m D+",
     "place": "4th overall"
+  },
+  {
+    "date": "2018-12-08",
+    "race": "Maxi Race Madeira",
+    "location": "Madeira, Portugal",
+    "type": "trail",
+    "distance": "103.2 km",
+    "time": "14:03:03",
+    "elevation": "7,970 m D+",
+    "place": "3rd overall"
+  },
+  {
+    "date": "2018-08-29",
+    "race": "UTMB® 2018",
+    "location": "Mont Blanc",
+    "type": "trail",
+    "distance": "171 km",
+    "time": "28:12:07",
+    "elevation": "9,990 m D+",
+    "place": "74th overall"
+  },
+  {
+    "date": "2018-06-30",
+    "race": "Ultra-Trail® Serra da Freita",
+    "location": "Arouca, Portugal",
+    "type": "trail",
+    "distance": "106.6 km",
+    "time": "15:25:45",
+    "elevation": "7,020 m D+",
+    "place": "15th overall",
+    "details": "National Championship 7,020 m D+"
   },
   {
     "date": "2018-04-28",
@@ -225,33 +245,23 @@
     "place": "34th overall"
   },
   {
-    "date": "2025-12-20",
-    "race": "São Silvestre Baía do Seixal",
-    "location": "Seixal, Portugal",
-    "type": "road",
-    "distance": "10 km",
-    "time": "0:33:59",
-    "place": "5th · M40-44",
-    "pace": "3'24 pace"
+    "date": "2017-11-26",
+    "race": "Hard Trail Montejunto",
+    "location": "Montejunto, Portugal",
+    "type": "trail",
+    "distance": "16.2 km",
+    "time": "1:37:03",
+    "elevation": "1,050 m D+",
+    "place": "2nd overall"
   },
   {
-    "date": "2026-04-26",
-    "race": "Middle Distance National Championship",
-    "location": "Moura, Portugal",
-    "type": "triathlon",
-    "distance": "Half",
-    "time": "4:45:38",
-    "details": "1.9/90/21 km",
-    "place": "2nd · M45-49"
-  },
-  {
-    "date": "2025-07-06",
-    "race": "Challenge Roth",
-    "location": "Roth, Germany",
-    "type": "triathlon",
-    "distance": "Full",
-    "time": "9:36:12",
-    "details": "3.8/180/42.2 km",
-    "place": "51st · M40-44"
+    "date": "2017-07-07",
+    "race": "Ehunmilak Ultra-Trail®",
+    "location": "Basque Country, Spain",
+    "type": "trail",
+    "distance": "170.7 km",
+    "time": "30:11:42",
+    "elevation": "10,160 m D+",
+    "place": "30th overall"
   }
 ]
