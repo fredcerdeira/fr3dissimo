@@ -115,11 +115,12 @@ th:first-child, td:first-child { padding-left:0; } th:last-child, td:last-child 
 body { overflow-x:clip; }
 
 /* partners */
-.partners { margin:56px 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:24px; }
+.partners { margin:56px 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:24px; }
 .partner { display:flex; flex-direction:column; justify-content:space-between; gap:40px; min-height:180px; padding:28px; background:rgba(17,17,18,.05); color:var(--ink-dark); text-decoration:none; transition:background .25s, color .25s; }
 .partner .mono { color:var(--muted-dark); }
 .partner b { font:extra-condensed 900 32px/1 var(--display); text-transform:uppercase; }
 .partner img { max-width:100%; height:auto; max-height:66px; object-fit:contain; align-self:center; }
+.partner svg { max-width:220px; align-self:center; } /* keeps wide wordmarks in balance with the others */
 .partner:hover, .partner:focus-visible { background:var(--ink-dark); color:var(--paper); }
 .partner:hover .mono, .partner:focus-visible .mono { color:var(--muted); }
 .partner:hover img, .partner:focus-visible img { filter:brightness(0) invert(1); } /* raster logos turn light on the dark hover state */
@@ -243,7 +244,7 @@ body::after { content:""; position:fixed; inset:0; z-index:100; pointer-events:n
   .story-grid, .race-card { grid-template-columns:1fr; }
   .race-card .splits { border-left:0; border-top:1px solid var(--line); }
   .timeline, .buildup, .train-grid, .trail-grid { grid-template-columns:1fr; }
-  .partners { grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px; }
+  .partners { grid-template-columns:1fr; gap:12px; }
   .partner { min-height:140px; padding:20px; }
   .partner b { font-size:24px; overflow-wrap:anywhere; }
   .timeline li + li { padding-left:0; padding-top:24px; margin-top:24px; }
