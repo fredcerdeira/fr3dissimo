@@ -233,5 +233,15 @@
     "time": "0:33:59",
     "place": "5th · M40-44",
     "pace": "3'24 pace"
+  },
+  {
+    "date": "2026-04-26",
+    "race": "Moura – Half Distance National Championship",
+    "location": "Moura, Portugal",
+    "type": "triathlon",
+    "distance": "Half",
+    "time": "4:45:38",
+    "details": "1.9/90/19.4 km",
+    "place": "2nd · M45-49"
   }
 ]
