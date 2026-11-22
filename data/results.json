@@ -243,5 +243,15 @@
     "time": "4:45:38",
     "details": "1.9/90/21 km",
     "place": "2nd · M45-49"
+  },
+  {
+    "date": "2025-07-06",
+    "race": "Challenge Roth",
+    "location": "Roth, Germany",
+    "type": "triathlon",
+    "distance": "Full",
+    "time": "9:36:12",
+    "details": "3.8/180/42.2 km",
+    "place": "51st · M40-44"
   }
 ]
