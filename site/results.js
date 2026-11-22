@@ -112,7 +112,24 @@
     if (status) status.textContent = `${shown.length} result${shown.length === 1 ? "" : "s"}`;
   }
 
-  buttons.forEach((b) => b.addEventListener("click", () => render(b.dataset.filter)));
+  // Deep links: #results-trail, #results-triathlon, … open Results with that filter on
+  const hashFilter = () => {
+    const m = /^#results-([a-z]+)$/.exec(location.hash);
+    return m && buttons.some((b) => b.dataset.filter === m[1]) ? m[1] : null;
+  };
+  const openFromHash = () => {
+    const f = hashFilter();
+    if (!f || !rows.length) return;
+    render(f);
+    document.getElementById("results")?.scrollIntoView();
+  };
+  addEventListener("hashchange", openFromHash);
+
+  buttons.forEach((b) => b.addEventListener("click", () => {
+    render(b.dataset.filter);
+    // keep the address shareable without jumping the page
+    history.replaceState(null, "", b.dataset.filter === "all" ? "#results" : "#results-" + b.dataset.filter);
+  }));
 
   fetch(SRC, { cache: "no-cache" })
     .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
@@ -125,6 +142,7 @@
         if (c) c.textContent = n;
       });
       render("all");
+      openFromHash();
     })
     .catch((e) => console.warn("results: could not load", SRC, e));
 })();
