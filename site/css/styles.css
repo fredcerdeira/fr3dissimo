@@ -147,7 +147,7 @@ body { overflow-x:clip; }
 .weekly > div { flex:1; min-height:2px; background:currentColor; }
 
 /* reveal delays */
-.d-06 { --d:.06s; } .d-08 { --d:.08s; } .d-1 { --d:.1s; } .d-12 { --d:.12s; } .d-14 { --d:.14s; } .d-15 { --d:.15s; } .d-16 { --d:.16s; } .d-18 { --d:.18s; } .d-22 { --d:.22s; } .d-24 { --d:.24s; } .d-7 { --d:.7s; } .d-85 { --d:.85s; }
+.d-06 { --d:.06s; } .d-08 { --d:.08s; } .d-1 { --d:.1s; } .d-12 { --d:.12s; } .d-14 { --d:.14s; } .d-15 { --d:.15s; } .d-16 { --d:.16s; } .d-18 { --d:.18s; } .d-22 { --d:.22s; } .d-24 { --d:.24s; } .d-32 { --d:.32s; } .d-7 { --d:.7s; } .d-85 { --d:.85s; }
 
 /* image framing */
 .op-70-70 { object-position:70% 70%; } .op-74-50, .story-photo img.op-74-50 { object-position:74% 50%; } .story-photo img.full { height:100%; } /* whole photo visible, no parallax crop */ .op-70-50 { object-position:70% 50%; } .op-50-92 { object-position:50% 92%; } .op-50-35 { object-position:50% 35%; } .op-50-30 { object-position:50% 30%; } .op-50-20 { object-position:50% 20%; } .op-45-40 { object-position:45% 40%; } .op-40-30 { object-position:40% 30%; }
@@ -253,3 +253,12 @@ body::after { content:""; position:fixed; inset:0; z-index:100; pointer-events:n
   .tile.wide { grid-column:auto; }
   .gallery { grid-template-columns:repeat(2, minmax(0, 1fr)); grid-auto-rows:180px; }
 }
+
+/* Personal records */
+.prs { margin:56px 0 72px; }
+.sub-title { margin:0; font:extra-condensed 900 clamp(32px, 4vw, 48px)/1 var(--display); text-transform:uppercase; letter-spacing:.01em; }
+.pr-grid { grid-template-columns:repeat(5, minmax(0,1fr)); gap:40px; }
+.pr-grid .tile { min-height:0; padding-top:0; padding-bottom:0; }
+.pr-grid .tile .num { font-size:24cqi; }
+@media (max-width:1000px) { .pr-grid { grid-template-columns:repeat(3, minmax(0,1fr)); } }
+@media (max-width:640px) { .pr-grid { grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px 24px; } }
