@@ -125,6 +125,7 @@ body { overflow-x:clip; }
 .partner svg { max-width:220px; position:absolute; top:22%; bottom:0; left:0; right:0; margin:auto; } /* keeps wide wordmarks in balance with the others */
 .partner:hover, .partner:focus-visible { background:var(--ink-dark); color:var(--paper); }
 .partner:hover .mono, .partner:focus-visible .mono { color:var(--muted); }
+.partner img { filter:brightness(0) contrast(1.4); } /* raster logo (Darefore): solid ink, crisper edges, like the SVG logos */
 .partner:hover img, .partner:focus-visible img { filter:brightness(0) invert(1); } /* raster logos turn light on the dark hover state */
 
 /* utilities that replace former inline styles */
