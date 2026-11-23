@@ -116,11 +116,11 @@ body { overflow-x:clip; }
 
 /* partners */
 .partners { margin:56px 0 0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:24px; }
-.partner { display:flex; flex-direction:column; justify-content:space-between; gap:40px; min-height:180px; padding:28px; background:rgba(17,17,18,.05); color:var(--ink-dark); text-decoration:none; transition:background .25s, color .25s; }
+.partner { display:flex; flex-direction:column; justify-content:space-between; gap:40px; min-height:180px; padding:28px; position:relative; background:rgba(17,17,18,.05); color:var(--ink-dark); text-decoration:none; transition:background .25s, color .25s; }
 .partner .mono { color:var(--muted-dark); }
 .partner b { font:extra-condensed 900 32px/1 var(--display); text-transform:uppercase; }
-.partner img { max-width:100%; height:auto; max-height:66px; object-fit:contain; align-self:center; }
-.partner svg { max-width:220px; align-self:center; } /* keeps wide wordmarks in balance with the others */
+.partner img { max-width:100%; height:auto; max-height:66px; object-fit:contain; position:absolute; top:22%; bottom:0; left:0; right:0; margin:auto; }
+.partner svg { max-width:220px; position:absolute; top:22%; bottom:0; left:0; right:0; margin:auto; } /* keeps wide wordmarks in balance with the others */
 .partner:hover, .partner:focus-visible { background:var(--ink-dark); color:var(--paper); }
 .partner:hover .mono, .partner:focus-visible .mono { color:var(--muted); }
 .partner:hover img, .partner:focus-visible img { filter:brightness(0) invert(1); } /* raster logos turn light on the dark hover state */
