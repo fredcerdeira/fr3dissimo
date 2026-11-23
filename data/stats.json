@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T13:26:00.942Z",
+  "updatedAt": "2026-11-23T16:06:11.956Z",
   "year": 2026,
   "ytd": {
     "swim": {
@@ -33,20 +33,12 @@
   },
   "typicalWeek": {
     "weeks": 8,
-    "hours": 10.7,
-    "swimKm": 1.4,
-    "bikeKm": 103.5,
-    "runKm": 62.8
+    "hours": 9.2,
+    "swimKm": 0.7,
+    "bikeKm": 88.4,
+    "runKm": 54.7
   },
   "weekly": [
-    {
-      "week": "2026-08-31",
-      "swim": 0.72,
-      "bike": 4.63,
-      "run": 4.7,
-      "other": 0,
-      "hours": 10.04
-    },
     {
       "week": "2026-09-07",
       "swim": 1.38,
@@ -129,6 +121,14 @@
     },
     {
       "week": "2026-11-16",
+      "swim": 0,
+      "bike": 0,
+      "run": 0,
+      "other": 0,
+      "hours": 0
+    },
+    {
+      "week": "2026-11-23",
       "swim": 0,
       "bike": 0,
       "run": 0,
