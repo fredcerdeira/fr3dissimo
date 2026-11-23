@@ -134,6 +134,7 @@ body { overflow-x:clip; }
 .intro + .intro { margin-top:16px; }
 .paper .intro { color:var(--muted-dark); }
 .intro-wide { max-width:747px; }
+.intro-655 { max-width:655px; }
 .intro-small { font-size:inherit; max-width:36rem; }
 .section-alt { background:var(--bg2); }
 .section.flush-bottom { padding-bottom:0; }
