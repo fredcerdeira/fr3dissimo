@@ -87,7 +87,7 @@
     detailHead.textContent = detailLabel;
     list.replaceChildren(...shown.map((r, i) => {
       const li = el("li", "res-row");
-      li.style.animationDelay = i * 40 + "ms";
+      li.style.animationDelay = Math.min(i, 10) * 40 + "ms";
       const h = el("h3", null, r.race || "");
       if (r.location) {
         const loc = el("span", "loc");
@@ -144,5 +144,9 @@
       render("all");
       openFromHash();
     })
-    .catch((e) => console.warn("results: could not load", SRC, e));
+    .catch((e) => {
+      console.warn("results: could not load", SRC, e);
+      list.replaceChildren(el("li", "res-row res-empty", "Results couldn't load. Refresh the page to try again."));
+      if (status) status.textContent = "";
+    });
 })();

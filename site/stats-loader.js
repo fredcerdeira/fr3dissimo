@@ -76,5 +76,12 @@
       fill(stats);
       document.dispatchEvent(new CustomEvent("stats:filled", { detail: stats }));
     })
-    .catch((e) => console.warn("stats-loader: could not load", SRC, e));
+    .catch((e) => {
+      console.warn("stats-loader: could not load", SRC, e);
+      document.querySelectorAll("[data-stat-recent]").forEach((ul) => {
+        const li = document.createElement("li");
+        li.textContent = "Latest sessions couldn't load. Refresh the page to try again.";
+        ul.replaceChildren(li);
+      });
+    });
 })();

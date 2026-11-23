@@ -3,11 +3,12 @@
 //  - hero title slides in line by line
 //  - [data-reveal] fades up when it enters the viewport (stagger with --d)
 //  - [data-parallax="f"] moves at a different speed while scrolling
-//  - [data-scrub] lights up as it crosses the middle of the screen
+//  - [data-scrub] draws its accent rule as it crosses the middle of the screen
 //  - [data-count] numbers count up and weekly bars grow once the stats load
 // Everything is skipped for prefers-reduced-motion.
 
 (function () {
+  document.documentElement.dataset.motion = "on";
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
@@ -42,7 +43,8 @@
       (entries) => entries.forEach((e) => {
         if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
       }),
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.12 }
+      // threshold 0: an element taller than the viewport can never reach a ratio above ~0.1
+      { rootMargin: "0px 0px -10% 0px", threshold: 0 }
     );
     reveals.forEach((el) => io.observe(el));
   }
@@ -61,10 +63,10 @@
 
     if (reduce) return;
 
-    // parallax: offset relative to the element's distance from the viewport centre
-    parallax.forEach((img) => {
+    // measure everything first, then write, so the browser lays out once per frame
+    const moves = parallax.map((img) => {
       const box = img.parentElement.getBoundingClientRect();
-      if (box.bottom < -200 || box.top > vh + 200) return;
+      if (box.bottom < -200 || box.top > vh + 200) return null;
       const f = parseFloat(img.dataset.parallax) || 0;
       const d = box.top + box.height / 2 - vh / 2;
       // never move further than the image's extra height, so no empty strip shows
@@ -73,15 +75,13 @@
         const spare = Math.max(0, img.offsetHeight - box.height);
         y = clamp(y, -spare, 0);
       }
-      img.style.transform = `translate3d(0, ${y.toFixed(1)}px, 0)`;
+      return [img, y];
     });
+    const draws = scrub.map((el) => [el, clamp((vh * 0.85 - el.getBoundingClientRect().top) / (vh * 0.35), 0, 1)]);
 
-    // scrub: dim → bright as items cross 65% of the viewport
-    scrub.forEach((el) => {
-      const r = el.getBoundingClientRect();
-      const t = clamp((vh * 0.85 - r.top) / (vh * 0.35), 0, 1);
-      el.style.opacity = (0.2 + 0.8 * t).toFixed(3);
-    });
+    moves.forEach((m) => m && (m[0].style.transform = `translate3d(0, ${m[1].toFixed(1)}px, 0)`));
+    // scrub: each item's accent rule draws across as it crosses 50–85% of the viewport
+    draws.forEach(([el, t]) => el.style.setProperty("--t", t.toFixed(3)));
   }
   function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
   addEventListener("scroll", onScroll, { passive: true });
