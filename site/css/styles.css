@@ -163,14 +163,6 @@ body { overflow-x:clip; }
 @keyframes rowin { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
 @media (prefers-reduced-motion: reduce) { .res-row { animation:none; } }
 
-/* season */
-.race-card { margin-top:56px; display:grid; grid-template-columns:1.2fr 1fr; border:1px solid var(--line); background:var(--bg2); }
-.race-card .info { padding:clamp(28px, 4vw, 56px); display:flex; flex-direction:column; gap:16px; }
-.race-card h3 { font-size:clamp(44px, 5.5vw, 80px); }
-.race-card .splits { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); border-left:1px solid var(--line); }
-.race-card .splits div { padding:clamp(20px, 3vw, 40px); border-left:1px solid var(--line); display:flex; flex-direction:column; justify-content:flex-end; gap:8px; }
-.race-card .splits div:first-child { border-left:0; }
-.race-card .splits b { font:extra-condensed 900 44px/1 var(--display); }
 .buildup { margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px; }
 .buildup li { padding:24px 0; display:flex; flex-direction:column; gap:6px; }
 .buildup b { font:extra-condensed 900 24px/1 var(--display); text-transform:uppercase; }
@@ -243,8 +235,7 @@ body::after { content:""; position:fixed; inset:0; z-index:100; pointer-events:n
   .stats .wrap { grid-template-columns:repeat(2, minmax(0,1fr)); }
   .stat, .stat:first-child { padding-left:0; }
   .stat:nth-child(even) { padding-left:20px; }
-  .story-grid, .race-card { grid-template-columns:1fr; }
-  .race-card .splits { border-left:0; border-top:1px solid var(--line); }
+  .story-grid { grid-template-columns:1fr; }
   .timeline, .buildup, .train-grid, .trail-grid { grid-template-columns:1fr; }
   .partners { grid-template-columns:1fr; gap:12px; }
   .partner { min-height:140px; padding:20px; }
