@@ -154,6 +154,7 @@ body { overflow-x:clip; }
 .op-70-70 { object-position:70% 70%; } .op-74-50, .story-photo img.op-74-50 { object-position:74% 50%; } .story-photo img.full { height:100%; will-change:auto; } /* whole photo visible, no parallax crop */ .op-70-50 { object-position:70% 50%; } .op-50-92 { object-position:50% 92%; } .op-50-35 { object-position:50% 35%; } .op-50-30 { object-position:50% 30%; } .op-50-20 { object-position:50% 20%; } .op-45-40 { object-position:45% 40%; } .op-40-30 { object-position:40% 30%; }
 
 @media (max-width: 1023px) {
+  .partners { grid-template-columns:repeat(2, minmax(0,1fr)); }
   .res-head { display:none; }
   .res-row { grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px 20px; padding:22px 0; align-items:start; }
   .res-row h3 { grid-area:auto; grid-column:1 / -1; font-size:19px; line-height:1.25; }
