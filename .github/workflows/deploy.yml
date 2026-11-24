@@ -1,0 +1,53 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  # Commits pushed by Garmin sync use GITHUB_TOKEN, which doesn't trigger "push" here
+  workflow_run:
+    workflows: ["Garmin sync"]
+    types: [completed]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Collect the public files
+        run: |
+          mkdir _site
+          cp -R index.html CNAME site data img _site/
+
+      # GitHub Pages caches every file for 10 minutes and the header can't be changed,
+      # so each CSS/JS link gets ?v=<content hash>: a changed file is a new URL.
+      - name: Stamp CSS and JS links with a version
+        run: |
+          cd _site
+          for f in $(grep -oE '(href|src)="site/[^"?]+\.(css|js)"' index.html | sed -E 's/^[a-z]+="([^"]+)"$/\1/' | sort -u); do
+            v=$(sha256sum "$f" | cut -c1-8)
+            sed -i "s#\"$f\"#\"$f?v=$v\"#g" index.html
+            echo "$f?v=$v"
+          done
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
