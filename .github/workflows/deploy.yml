@@ -32,7 +32,7 @@ jobs:
       - name: Collect the public files
         run: |
           mkdir _site
-          cp -R index.html CNAME site data img _site/
+          cp -R index.html CNAME robots.txt sitemap.xml site data img _site/
 
       # GitHub Pages caches every file for 10 minutes and the header can't be changed,
       # so each CSS/JS link gets ?v=<content hash>: a changed file is a new URL.
