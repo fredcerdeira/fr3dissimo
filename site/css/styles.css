@@ -87,7 +87,7 @@ p { text-wrap:pretty; }
 .paper { background:var(--paper); color:var(--ink-dark); }
 .paper .muted { color:var(--muted-dark); }
 
-.results { margin-top:56px; display:flex; flex-direction:column; gap:24px; }
+.results { margin-top:56px; scroll-margin-top:24px; display:flex; flex-direction:column; gap:24px; }
 .filters { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
 .chip { font:500 14px var(--sans); min-height:40px; padding:0 16px; border-radius:999px; border:1px solid var(--line-dark); background:transparent; color:var(--ink-dark); cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:background .2s, color .2s, border-color .2s; }
 .chip:hover { border-color:var(--ink-dark); }

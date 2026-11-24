@@ -145,7 +145,7 @@
     const f = hashFilter();
     if (!f || !rows.length) return;
     render(f);
-    document.getElementById("results")?.scrollIntoView();
+    root.scrollIntoView();
   };
   addEventListener("hashchange", openFromHash);
 
