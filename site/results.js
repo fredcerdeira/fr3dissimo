@@ -19,7 +19,7 @@
   const more = root.querySelector("[data-res-more]");
   const toggle = root.querySelector("[data-res-toggle]");
   const count = root.querySelector("[data-res-count]");
-  const LIMIT = 8;
+  const LIMIT = 10;
 
   const LABEL = { triathlon: "Triathlon", trail: "Trail Run", road: "Road Run", cycling: "Cycling" };
   const DETAIL_HEAD = { all: "Details", triathlon: "Swim · Bike · Run", trail: "D+", road: "Pace", cycling: "Avg speed" };
