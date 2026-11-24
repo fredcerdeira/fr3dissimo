@@ -111,11 +111,11 @@
     fitNums();
     const nf = new Intl.NumberFormat("en-GB", { maximumFractionDigits: 0 });
     const counters = $$("[data-count]").map((el) => ({ el, to: parseFloat(el.textContent.replace(/[^\d.]/g, "")) })).filter((c) => !isNaN(c.to));
-    const bars = $$("[data-stat-weekly] > div");
+    const bars = $$("[data-stat-weekly] > *");
     if (reduce || !("IntersectionObserver" in window)) return;
 
     counters.forEach((c) => (c.el.textContent = "0"));
-    bars.forEach((b) => { b.style.transformOrigin = "bottom"; b.style.transform = "scaleY(0)"; b.style.transition = "transform .9s cubic-bezier(.2,.7,.2,1)"; });
+    bars.forEach((b) => { b.style.transformOrigin = "bottom"; b.style.transform = "scaleY(0)"; b.style.transition = "transform .9s cubic-bezier(.2,.7,.2,1), opacity .2s"; });
 
     const run = (c) => {
       const start = performance.now(), dur = 1400;
@@ -131,7 +131,7 @@
       io.unobserve(e.target);
       const c = counters.find((x) => x.el === e.target);
       if (c) run(c);
-      else $$(":scope > div", e.target).forEach((b, i) => setTimeout(() => (b.style.transform = "none"), i * 50));
+      else $$(":scope > *", e.target).forEach((b, i) => setTimeout(() => (b.style.transform = "none"), i * 50));
     }), { threshold: 0.4 });
     counters.forEach((c) => io.observe(c.el));
     $$("[data-stat-weekly]").forEach((w) => io.observe(w));
