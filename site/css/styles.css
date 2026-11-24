@@ -111,6 +111,15 @@ p { text-wrap:pretty; }
 .res-row .f-date > dd { grid-area:1 / 1; } .res-row .f-disc > dd { grid-area:1 / 3; } .res-row .f-dist > dd { grid-area:1 / 4; }
 .res-row .f-time > dd { grid-area:1 / 5; font-weight:700; } .res-row .f-det > dd { grid-area:1 / 6; } .res-row .f-place > dd { grid-area:1 / 7; }
 .res-empty { display:block; color:var(--muted-dark); }
+.res-row.is-podium .f-place > dd { color:var(--accent-on-paper); font-weight:700; }
+.res-row.is-podium .f-place > dd::before { content:""; display:inline-block; width:7px; height:7px; border-radius:50%; background:currentColor; margin-right:7px; vertical-align:2px; }
+.res-row.is-top10 .f-place > dd { font-weight:700; }
+.res-row.is-hidden { display:none; }
+.res-more { display:flex; align-items:center; gap:16px; }
+.res-more[hidden] { display:none; }
+.res-more button { font:600 15px var(--sans); min-height:46px; padding:0 22px; border-radius:999px; border:1px solid var(--ink-dark); background:transparent; color:var(--ink-dark); cursor:pointer; transition:background .2s, color .2s; }
+.res-more button:hover { background:var(--ink-dark); color:var(--paper); }
+.res-more .mono { color:var(--muted-dark); }
 .res-row .nl { display:block; }
 .res-row .ag { display:block; margin-top:2px; font-size:12px; color:var(--muted-dark); letter-spacing:.02em; }
 
@@ -250,6 +259,16 @@ body::after { content:""; position:fixed; inset:0; z-index:100; pointer-events:n
 }
 
 /* Personal records */
+.hl { margin:56px 0 0; }
+.hl-list { list-style:none; margin:24px 0 0; padding:0; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:0 32px; }
+.hl-list li { border-top:2px solid var(--ink-dark); padding-top:18px; display:flex; flex-direction:column; gap:10px; }
+.hl-list li.lead { border-top-color:var(--accent-on-paper); }
+.hl-list .mono { color:var(--muted-dark); }
+.hl-list li.lead .mono { color:var(--accent-on-paper); }
+.hl-list b { font:extra-condensed 900 clamp(32px, 3.6vw, 52px)/.92 var(--display); text-transform:uppercase; letter-spacing:.005em; }
+.hl-list p { margin:0; color:var(--muted-dark); font-size:15px; line-height:1.45; }
+.hl-list p strong { color:var(--ink-dark); font-weight:600; }
+@media (max-width:960px) { .hl-list { grid-template-columns:1fr; gap:28px; } .hl-list b { font-size:44px; } }
 .prs { margin:56px 0 72px; }
 .sub-title { margin:0; font:extra-condensed 900 clamp(32px, 4vw, 48px)/1 var(--display); text-transform:uppercase; letter-spacing:.01em; }
 .pr-grid { grid-template-columns:repeat(5, minmax(0,1fr)); gap:40px; }

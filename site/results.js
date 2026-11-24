@@ -16,6 +16,10 @@
   const detailHead = root.querySelector("[data-detail-head]");
   const buttons = [...root.querySelectorAll("[data-filter]")];
   const status = root.querySelector("[data-results-status]");
+  const more = root.querySelector("[data-res-more]");
+  const toggle = root.querySelector("[data-res-toggle]");
+  const count = root.querySelector("[data-res-count]");
+  const LIMIT = 8;
 
   const LABEL = { triathlon: "Triathlon", trail: "Trail Run", road: "Road Run", cycling: "Cycling" };
   const DETAIL_HEAD = { all: "Details", triathlon: "Swim · Bike · Run", trail: "D+", road: "Pace", cycling: "Avg speed" };
@@ -80,6 +84,22 @@
     return f;
   };
 
+  // Collapsed: only the first LIMIT rows of the current filter are shown
+  const setExpanded = (open) => {
+    const items = [...list.children];
+    items.forEach((li, i) => li.classList.toggle("is-hidden", !open && i >= LIMIT));
+    if (!more) return;
+    more.hidden = items.length <= LIMIT;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.textContent = open ? "Show fewer" : `Show the full list (${items.length})`;
+    count.textContent = open ? `${items.length} shown` : `${LIMIT} of ${items.length} shown`;
+  };
+  toggle?.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") !== "true";
+    setExpanded(open);
+    if (!open) root.scrollIntoView({ block: "start" });
+  });
+
   let rows = [];
   function render(filter) {
     const shown = rows.filter((r) => filter === "all" || r.type === filter);
@@ -87,6 +107,9 @@
     detailHead.textContent = detailLabel;
     list.replaceChildren(...shown.map((r, i) => {
       const li = el("li", "res-row");
+      const rank = parseInt(r.place, 10);
+      if (rank <= 3) li.classList.add("is-podium");
+      else if (rank <= 10) li.classList.add("is-top10");
       li.style.animationDelay = Math.min(i, 10) * 40 + "ms";
       const h = el("h3", null, r.race || "");
       if (r.location) {
@@ -108,6 +131,7 @@
       li.append(h, dl);
       return li;
     }));
+    setExpanded(false);
     buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === filter)));
     if (status) status.textContent = `${shown.length} result${shown.length === 1 ? "" : "s"}`;
   }
