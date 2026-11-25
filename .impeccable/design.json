@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-25T14:45:43+00:00",
+  "title": "Design System: Fred Cerdeira",
+  "extensions": {
+    "colorMeta": {
+      "night-asphalt": {
+        "role": "neutral",
+        "displayName": "Night Asphalt",
+        "canonical": "oklch(15.0% 0.002 286)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424243",
+          "#616162",
+          "#828283",
+          "#a5a5a6",
+          "#c9c9ca",
+          "#eeeeef"
+        ]
+      },
+      "asphalt-raised": {
+        "role": "neutral",
+        "displayName": "Asphalt Raised",
+        "canonical": "oklch(18.8% 0.004 286)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#252526",
+          "#424243",
+          "#616163",
+          "#828285",
+          "#a5a5a7",
+          "#c9c9cb",
+          "#eeeeef"
+        ]
+      },
+      "asphalt-deep": {
+        "role": "neutral",
+        "displayName": "Asphalt Deep",
+        "canonical": "oklch(22.3% 0.006 286)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#252526",
+          "#424244",
+          "#616164",
+          "#828286",
+          "#a5a5a8",
+          "#c9c9cb",
+          "#eeeef0"
+        ]
+      },
+      "chalk": {
+        "role": "neutral",
+        "displayName": "Chalk",
+        "canonical": "oklch(95.8% 0.007 97)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#252523",
+          "#42423f",
+          "#62615e",
+          "#83827e",
+          "#a6a5a1",
+          "#cac9c6",
+          "#efeeec"
+        ]
+      },
+      "dust-gray": {
+        "role": "neutral",
+        "displayName": "Dust Gray",
+        "canonical": "oklch(71.1% 0.009 99)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#252523",
+          "#43423f",
+          "#62615d",
+          "#83827d",
+          "#a6a5a0",
+          "#cac9c5",
+          "#efeeec"
+        ]
+      },
+      "race-sheet-paper": {
+        "role": "neutral",
+        "displayName": "Race-Sheet Paper",
+        "canonical": "oklch(95.8% 0.007 97)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#252523",
+          "#42423f",
+          "#62615e",
+          "#83827e",
+          "#a6a5a1",
+          "#cac9c6",
+          "#efeeec"
+        ]
+      },
+      "bib-black": {
+        "role": "neutral",
+        "displayName": "Bib Black",
+        "canonical": "oklch(17.8% 0.002 286)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424243",
+          "#616162",
+          "#828283",
+          "#a5a5a6",
+          "#c9c9ca",
+          "#eeeeef"
+        ]
+      },
+      "pencil-gray": {
+        "role": "neutral",
+        "displayName": "Pencil Gray",
+        "canonical": "oklch(47.4% 0.008 97)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#252523",
+          "#43423f",
+          "#62615d",
+          "#83827d",
+          "#a6a5a1",
+          "#cac9c6",
+          "#efeeec"
+        ]
+      },
+      "race-orange": {
+        "role": "primary",
+        "displayName": "Race Orange",
+        "canonical": "oklch(70.4% 0.195 41)",
+        "tonalRamp": [
+          "#1b0300",
+          "#451100",
+          "#742200",
+          "#a73500",
+          "#db4c00",
+          "#f47f53",
+          "#ffaf8d",
+          "#ffddc5"
+        ]
+      },
+      "burnt-orange": {
+        "role": "primary",
+        "displayName": "Burnt Orange",
+        "canonical": "oklch(53.5% 0.165 39)",
+        "tonalRamp": [
+          "#190501",
+          "#411506",
+          "#6e2a10",
+          "#9e3f1c",
+          "#d0582c",
+          "#ea8665",
+          "#ffb399",
+          "#ffe0cd"
+        ]
+      },
+      "hairline-on-dark": {
+        "role": "neutral",
+        "displayName": "Hairline on Dark",
+        "canonical": "rgba(242,241,236,.14)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#252523",
+          "#42423f",
+          "#62615e",
+          "#83827e",
+          "#a6a5a1",
+          "#cac9c6",
+          "#efeeec"
+        ]
+      },
+      "hairline-on-paper": {
+        "role": "neutral",
+        "displayName": "Hairline on Paper",
+        "canonical": "rgba(17,17,18,.15)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424243",
+          "#616162",
+          "#828283",
+          "#a5a5a6",
+          "#c9c9ca",
+          "#eeeeef"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Section titles, hero and footer sign-off; uppercase Archivo 900 at width 62."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Big figures in stat tiles; scales with its container."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Sub-section titles such as Highlights and Personal Records."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Timeline entries and race names."
+      },
+      "intro": {
+        "displayName": "Intro",
+        "purpose": "The muted paragraph under each section title."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default reading text."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Result rows, captions and highlight details, with tabular figures."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Mono uppercase labels: tiles, stats, section labels, table heads."
+      }
+    },
+    "shadows": [
+      {
+        "name": "lede-lift",
+        "value": "0 1px 12px rgba(0,0,0,.6)",
+        "purpose": "Text-shadow on the hero intro only, for legibility over the photograph."
+      },
+      {
+        "name": "flag-ring",
+        "value": "0 0 0 1px rgba(17,17,18,.12)",
+        "purpose": "Hairline ring around country flags in results so white fields don't vanish into paper."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-reveal",
+        "value": "cubic-bezier(.2,.7,.2,1)",
+        "purpose": "Default ease-out for reveals, gallery zoom and state changes."
+      },
+      {
+        "name": "ease-hero",
+        "value": "cubic-bezier(.2,.8,.2,1)",
+        "purpose": "Hero headline lines sliding up into place."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity + translateY(28px) .9s ease-reveal",
+        "purpose": "Sections and blocks fading up on arrival, staggered by --d."
+      },
+      {
+        "name": "hero-lines",
+        "value": "translateY(105%) 1.1s ease-hero, 90ms stagger, 150ms delay",
+        "purpose": "Hero headline entrance."
+      },
+      {
+        "name": "row-in",
+        "value": "opacity + translateY(8px) .45s",
+        "purpose": "Result rows arriving when the list renders or expands."
+      },
+      {
+        "name": "hover-lift",
+        "value": "translateY(-2px) .2s",
+        "purpose": "Pill buttons on hover."
+      },
+      {
+        "name": "edge-glow",
+        "value": "opacity .65 to 1, 3.2s ease-in-out infinite alternate",
+        "purpose": "Race Orange glow on the viewport's top and bottom edges."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "640px"
+      },
+      {
+        "name": "nav-collapse",
+        "value": "960px"
+      },
+      {
+        "name": "records-3col",
+        "value": "1000px"
+      },
+      {
+        "name": "results-stack",
+        "value": "1023px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Race Orange pill; one per context for the main action.",
+      "html": "<a href=\"#\" class=\"ds-pill ds-pill-solid\">See results <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 22px; border-radius: 999px; font-family: var(--sans, Barlow, system-ui, sans-serif); font-weight: 600; font-size: 15px; text-decoration: none; transition: transform .2s, background .2s, color .2s, border-color .2s; } .ds-pill:hover { transform: translateY(-2px); } .ds-pill:focus-visible { outline: 2px solid var(--accent, #ff6b2c); outline-offset: 3px; } .ds-pill-solid { background: var(--accent, #ff6b2c); color: var(--accent-ink, #111112); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Hairline pill with a blurred dark fill; secondary actions over photos and dark sections.",
+      "html": "<div class=\"ds-dark\"><a href=\"#\" class=\"ds-pill-line\">Instagram</a></div>",
+      "css": ".ds-dark { background: var(--bg, #0b0b0c); padding: 24px; } .ds-pill-line { display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px; border-radius: 999px; font-family: var(--sans, Barlow, system-ui, sans-serif); font-weight: 600; font-size: 15px; text-decoration: none; color: var(--ink, #f2f1ec); border: 1px solid var(--line, rgba(242,241,236,.14)); background: rgba(11,11,12,.35); backdrop-filter: blur(6px); transition: transform .2s, border-color .2s; } .ds-pill-line:hover { transform: translateY(-2px); border-color: var(--ink, #f2f1ec); } .ds-pill-line:focus-visible { outline: 2px solid var(--accent, #ff6b2c); outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button on Paper",
+      "kind": "button",
+      "refersTo": "button-ghost-on-paper",
+      "description": "Bib Black outline pill inside the results band; fills on hover.",
+      "html": "<div class=\"ds-paper\"><button class=\"ds-btn-paper\">Show the full list</button></div>",
+      "css": ".ds-paper { background: var(--paper, #f2f1ec); padding: 24px; } .ds-btn-paper { font-family: var(--sans, Barlow, system-ui, sans-serif); font-weight: 600; font-size: 15px; min-height: 46px; padding: 0 22px; border-radius: 999px; border: 1px solid var(--ink-dark, #111112); background: transparent; color: var(--ink-dark, #111112); cursor: pointer; transition: background .2s, color .2s; } .ds-btn-paper:hover { background: var(--ink-dark, #111112); color: var(--paper, #f2f1ec); } .ds-btn-paper:focus-visible { outline: 2px solid var(--accent-on-paper, #b8400c); outline-offset: 3px; }"
+    },
+    {
+      "name": "Filter Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Discipline filters for the results list; the selected chip fills Bib Black.",
+      "html": "<div class=\"ds-paper-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Full list <span>27</span></button><button class=\"ds-chip\" aria-pressed=\"false\">Triathlon <span>9</span></button><button class=\"ds-chip\" aria-pressed=\"false\">Trail Run <span>13</span></button></div>",
+      "css": ".ds-paper-chips { background: var(--paper, #f2f1ec); padding: 24px; display: flex; flex-wrap: wrap; gap: 8px; } .ds-chip { font-family: var(--sans, Barlow, system-ui, sans-serif); font-weight: 600; font-size: 14px; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line-dark, rgba(17,17,18,.15)); background: transparent; color: var(--ink-dark, #111112); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: background .2s, color .2s, border-color .2s; } .ds-chip span { font-family: var(--mono, 'Space Mono', monospace); font-size: 11px; opacity: .7; } .ds-chip:hover { border-color: var(--ink-dark, #111112); } .ds-chip[aria-pressed=\"true\"] { background: var(--ink-dark, #111112); color: var(--paper, #f2f1ec); border-color: var(--ink-dark, #111112); } .ds-chip:focus-visible { outline: 2px solid var(--accent-on-paper, #b8400c); outline-offset: 3px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-cta",
+      "description": "Fixed 64px bar; blurred Night Asphalt once scrolled, condensed brand, Race Orange Contact pill.",
+      "html": "<header class=\"ds-nav\"><a href=\"#\" class=\"ds-brand\">Fred Cerdeira</a><nav><a href=\"#\">About</a><a href=\"#\">Results</a><a href=\"#\">Training</a></nav><a href=\"#\" class=\"ds-nav-cta\">Contact</a></header>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 32px; height: 64px; padding: 0 24px; background: rgba(11,11,12,.78); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line, rgba(242,241,236,.14)); } .ds-brand { font-family: var(--display, Archivo, 'Arial Narrow', sans-serif); font-weight: 900; font-stretch: 62%; font-variation-settings: 'wdth' 62; text-transform: uppercase; font-size: 24px; color: var(--ink, #f2f1ec); text-decoration: none; } .ds-nav nav { display: flex; gap: 24px; margin-left: auto; } .ds-nav nav a { font-family: var(--sans, Barlow, system-ui, sans-serif); font-size: 14px; color: var(--nav-link, #d9d9d9); text-decoration: none; transition: color .2s; } .ds-nav nav a:hover { color: var(--ink, #f2f1ec); } .ds-nav-cta { display: inline-flex; align-items: center; min-height: 38px; padding: 0 18px; border-radius: 999px; background: var(--accent, #ff6b2c); color: var(--accent-ink, #111112); font-family: var(--sans, Barlow, system-ui, sans-serif); font-weight: 600; font-size: 14px; text-decoration: none; transition: transform .2s; } .ds-nav-cta:hover { transform: translateY(-2px); } .ds-nav a:focus-visible { outline: 2px solid var(--accent, #ff6b2c); outline-offset: 3px; }"
+    },
+    {
+      "name": "Stat Tile",
+      "kind": "card",
+      "refersTo": "numeral",
+      "description": "The proof unit: mono label, condensed numeral, one-line caption, optional orange translation.",
+      "html": "<div class=\"ds-dark\"><div class=\"ds-tile\"><span class=\"ds-label\">Ascent · all time</span><b class=\"ds-num\">529,359</b><span class=\"ds-cap\">metres climbed (D+)</span><span class=\"ds-extra\">About 60 Everests from sea level</span></div></div>",
+      "css": ".ds-dark { background: var(--bg, #0b0b0c); padding: 24px; } .ds-label { font-family: var(--mono, 'Space Mono', ui-monospace, monospace); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted, #a3a29c); } .ds-tile { container-type: inline-size; display: flex; flex-direction: column; gap: 12px; max-width: 360px; padding: 24px 0; } .ds-label { font-family: var(--mono, 'Space Mono', ui-monospace, monospace); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted, #a3a29c); } .ds-num { font-family: var(--display, Archivo, 'Arial Narrow', sans-serif); font-weight: 900; font-stretch: 62%; font-variation-settings: 'wdth' 62; text-transform: uppercase; font-size: min(32cqi, 128px); line-height: 1; color: var(--ink, #f2f1ec); } .ds-cap { font-family: var(--sans, Barlow, system-ui, sans-serif); font-size: 15px; color: var(--muted, #a3a29c); } .ds-extra { font-family: var(--sans, Barlow, system-ui, sans-serif); font-size: 15px; color: var(--accent, #ff6b2c); }"
+    },
+    {
+      "name": "Results Row",
+      "kind": "custom",
+      "refersTo": "data",
+      "description": "One race on the paper start list; podium places in Burnt Orange with a dot.",
+      "html": "<ol class=\"ds-res\"><li class=\"ds-row\"><span>26 Apr 2026</span><span><b>Middle Distance National Championship</b><br><small>Moura, Portugal</small></span><span>Triathlon</span><span>70.3</span><b>4:45:38</b><span class=\"ds-place ds-podium\">2nd · M45-49</span></li><li class=\"ds-row\"><span>5 Jul 2026</span><span><b>Challenge Roth</b><br><small>Roth, Germany</small></span><span>Triathlon</span><span>Full</span><b>9:31:32</b><span class=\"ds-place\">18th · M45-49</span></li></ol>",
+      "css": ".ds-res { list-style: none; margin: 0; padding: 0 24px; background: var(--paper, #f2f1ec); color: var(--ink-dark, #111112); font-family: var(--sans, Barlow, system-ui, sans-serif); font-size: 15px; font-variant-numeric: tabular-nums; } .ds-row { display: grid; grid-template-columns: 110px 1.6fr 1fr 80px 90px 90px; column-gap: 16px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--line-dark, rgba(17,17,18,.15)); } .ds-row small { color: var(--muted-dark, #5d5c57); font-size: 13px; } .ds-place { text-align: right; } .ds-podium { color: var(--accent-on-paper, #b8400c); font-weight: 700; } .ds-podium::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: currentColor; margin-right: 6px; vertical-align: 2px; }"
+    },
+    {
+      "name": "Section Heading",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "Mono section label over a stacked, extra-condensed uppercase title and a muted intro.",
+      "html": "<div class=\"ds-dark\"><span class=\"ds-label\">01 · About</span><h2 class=\"ds-h\">Since<br>2013.</h2><p class=\"ds-intro\">From the trails to the triathlon start line.</p></div>",
+      "css": ".ds-dark { background: var(--bg, #0b0b0c); padding: 24px; } .ds-label { font-family: var(--mono, 'Space Mono', ui-monospace, monospace); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted, #a3a29c); } .ds-h { font-family: var(--display, Archivo, 'Arial Narrow', sans-serif); font-weight: 900; font-stretch: 62%; font-variation-settings: 'wdth' 62; text-transform: uppercase; font-size: clamp(56px, 8vw, 128px); line-height: .9; margin: 16px 0 24px; color: var(--ink, #f2f1ec); } .ds-intro { font-family: var(--sans, Barlow, system-ui, sans-serif); font-size: 20px; line-height: 1.6; max-width: 34rem; color: var(--muted, #a3a29c); margin: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Start Line",
+    "overview": "The site feels like the minute before the gun: dark, quiet and wound tight, with one colour that means *go*. Night Asphalt carries almost every screen; grayscale photographs of real races sit behind it like floodlit course; headings are set in extra-condensed, uppercase Archivo, stacked tight like a start-line banner. Race Orange is the bib number in the crowd: the call to action, the accent in the hero, the bar chart, the podium mark. Nothing else competes with it.\n\nThe record is the decoration. Numbers are the largest things on the page after the section titles, set in the same condensed face, and they come from Garmin rather than from a designer's sample data. Labels speak in small, spaced Space Mono, like timing-chip printouts. The one light surface, Race-Sheet Paper, is reserved for the results: the moment the page stops telling a story and shows the start list.\n\nDensity is low and the rhythm is long: generous section padding, wide gutters, and blocks separated by hairlines rather than boxes. Motion is a single grammar (fade-up on arrival, hero lines sliding in, numbers counting up) and it disappears entirely under reduced motion.",
+    "keyCharacteristics": [
+      "Dark by default; one light \"results\" band per page.",
+      "One accent colour, used sparingly and always meaning action or achievement.",
+      "Extra-condensed uppercase display type for headings and big numbers; humanist Barlow for reading; Space Mono for labels.",
+      "Every photograph is grayscale; colour returns only on hover in the gallery.",
+      "Flat surfaces separated by hairlines, never by shadows."
+    ],
+    "rules": [
+      {
+        "name": "The One Orange Rule",
+        "body": "Race Orange is the only hue on the page. It marks action (buttons, links on hover) or achievement (podiums, the goal race, the chart). If something orange is neither, it shouldn't be orange.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paper Swap Rule",
+        "body": "On Race-Sheet Paper, Race Orange becomes Burnt Orange and Dust Gray becomes Pencil Gray. Never put Race Orange text on paper; it fails contrast.",
+        "section": "colors"
+      },
+      {
+        "name": "The Condensed Voice Rule",
+        "body": "Archivo appears only uppercase, only at weight 900, only at width 62. It is for headings, the brand, the mobile menu and big numbers, never for sentences.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Any number a visitor might compare (times, distances, hours) uses tabular figures so columns line up.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Rule",
+        "body": "Separate with a 1px hairline, not a box or a shadow. Lists, tiles, timeline entries and highlights are divided by rules on top or bottom; the only heavier rules are the 2px Bib Black (or Burnt Orange) tops on highlights and the 2px orange timeline progress.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep every photograph grayscale (`filter: grayscale(1)`), with contrast lifted slightly; let colour return only on gallery hover.",
+      "**Do** put a Night Asphalt scrim between any photo and the text on top of it.",
+      "**Do** use Race Orange for one primary action per view and for achievement marks; switch to Burnt Orange on paper.",
+      "**Do** set headings and big numbers in uppercase Archivo 900 at width 62, and labels in uppercase Space Mono at 12px with 0.14em tracking.",
+      "**Do** separate content with hairlines and space, and use tabular figures for anything numeric.",
+      "**Do** give every motion a reduced-motion fallback that shows the final state immediately."
+    ],
+    "donts": [
+      "**Don't** add a second accent colour, gradients on text, or coloured photo treatments.",
+      "**Don't** round photos, tiles or cards; rounding belongs only to pill controls.",
+      "**Don't** add drop shadows to cards or buttons.",
+      "**Don't** set sentences in Archivo or use it in lowercase.",
+      "**Don't** put Race Orange text on Race-Sheet Paper.",
+      "**Don't** fill a tile with sample or rounded-up numbers; training figures come from the Garmin data file only."
+    ]
+  }
+}
