@@ -216,6 +216,8 @@ body { overflow-x:clip; }
 footer h2 { font-size:clamp(64px, 12vw, 200px); }
 .links { display:flex; flex-wrap:wrap; gap:12px; margin-top:40px; }
 .pill .icon { width:18px; height:18px; flex:none; }
+.copy-email { font:inherit; font-weight:600; font-size:15px; justify-content:center; cursor:pointer; user-select:text; }
+.copy-email [hidden] { display:none; }
 .see-all { margin:40px 0 0; }
 
 /* reveal */

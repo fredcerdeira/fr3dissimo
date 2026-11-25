@@ -28,6 +28,29 @@
     });
     matchMedia("(min-width: 961px)").addEventListener("change", (e) => e.matches && setOpen(false));
   }
+
+  // ---- copy email ----
+  $$("[data-copy]").forEach((btn) => {
+    const label = btn.querySelector("[data-copy-label]");
+    const status = document.getElementById(btn.getAttribute("aria-describedby"));
+    const [copyIcon, doneIcon] = [btn.querySelector("[data-copy-icon]"), btn.querySelector("[data-copied-icon]")];
+    let timer;
+    btn.addEventListener("click", () => {
+      (navigator.clipboard ? navigator.clipboard.writeText(btn.dataset.copy) : Promise.reject()).then(() => {
+        btn.style.minWidth = `${btn.offsetWidth}px`;
+        label.textContent = "Copied";
+        copyIcon.toggleAttribute("hidden", true); doneIcon.toggleAttribute("hidden", false);
+        status.textContent = "Email address copied";
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          label.textContent = btn.dataset.copy;
+          copyIcon.toggleAttribute("hidden", false); doneIcon.toggleAttribute("hidden", true);
+          status.textContent = "";
+          btn.style.minWidth = "";
+        }, 2000);
+      }, () => getSelection().selectAllChildren(label));
+    });
+  });
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
   // ---- hero title ----
