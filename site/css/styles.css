@@ -148,6 +148,11 @@ body { overflow-x:clip; }
 .intro-small { max-width:36rem; }
 .section-alt { background:var(--bg2); }
 .section.flush-bottom { padding-bottom:0; }
+.notfound { position:relative; min-height:100svh; display:flex; align-items:flex-end; padding:120px 0 clamp(56px, 8vw, 96px); overflow:hidden; isolation:isolate; }
+.notfound > .wrap { width:100%; }
+.notfound > img { position:absolute; inset:0; z-index:-2; width:100%; height:100%; object-fit:cover; filter:grayscale(1); opacity:.45; }
+.notfound::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(0deg, var(--bg) 0%, rgba(11,11,12,.7) 40%, rgba(11,11,12,.25) 100%); }
+.notfound .mono { margin:40px 0 0; color:var(--muted); }
 .colophon { margin:96px 0 0; padding-top:24px; border-top:1px solid var(--line); color:var(--muted); }
 .visually-hidden { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
 .nav-cta { min-height:38px; padding:0 18px; font-size:14px; }

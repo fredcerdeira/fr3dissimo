@@ -32,17 +32,19 @@ jobs:
       - name: Collect the public files
         run: |
           mkdir _site
-          cp -R index.html CNAME robots.txt sitemap.xml google*.html site data img _site/
+          cp -R index.html 404.html favicon.ico site.webmanifest CNAME robots.txt sitemap.xml google*.html site data img _site/
 
       # GitHub Pages caches every file for 10 minutes and the header can't be changed,
       # so each CSS/JS link gets ?v=<content hash>: a changed file is a new URL.
       - name: Stamp CSS and JS links with a version
         run: |
           cd _site
-          for f in $(grep -oE '(href|src)="site/[^"?]+\.(css|js)"' index.html | sed -E 's/^[a-z]+="([^"]+)"$/\1/' | sort -u); do
-            v=$(sha256sum "$f" | cut -c1-8)
-            sed -i "s#\"$f\"#\"$f?v=$v\"#g" index.html
-            echo "$f?v=$v"
+          for page in index.html 404.html; do
+            for f in $(grep -oE '(href|src)="/?site/[^"?]+\.(css|js)"' "$page" | sed -E 's/^[a-z]+="([^"]+)"$/\1/' | sort -u); do
+              v=$(sha256sum "${f#/}" | cut -c1-8)
+              sed -i "s#\"$f\"#\"$f?v=$v\"#g" "$page"
+              echo "$page: $f?v=$v"
+            done
           done
 
       - uses: actions/configure-pages@v6
