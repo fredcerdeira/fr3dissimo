@@ -87,7 +87,11 @@
   // Collapsed: only the first LIMIT rows of the current filter are shown
   const setExpanded = (open) => {
     const items = [...list.children];
-    items.forEach((li, i) => li.classList.toggle("is-hidden", !open && i >= LIMIT));
+    items.forEach((li, i) => {
+      li.classList.toggle("is-hidden", !open && i >= LIMIT);
+      // Rows revealed by "Show the full list" restart rowin; stagger them from zero
+      if (open && i >= LIMIT) li.style.animationDelay = Math.min(i - LIMIT, 8) * 30 + "ms";
+    });
     if (!more) return;
     more.hidden = items.length <= LIMIT;
     toggle.setAttribute("aria-expanded", String(open));

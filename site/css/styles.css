@@ -251,6 +251,8 @@ body::after { content:""; position:fixed; inset:0; z-index:100; pointer-events:n
   .js [data-reveal], .js .hero h1 .line > span, .js .hero-name b::before { opacity:1 !important; transform:none !important; transition:none !important; }
   .hero-bg img, .story-photo img, .pill:hover { transform:none !important; }
   body::after { animation:none; }
+  .gallery img, .gallery figure:hover img { transform:none !important; transition:filter .3s; }
+  .menu-btn span { transition:none; }
 }
 @media (max-width: 960px) {
   .menu-btn { display:inline-block; }
