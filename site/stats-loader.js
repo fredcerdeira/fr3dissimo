@@ -57,16 +57,16 @@
       const tile = box.closest(".tile");
       const typical = tile && tile.querySelector("[data-weekly-typical]");
       const detail = tile && tile.querySelector("[data-weekly-detail]");
-      const h = (v) => `${nf(1).format(v || 0)} h`;
+      const h = (v) => `${nf(1).format(v || 0)}\u00a0h`;
       const describe = (w) =>
         `Week of ${fmt.date(w.week).replace(/ \d{4}$/, "")} · ${h(w.hours)} · ` +
-        `swim ${h(w.swim)} · bike ${h(w.bike)} · run ${h(w.run)}` + (w.other ? ` · other ${h(w.other)}` : "");
+        `swim\u00a0${h(w.swim)} · bike\u00a0${h(w.bike)} · run\u00a0${h(w.run)}` + (w.other ? ` · other\u00a0${h(w.other)}` : "");
       box.setAttribute("role", "group");
       box.setAttribute("aria-label", `Training hours per week, last ${stats.weekly.length} weeks`);
       const bars = stats.weekly.map((w, i) => {
         const bar = document.createElement("button");
         bar.type = "button";
-        bar.style.height = `${(w.hours / max) * 100}%`;
+        bar.style.setProperty("--h", `${(w.hours / max) * 100}%`);
         bar.setAttribute("aria-label", describe(w));
         bar.tabIndex = i === stats.weekly.length - 1 ? 0 : -1;
         return bar;
