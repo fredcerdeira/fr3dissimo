@@ -192,7 +192,7 @@ A single centred column (max 1240px) with fluid side gutters (`clamp(20px, 4vw, 
 
 Story sections use a two-column grid (text left, a 4:5 grayscale photo right, aligned to the bottom). Data sits in three- to five-column grids of borderless tiles: three for the timeline, trail build-up and training, four for trail stats, five for personal records, the hero stats bar and partners. The gallery is a four-column dense grid with 240px rows, mixing wide (2×2) and tall (1×2) frames.
 
-The hero fills the viewport (`100svh`) with its photo bleeding behind a left-to-right and bottom-up scrim; the stats bar is pinned to its bottom edge.
+The hero fills the viewport (`100svh`) with its photo bleeding behind a left-to-right and bottom-up scrim; the stats bar is pinned to its bottom edge. The slogan is the headline on the left; the right column opens with the name as a signature (Archivo 900 at `clamp(40px, 4.4vw, 72px)` under a 2px Race Orange rule cut to the name's width, then a Label line), followed by the intro and the primary button.
 
 Responsive behaviour: at 1023px the results table becomes stacked cards and partners go to two columns. At 960px the nav collapses to a menu button, story grids and tile grids go to one column, the hero stats become a two-column grid and the gallery two columns. Personal records step down to three columns at 1000px and two at 640px.
 
