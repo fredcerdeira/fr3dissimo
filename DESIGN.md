@@ -235,7 +235,7 @@ Confident, compact race-kit pills.
 
 ### Navigation
 - Fixed, 64px tall, transparent over the hero; after scrolling it becomes 78% Night Asphalt with a 12px blur and a bottom hairline.
-- Brand in Archivo 900 uppercase at 24px; section links in Barlow at 14px, light gray turning Chalk on hover; the Contact pill on the right.
+- Brand in Archivo 900 uppercase at 24px; section links in Barlow at 14px, light gray turning Race Orange on hover; the Contact pill on the right.
 - Under 960px the links move into a full-width drop panel opened by a round 44px menu button. The links there become Archivo 900 uppercase at 22px, separated by hairlines. Escape closes it.
 
 ### Stat Tile (signature)

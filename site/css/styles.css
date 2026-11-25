@@ -41,7 +41,7 @@ p { text-wrap:pretty; }
 .nav .brand { white-space:nowrap; font-family:var(--display); font-weight:900; font-stretch:extra-condensed; font-size:24px; text-transform:uppercase; text-decoration:none; letter-spacing:.02em; }
 .nav nav { display:flex; gap:24px; font-size:14px; }
 .nav nav a { text-decoration:none; color:var(--nav-link); padding:10px 0; transition:color .2s; }
-.nav nav a:hover { color:var(--ink); }
+.nav nav a:hover { color:var(--accent); }
 .menu-btn { display:none; width:44px; height:44px; border:1px solid var(--line); border-radius:999px; background:transparent; cursor:pointer; position:relative; flex:none; }
 .menu-btn span { position:absolute; left:13px; right:13px; height:2px; background:var(--ink); transition:transform .25s, top .25s; }
 .menu-btn span:first-child { top:17px; } .menu-btn span:last-child { top:25px; }
