@@ -53,7 +53,7 @@ Add an entry to `data/results.json`. Order doesn't matter, because the list is s
 
 Colours, fonts and spacing live in `tokens/`, in three files:
 
-- `theme-primitives.tokens.json`: the raw values for each theme (`Classic`, `Alternative`).
+- `theme-primitives.tokens.json`: the raw values for each theme (`fc1`, the original look, and `fc2`).
 - `surface.tokens.json`: the roles for each surface (`Asphalt` on the page, `Paper` inside `.paper`), plus the legacy names `styles.css` still uses.
 - `shared.tokens.json`: spacing and radius, the same in every theme.
 
@@ -64,7 +64,7 @@ node scripts/build-tokens.mjs          # writes site/css/tokens.css and site/the
 node scripts/build-tokens.mjs --check  # fails if either generated file is out of date
 ```
 
-To preview the second theme, use the Vibe dropdown at the bottom right of the footer. It calls `fr3Theme.set("alternative")` (or `"classic"`) from `site/theme.js`, which sets `data-theme` on `<html>` and loads the theme's Google Fonts the first time. The choice is not saved, so a reload returns to Classic. The font lists live in `$fonts` in `tokens/theme-primitives.tokens.json`.
+To preview the second theme, use the Vibe dropdown at the bottom right of the footer. It calls `fr3Theme.set("fc2")` (or `"fc1"`) from `site/theme.js`, which sets `data-theme` on `<html>` and loads the theme's Google Fonts the first time. The choice is not saved, so a reload returns to fc1. The font lists live in `$fonts` in `tokens/theme-primitives.tokens.json`.
 
 ## Garmin data
 

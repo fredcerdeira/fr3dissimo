@@ -1,7 +1,7 @@
 // Theme switch for the design tokens. No dependencies.
 //
-//   fr3Theme.set("alternative")  sets <html data-theme="alternative">
-//   fr3Theme.set("classic")      switches back
+//   fr3Theme.set("fc2")  sets <html data-theme="fc2">
+//   fr3Theme.set("fc1")  switches back to the default
 //
 // Colours and font names change with the attribute (site/css/tokens.css already has both themes).
 // This file only adds the Google Fonts stylesheets a theme needs, the first time it is used.
@@ -42,7 +42,7 @@
   function bindSwitch() {
     const select = document.querySelector("[data-theme-select]");
     if (!select) return;
-    select.value = document.documentElement.dataset.theme || "classic";
+    select.value = document.documentElement.dataset.theme || "fc1";
     select.addEventListener("change", () => window.fr3Theme.set(select.value));
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bindSwitch);

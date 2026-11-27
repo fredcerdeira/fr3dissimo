@@ -6,7 +6,7 @@
 //   node scripts/build-tokens.mjs --check  fail if the committed file is out of date
 //
 // Output order:
-//   1. Theme primitives, one block per theme. Classic is also the default (:root).
+//   1. Theme primitives, one block per theme. The first theme (fc1) is also the default (:root).
 //   2. Surface roles: Asphalt on :root, Paper on .paper.
 //   3. Shared scale on :root.
 //   4. Legacy names used by site/css/styles.css, on :root.
