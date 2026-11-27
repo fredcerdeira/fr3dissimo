@@ -60,11 +60,11 @@ Colours, fonts and spacing live in `tokens/`, in three files:
 Figma is the design source. The JSON files mirror the Figma file "Fred's Playground", page "fr3dissimo Tokens". After you change a value in Figma, update the matching JSON, then regenerate and check the CSS:
 
 ```sh
-node scripts/build-tokens.mjs          # writes site/css/tokens.css
-node scripts/build-tokens.mjs --check  # fails if tokens.css is out of date
+node scripts/build-tokens.mjs          # writes site/css/tokens.css and site/theme-fonts.js
+node scripts/build-tokens.mjs --check  # fails if either generated file is out of date
 ```
 
-To preview the second theme, set `data-theme="alternative"` on `<html>`.
+To preview the second theme, run `fr3Theme.set("alternative")` in the browser console (and `fr3Theme.set("classic")` to switch back). It sets `data-theme` on `<html>` and loads the theme's Google Fonts the first time. The font lists live in `$fonts` in `tokens/theme-primitives.tokens.json`.
 
 ## Garmin data
 
