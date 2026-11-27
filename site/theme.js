@@ -38,16 +38,12 @@
     },
   };
 
-  // Footer switch: <button data-theme-option="classic|alternative">. Shows the current theme with aria-pressed.
+  // Footer dropdown: <select data-theme-select> with one <option> per theme.
   function bindSwitch() {
-    const buttons = [...document.querySelectorAll("[data-theme-option]")];
-    if (!buttons.length) return;
-    const sync = () => {
-      const current = document.documentElement.dataset.theme || "classic";
-      buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.themeOption === current)));
-    };
-    buttons.forEach((b) => b.addEventListener("click", () => { window.fr3Theme.set(b.dataset.themeOption); sync(); }));
-    sync();
+    const select = document.querySelector("[data-theme-select]");
+    if (!select) return;
+    select.value = document.documentElement.dataset.theme || "classic";
+    select.addEventListener("change", () => window.fr3Theme.set(select.value));
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bindSwitch);
   else bindSwitch();
