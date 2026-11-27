@@ -71,6 +71,14 @@
     }
   },
 
+  "photo": {
+    "tint": {
+      "$type": "color", "$css": "--photo-tint",
+      "$description": "Laid over the grey photos with mix-blend-mode: color. Alpha is the strength. Transparent means no tint.",
+      "$value": { "fc1": "rgba(11,11,12,0)", "fc2": "rgba(27,37,64,0.85)" }
+    }
+  },
+
   "font": {
     "display": {
       "$type": "fontFamily", "$css": "--font-display",

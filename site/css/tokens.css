@@ -14,6 +14,7 @@
   --neutral-paper-tint: rgba(17,17,18,0.05);
   --neutral-hairline-on-dark: rgba(242,241,236,0.14);
   --neutral-hairline-on-paper: rgba(17,17,18,0.15);
+  --photo-tint: rgba(11,11,12,0);
   --font-display: "Archivo";
   --font-sans: "Barlow";
   --font-mono: "Space Mono";
@@ -33,6 +34,7 @@
   --neutral-paper-tint: rgba(11,16,32,0.05);
   --neutral-hairline-on-dark: rgba(238,243,251,0.14);
   --neutral-hairline-on-paper: rgba(11,16,32,0.15);
+  --photo-tint: rgba(27,37,64,0.85);
   --font-display: "Oswald";
   --font-sans: "Inter";
   --font-mono: "JetBrains Mono";
