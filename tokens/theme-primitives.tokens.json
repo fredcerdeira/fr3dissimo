@@ -1,0 +1,99 @@
+{
+  "$collection": "Theme Primitives",
+  "$modes": ["fc1", "fc2"],
+  "$source": "Figma: Fred's Playground (29HCuuNGbeWkFdUy6dHEsR), page 'fr3dissimo Tokens'",
+  "$note": "Values are per theme. fc1 is the original look. fc2 values are placeholders until chosen.",
+  "$fonts": {
+    "$note": "Google Fonts stylesheets each theme needs. fc1 is also linked statically in index.html, and the loader skips URLs already on the page. fc2 loads on first switch (site/theme.js).",
+    "fc1": [
+      "https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62,900&family=Barlow:wght@400;600;700&family=Space+Mono&display=swap"
+    ],
+    "fc2": [
+      "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Oswald:wght@400;600;700&display=swap"
+    ]
+  },
+
+  "brand": {
+    "accent": {
+      "$type": "color", "$css": "--brand-accent",
+      "$value": { "fc1": "#ff6b2c", "fc2": "#3ddc97" }
+    },
+    "accent-on-paper": {
+      "$type": "color", "$css": "--brand-accent-on-paper",
+      "$value": { "fc1": "#b8400c", "fc2": "#1f8a5b" }
+    },
+    "accent-ink": {
+      "$type": "color", "$css": "--brand-accent-ink",
+      "$value": { "fc1": "#111112", "fc2": "#0b1020" }
+    }
+  },
+
+  "neutral": {
+    "night": {
+      "$type": "color", "$css": "--neutral-night",
+      "$value": { "fc1": "#0b0b0c", "fc2": "#0b1020" }
+    },
+    "raised": {
+      "$type": "color", "$css": "--neutral-raised",
+      "$value": { "fc1": "#131315", "fc2": "#121a2e" }
+    },
+    "deep": {
+      "$type": "color", "$css": "--neutral-deep",
+      "$value": { "fc1": "#1b1b1e", "fc2": "#1b2540" }
+    },
+    "chalk": {
+      "$type": "color", "$css": "--neutral-chalk",
+      "$value": { "fc1": "#f2f1ec", "fc2": "#eef3fb" }
+    },
+    "dust": {
+      "$type": "color", "$css": "--neutral-dust",
+      "$value": { "fc1": "#a3a29c", "fc2": "#9aa6bf" }
+    },
+    "bib": {
+      "$type": "color", "$css": "--neutral-bib",
+      "$value": { "fc1": "#111112", "fc2": "#0b1020" }
+    },
+    "pencil": {
+      "$type": "color", "$css": "--neutral-pencil",
+      "$value": { "fc1": "#5d5c57", "fc2": "#4b5670" }
+    },
+    "paper-tint": {
+      "$type": "color", "$css": "--neutral-paper-tint",
+      "$value": { "fc1": "rgba(17,17,18,0.05)", "fc2": "rgba(11,16,32,0.05)" }
+    },
+    "hairline-on-dark": {
+      "$type": "color", "$css": "--neutral-hairline-on-dark",
+      "$value": { "fc1": "rgba(242,241,236,0.14)", "fc2": "rgba(238,243,251,0.14)" }
+    },
+    "hairline-on-paper": {
+      "$type": "color", "$css": "--neutral-hairline-on-paper",
+      "$value": { "fc1": "rgba(17,17,18,0.15)", "fc2": "rgba(11,16,32,0.15)" }
+    }
+  },
+
+  "photo": {
+    "tint": {
+      "$type": "color", "$css": "--photo-tint",
+      "$description": "Laid over the grey photos with mix-blend-mode: color. Alpha is the strength. Transparent means no tint.",
+      "$value": { "fc1": "rgba(11,11,12,0)", "fc2": "rgba(27,37,64,0.85)" }
+    }
+  },
+
+  "font": {
+    "display": {
+      "$type": "fontFamily", "$css": "--font-display",
+      "$fallback": ", \"Arial Narrow\", sans-serif",
+      "$value": { "fc1": "\"Archivo\"", "fc2": "\"Oswald\"" }
+    },
+    "sans": {
+      "$type": "fontFamily", "$css": "--font-sans",
+      "$fallback": ", system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+      "$value": { "fc1": "\"Barlow\"", "fc2": "\"Inter\"" }
+    },
+    "mono": {
+      "$type": "fontFamily", "$css": "--font-mono",
+      "$fallback": ", ui-monospace, Menlo, monospace",
+      "$value": { "fc1": "\"Space Mono\"", "fc2": "\"JetBrains Mono\"" }
+    }
+  }
+}
