@@ -1,0 +1,69 @@
+{
+  "$collection": "Surface",
+  "$modes": ["Asphalt", "Paper"],
+  "$source": "Figma: Fred's Playground (29HCuuNGbeWkFdUy6dHEsR), page 'fr3dissimo Tokens'",
+  "$note": "Aliases use {path} references into theme-primitives.tokens.json. Asphalt is the default (:root). Paper applies inside .paper.",
+
+  "color": {
+    "bg": {
+      "canvas": {
+        "$type": "color", "$css": "--color-bg-canvas",
+        "$value": { "Asphalt": "{neutral.night}", "Paper": "{neutral.chalk}" }
+      },
+      "raised": {
+        "$type": "color", "$css": "--color-bg-raised",
+        "$value": { "Asphalt": "{neutral.raised}", "Paper": "{neutral.paper-tint}" }
+      },
+      "deep": {
+        "$type": "color", "$css": "--color-bg-deep",
+        "$value": { "Asphalt": "{neutral.deep}", "Paper": "{neutral.bib}" }
+      }
+    },
+    "text": {
+      "primary": {
+        "$type": "color", "$css": "--color-text-primary",
+        "$value": { "Asphalt": "{neutral.chalk}", "Paper": "{neutral.bib}" }
+      },
+      "muted": {
+        "$type": "color", "$css": "--color-text-muted",
+        "$value": { "Asphalt": "{neutral.dust}", "Paper": "{neutral.pencil}" }
+      },
+      "on-accent": {
+        "$type": "color", "$css": "--color-text-on-accent",
+        "$value": { "Asphalt": "{brand.accent-ink}", "Paper": "{neutral.chalk}" }
+      }
+    },
+    "accent": {
+      "default": {
+        "$type": "color", "$css": "--color-accent-default",
+        "$value": { "Asphalt": "{brand.accent}", "Paper": "{brand.accent-on-paper}" }
+      }
+    },
+    "border": {
+      "hairline": {
+        "$type": "color", "$css": "--color-border-hairline",
+        "$value": { "Asphalt": "{neutral.hairline-on-dark}", "Paper": "{neutral.hairline-on-paper}" }
+      }
+    }
+  },
+
+  "$legacy": {
+    "$note": "Names used by site/css/styles.css today. Fixed (not surface-dependent), so the current stylesheet keeps its exact look.",
+    "--bg": "{neutral.night}",
+    "--bg2": "{neutral.raised}",
+    "--bg3": "{neutral.deep}",
+    "--line": "{neutral.hairline-on-dark}",
+    "--ink": "{neutral.chalk}",
+    "--muted": "{neutral.dust}",
+    "--paper": "{neutral.chalk}",
+    "--ink-dark": "{neutral.bib}",
+    "--muted-dark": "{neutral.pencil}",
+    "--line-dark": "{neutral.hairline-on-paper}",
+    "--accent": "{brand.accent}",
+    "--accent-ink": "{brand.accent-ink}",
+    "--accent-on-paper": "{brand.accent-on-paper}",
+    "--display": "{font.display}",
+    "--sans": "{font.sans}",
+    "--mono": "{font.mono}"
+  }
+}

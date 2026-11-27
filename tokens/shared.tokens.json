@@ -1,0 +1,18 @@
+{
+  "$collection": "Shared Scale",
+  "$modes": ["Value"],
+  "$source": "Figma: Fred's Playground (29HCuuNGbeWkFdUy6dHEsR), page 'fr3dissimo Tokens'",
+  "$note": "Theme-independent. Same value in every theme and surface.",
+
+  "space": {
+    "stack": { "$type": "dimension", "$unit": "px", "$css": "--space-stack", "$value": { "Value": 24 } },
+    "cluster": { "$type": "dimension", "$unit": "px", "$css": "--space-cluster", "$value": { "Value": 12 } },
+    "block": { "$type": "dimension", "$unit": "px", "$css": "--space-block", "$value": { "Value": 56 } }
+  },
+
+  "radius": {
+    "none": { "$type": "dimension", "$unit": "px", "$css": "--radius-none", "$value": { "Value": 0 } },
+    "flag": { "$type": "dimension", "$unit": "px", "$css": "--radius-flag", "$value": { "Value": 2 } },
+    "pill": { "$type": "dimension", "$unit": "px", "$css": "--radius-pill", "$value": { "Value": 999 } }
+  }
+}
