@@ -64,7 +64,7 @@ node scripts/build-tokens.mjs          # writes site/css/tokens.css and site/the
 node scripts/build-tokens.mjs --check  # fails if either generated file is out of date
 ```
 
-To preview the second theme, use the Theme dropdown at the bottom right of the footer. It calls `fr3Theme.set("alternative")` (or `"classic"`) from `site/theme.js`, which sets `data-theme` on `<html>` and loads the theme's Google Fonts the first time. The choice is not saved, so a reload returns to Classic. The font lists live in `$fonts` in `tokens/theme-primitives.tokens.json`.
+To preview the second theme, use the Vibe dropdown at the bottom right of the footer. It calls `fr3Theme.set("alternative")` (or `"classic"`) from `site/theme.js`, which sets `data-theme` on `<html>` and loads the theme's Google Fonts the first time. The choice is not saved, so a reload returns to Classic. The font lists live in `$fonts` in `tokens/theme-primitives.tokens.json`.
 
 ## Garmin data
 
