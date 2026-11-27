@@ -1,12 +1,7 @@
 /* Fred Cerdeira — site styles */
+/* Colours, fonts and the legacy --bg/--ink/--accent names come from tokens.css (generated from tokens/). */
 :root {
-  --bg:#0b0b0c; --bg2:#131315; --bg3:#1b1b1e; --line:rgba(242,241,236,.14);
-  --ink:#f2f1ec; --muted:#a3a29c; --nav-link:#d9d9d9;
-  --paper:#f2f1ec; --ink-dark:#111112; --muted-dark:#5d5c57; --line-dark:rgba(17,17,18,.15);
-  --accent:#ff6b2c; --accent-ink:#111112; --accent-on-paper:#b8400c;
-  --display:"Archivo", "Arial Narrow", sans-serif;
-  --sans:"Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --mono:"Space Mono", ui-monospace, Menlo, monospace;
+  --nav-link:#d9d9d9;
   --gutter:clamp(20px, 4vw, 56px);
 }
 * { box-sizing:border-box; }

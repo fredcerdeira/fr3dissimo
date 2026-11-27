@@ -6,7 +6,7 @@ Live at [fredcerdeira.com](https://fredcerdeira.com).
 
 ## Run it locally
 
-Plain HTML, CSS and JavaScript. No build step, no dependencies.
+Plain HTML, CSS and JavaScript. No dependencies. The one build step is the design tokens, see below.
 
 ```sh
 python3 -m http.server 8765
@@ -21,6 +21,9 @@ Then open http://127.0.0.1:8765. Use a server rather than opening the file direc
 | `index.html` | All the page content |
 | `404.html` | The "Wrong turn." page |
 | `site/css/styles.css` | All the styling |
+| `tokens/*.tokens.json` | Design tokens: colours, fonts, spacing and the two themes (source of truth) |
+| `site/css/tokens.css` | Generated from `tokens/`. Do not edit by hand |
+| `scripts/build-tokens.mjs` | Builds `tokens.css` from `tokens/` |
 | `site/*.js` | Motion, the results list and the stats loader |
 | `data/results.json` | Race results, edited by hand |
 | `data/stats.json` | Training numbers, written by the Garmin sync only |
@@ -45,6 +48,23 @@ Add an entry to `data/results.json`. Order doesn't matter, because the list is s
 ```
 
 `type` is one of `triathlon`, `trail`, `road` or `cycling` and drives the filters. The flag comes from the last part of `location`; set `"country": "pt"` to override it.
+
+## Design tokens
+
+Colours, fonts and spacing live in `tokens/`, in three files:
+
+- `theme-primitives.tokens.json`: the raw values for each theme (`Classic`, `Alternative`).
+- `surface.tokens.json`: the roles for each surface (`Asphalt` on the page, `Paper` inside `.paper`), plus the legacy names `styles.css` still uses.
+- `shared.tokens.json`: spacing and radius, the same in every theme.
+
+Figma is the design source. The JSON files mirror the Figma file "Fred's Playground", page "fr3dissimo Tokens". After you change a value in Figma, update the matching JSON, then regenerate and check the CSS:
+
+```sh
+node scripts/build-tokens.mjs          # writes site/css/tokens.css
+node scripts/build-tokens.mjs --check  # fails if tokens.css is out of date
+```
+
+To preview the second theme, set `data-theme="alternative"` on `<html>`.
 
 ## Garmin data
 
