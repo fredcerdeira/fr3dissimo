@@ -248,6 +248,18 @@ body::after { content:""; position:fixed; inset:0; z-index:100; pointer-events:n
     linear-gradient(0deg, rgba(255,107,44,.38) 0, rgba(255,107,44,.12) 34px, rgba(255,107,44,0) 110px);
   animation: edgeglow 3.2s ease-in-out infinite alternate; }
 @keyframes edgeglow { from { opacity:.65; } to { opacity:1; } }
+/* Glow follows the theme accent. Browsers without color-mix keep the orange above. */
+@supports (color: color-mix(in srgb, red 50%, transparent)) {
+  body::after {
+    --glow-edge:color-mix(in srgb, var(--accent) 85%, transparent);
+    --glow-near:color-mix(in srgb, var(--accent) 38%, transparent);
+    --glow-mid:color-mix(in srgb, var(--accent) 12%, transparent);
+    border-top-color:var(--glow-edge); border-bottom-color:var(--glow-edge);
+    background:
+      linear-gradient(180deg, var(--glow-near) 0, var(--glow-mid) 34px, transparent 110px),
+      linear-gradient(0deg, var(--glow-near) 0, var(--glow-mid) 34px, transparent 110px);
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior:auto; }
