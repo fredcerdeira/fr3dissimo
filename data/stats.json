@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T15:52:16.690Z",
+  "updatedAt": "2026-11-28T14:17:51.580Z",
   "year": 2026,
   "ytd": {
     "swim": {
@@ -18,11 +18,11 @@
       "hours": 162.5
     },
     "total": {
-      "count": 425,
-      "km": 9871.9,
-      "hours": 494.2
+      "count": 427,
+      "km": 9874.8,
+      "hours": 494.7
     },
-    "elevationM": 99159,
+    "elevationM": 99193,
     "trail": {
       "count": 10,
       "km": 121.6,
@@ -124,16 +124,16 @@
       "swim": 0,
       "bike": 0,
       "run": 0,
-      "other": 0,
-      "hours": 0
+      "other": 0.32,
+      "hours": 0.32
     },
     {
       "week": "2026-11-23",
       "swim": 0,
       "bike": 0,
       "run": 0,
-      "other": 0,
-      "hours": 0
+      "other": 0.21,
+      "hours": 0.21
     }
   ],
   "recent": [
